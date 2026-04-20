@@ -55,15 +55,15 @@ class LiNewsletter extends HTMLElement {
     shadow.innerHTML = `
       <style>
         ${baseStyles}
-        section { background: var(--cream); padding: 6rem 2rem; border-top: 1px solid rgba(26,16,48,.1); }
+        section { background: var(--cream); padding: 6rem 2rem; border-top: 8px solid var(--section-divider); }
         .inner { max-width: 800px; margin: 0 auto; text-align: center; }
         h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 5vw, 4rem); text-transform: uppercase; color: var(--text-dark); line-height: 1.0; letter-spacing: -.03em; margin-bottom: 2.5rem; }
         .form { display: flex; gap: 0; max-width: 560px; margin: 0 auto; border-bottom: 2px solid var(--text-dark); }
         input { flex: 1; background: none; border: none; outline: none; padding: .9rem .5rem; font-family: var(--font-body); font-size: .95rem; color: var(--text-dark); }
-        input::placeholder { color: rgba(26,16,48,.35); }
+        input::placeholder { color: rgba(28,27,27,.35); }
         .btn-sub { font-family: var(--font-display); font-weight: 800; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; background: var(--purple-dark); color: #fff; border: none; padding: .9rem 1.8rem; cursor: pointer; transition: background .2s; white-space: nowrap; }
         .btn-sub:hover { background: var(--purple-light); }
-        .legal { margin-top: 1rem; font-size: .65rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(26,16,48,.4); }
+        .legal { margin-top: 1rem; font-size: .65rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(28,27,27,.4); }
       </style>
       <section>
         <div class="inner">
@@ -93,9 +93,9 @@ class LiPartners extends HTMLElement {
     shadow.innerHTML = `
       <style>
         ${baseStyles}
-        section { background: var(--cream); padding: 3rem 2rem; border-top: 1px solid rgba(26,16,48,.1); border-bottom: 1px solid rgba(26,16,48,.1); }
+        section { background: var(--cream); padding: 3rem 2rem; border-top: 1px solid rgba(28,27,27,.1); border-bottom: 1px solid rgba(28,27,27,.1); }
         .inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
-        .label { font-family: var(--font-display); font-weight: 700; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(26,16,48,.4); white-space: nowrap; }
+        .label { font-family: var(--font-display); font-weight: 700; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(28,27,27,.4); white-space: nowrap; }
         .partners { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
         .partner { display: flex; align-items: center; gap: .6rem; opacity: .55; transition: opacity .2s; cursor: pointer; }
         .partner:hover { opacity: 1; }
@@ -119,7 +119,7 @@ class LiFooter extends HTMLElement {
     shadow.innerHTML = `
       <style>
         ${baseStyles}
-        footer { background: var(--purple-dark); padding: 4rem 2rem 2rem; border-top: 4px solid var(--yellow); }
+        footer { background: var(--purple-dark); padding: 4rem 2rem 2rem; border-top: 8px solid var(--section-divider); }
         .inner { max-width: 1200px; margin: 0 auto; }
         .top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,.08); }
         .brand-logo { margin-bottom: 1rem; display: block; }
