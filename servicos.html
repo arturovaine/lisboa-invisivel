@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serviços de Apoio · Lisboa Invisível</title>
+<link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #F4EFE6; color: #1A1030; overflow-x: hidden; }
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body>
+
+<li-navbar active="servicos"></li-navbar>
+
+<li-page-hero bg="./img/donations-box.jpg"
+  kicker="Rede de Apoio"
+  sub="Recursos essenciais para cidadãos em situação de vulnerabilidade. Dados verificados pela comunidade em tempo real.">
+  Serviços de <span class="accent">Apoio.</span>
+</li-page-hero>
+
+<li-data-filter></li-data-filter>
+<li-services-list></li-services-list>
+<li-footer></li-footer>
+
+<script src="./js/core.js"></script>
+<script src="./js/chrome.js"></script>
+<script src="./js/sections-common.js"></script>
+<script src="./js/servicos.js"></script>
+</body>
+</html>

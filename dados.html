@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dados · Lisboa Invisível</title>
+<link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #F4EFE6; color: #1A1030; overflow-x: hidden; }
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body>
+
+<li-navbar active="dados"></li-navbar>
+
+<li-page-hero bg="./img/mattress-street.jpg"
+  kicker="Observatório Social"
+  sub="Dados abertos, verificados e atualizados sobre a exclusão social em Lisboa. Explore, filtre e partilhe.">
+  Dados que <span class="accent">revelam</span> o invisível.
+</li-page-hero>
+
+<li-data-filter></li-data-filter>
+<li-data-cards></li-data-cards>
+<li-intersection></li-intersection>
+<li-data-export></li-data-export>
+<li-newsletter title="Receba alertas quando novos dados são publicados."></li-newsletter>
+<li-footer></li-footer>
+
+<script src="./js/core.js"></script>
+<script src="./js/chrome.js"></script>
+<script src="./js/sections-common.js"></script>
+<script src="./js/dados.js"></script>
+</body>
+</html>
