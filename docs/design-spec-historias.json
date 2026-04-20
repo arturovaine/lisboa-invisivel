@@ -1,0 +1,402 @@
+{
+  "project": "Lisboa Invisível",
+  "page": "Histórias",
+  "accessibility": {
+    "images": {
+      "rule": "Imagens de conteúdo (retratos, identificam pessoas/locais) → <img> com alt descritivo. Imagens puramente decorativas (backdrops atmosféricos sob overlay, texturas, padrões) podem usar background-image ou <img alt=\"\" role=\"presentation\">.",
+      "contentImages": "Cards de histórias, retratos em perfis, fotografias editoriais → <img alt>",
+      "decorativeImages": "Hero backdrop de páginas escuras (com overlay roxo), texturas de fundo, elementos ilustrativos sem informação → background-image aceitável"
+    },
+    "altPattern_storyCard": "Retrato de {Nome}, {Bairro} — testemunho sobre {categoria}",
+    "lazyLoading": "loading=\"lazy\" decoding=\"async\" em todas as imagens fora da fold inicial",
+    "focusVisible": "Estados de foco visíveis em botões/links — pendente (ver docs/TODO.md)",
+    "skipLink": "Skip-link 'Saltar para conteúdo' — pendente (ver docs/TODO.md)"
+  },
+  "colors": {
+    "backgroundDark": "#24103A",
+    "backgroundLight": "#FAF8F2",
+    "backgroundCard": "#F6F3F2",
+    "highlightYellow": "#F4C542",
+    "bodyTextDark": "#1C1B1B",
+    "bodyTextMid": "#4A454D",
+    "navTextWhite": "#FAF8F2",
+    "labelCategory": "#765B00",
+    "sectionDivider": "#25113B",
+    "statCardBorder": "#25113B"
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Epilogue",
+      "ui": "Space Grotesk",
+      "body": "Manrope"
+    },
+    "scale": {
+      "h1_hero": {
+        "font": "Epilogue",
+        "weight": 900,
+        "style": "Black",
+        "size": "96px",
+        "lineHeight": "96px",
+        "letterSpacing": "0px",
+        "color": "#25113B",
+        "note": "Lines 2–3 wrapped in yellow highlight background #F4C542"
+      },
+      "label_section": {
+        "font": "Space Grotesk",
+        "weight": 400,
+        "style": "Regular",
+        "size": "14px",
+        "lineHeight": "20px",
+        "letterSpacing": "1.4px",
+        "textTransform": "uppercase",
+        "color": "#765B00",
+        "example": "ARQUIVO DE DIGNIDADE"
+      },
+      "body_hero": {
+        "font": "Manrope",
+        "weight": 400,
+        "style": "Regular",
+        "size": "20px",
+        "lineHeight": "32.5px",
+        "letterSpacing": "0px",
+        "color": "#4A454D"
+      },
+      "h3_card_name": {
+        "font": "Epilogue",
+        "weight": 800,
+        "style": "ExtraBold",
+        "size": "36px",
+        "lineHeight": "40px",
+        "letterSpacing": "0px",
+        "color": "#1C1B1B",
+        "example": "António, 54 / Maria do Carmo"
+      },
+      "card_location": {
+        "font": "Space Grotesk",
+        "weight": 400,
+        "style": "Regular",
+        "size": "12px",
+        "lineHeight": "16px",
+        "letterSpacing": "0px",
+        "example": "Arroios, LX"
+      },
+      "nav_link": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "style": "Bold",
+        "size": "14px",
+        "lineHeight": "20px",
+        "letterSpacing": "0px",
+        "textTransform": "uppercase",
+        "color": "#FAF8F2",
+        "example": "SOBRE / DADOS / HISTÓRIAS"
+      },
+      "filter_tag": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "style": "Bold",
+        "size": "12px",
+        "lineHeight": "16px",
+        "letterSpacing": "0px",
+        "textAlign": "center",
+        "textTransform": "uppercase",
+        "colorActive": "#24103A",
+        "colorInactive": "#FAF8F2",
+        "example": "TODOS / EMPREGO / SAÚDE MENTAL"
+      },
+      "cta_link": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "style": "Bold",
+        "size": "14px",
+        "lineHeight": "20px",
+        "letterSpacing": "0px",
+        "textTransform": "uppercase",
+        "example": "LER HISTÓRIA"
+      }
+    }
+  },
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "2xl": "48px",
+    "3xl": "64px",
+    "4xl": "80px",
+    "5xl": "128px"
+  },
+  "layout": {
+    "pageMaxWidth": "1280px",
+    "mainContainer": {
+      "flow": "vertical",
+      "width": "1280px",
+      "height": "hug (3039.5px)",
+      "padding": {
+        "top": "128px",
+        "right": "32px",
+        "bottom": "80px",
+        "left": "32px"
+      },
+      "gap": "64px"
+    }
+  },
+  "components": {
+    "topNavBar": {
+      "flow": "horizontal",
+      "width": "1280px",
+      "height": "84px",
+      "justify": "space-between",
+      "padding": {
+        "top": "24px",
+        "right": "32px",
+        "bottom": "24px",
+        "left": "32px"
+      },
+      "background": "#24103A",
+      "items": ["Sobre", "Dados", "Histórias", "Blog", "Participar"],
+      "note": "5 links + CTA. Decisão de produto (2026-04-20): manter superset do Figma com Blog + Participar e CTA 'Encontrar Serviços' visível em desktop.",
+      "navLinksContainer": {
+        "flow": "horizontal",
+        "height": "hug (28px)",
+        "gap": "32px"
+      },
+      "navLink": {
+        "flow": "vertical",
+        "height": "hug (20px)",
+        "opacity_inactive": "80%"
+      },
+      "ctaButton": {
+        "label": "Encontrar Serviços",
+        "href": "servicos.html",
+        "background": "#F4C542",
+        "color": "#24103A",
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "13px",
+        "letterSpacing": "1.3px",
+        "textTransform": "uppercase",
+        "padding": "9px 20px"
+      },
+      "menuIcon": {
+        "visibility": "mobile-only (≤860px)",
+        "border": "1px solid rgba(255,255,255,.3)",
+        "color": "#FAF8F2",
+        "note": "hamburger abre drawer; handler pendente (ver docs/TODO.md)"
+      }
+    },
+    "heroSection": {
+      "flow": "grid",
+      "width": "1216px",
+      "height": "485.5px",
+      "grid": {
+        "rows": 1,
+        "columns": 12,
+        "rowGap": "32px",
+        "columnGap": "32px"
+      },
+      "innerContainer": {
+        "flow": "vertical",
+        "width": "fill (800px)",
+        "height": "hug (453.5px)",
+        "gap": "16px",
+        "gridColumnSpan": 8
+      },
+      "headingContainer": {
+        "flow": "vertical",
+        "width": "fill (800px)",
+        "height": "hug (289.5px)"
+      },
+      "labelContainer": {
+        "flow": "vertical",
+        "width": "fill (800px)",
+        "height": "hug (20px)"
+      },
+      "h1TextElement": {
+        "width": "758.5px",
+        "height": "96px"
+      },
+      "paragraphContainer": {
+        "flow": "vertical",
+        "width": "fixed (672px)",
+        "maxWidth": "672px",
+        "height": "hug (112px)",
+        "paddingTop": "14px"
+      }
+    },
+    "filterBar": {
+      "name": "Section - Filters",
+      "flow": "horizontal",
+      "width": "fill (1216px)",
+      "height": "hug (107px)",
+      "justify": "space-between",
+      "padding": "32px",
+      "background": "#25113B",
+      "filterTagsContainer": {
+        "flow": "horizontal",
+        "gap": "implied"
+      },
+      "filterTag": {
+        "flow": "vertical",
+        "width": "hug (~70px)",
+        "height": "hug (34px)",
+        "padding": {
+          "top": "9px",
+          "right": "16px",
+          "bottom": "9px",
+          "left": "16px"
+        },
+        "backgroundActive": "#F4C542",
+        "backgroundInactive": "transparent"
+      }
+    },
+    "storyGrid": {
+      "name": "Section - Story Grid",
+      "flow": "grid",
+      "width": "1216px",
+      "height": "1519px",
+      "grid": {
+        "rows": 3,
+        "columns": 3,
+        "rowGap": "48px",
+        "columnGap": "48px"
+      }
+    },
+    "storyCard_small": {
+      "name": "Article - Story Card 1 / 3 / 5 / 6",
+      "description": "Small vertical card — António, Ricardo, Inês",
+      "flow": "vertical",
+      "width": "fill (373.33px)",
+      "height": "hug (712.67px)",
+      "gap": "16px",
+      "gridColumnSpan": 1,
+      "gridRowSpan": 1,
+      "photo": {
+        "tag": "<img>",
+        "altRequired": true,
+        "altPattern": "Retrato de {Nome}, {Bairro} — testemunho sobre {categoria}",
+        "loading": "lazy",
+        "decoding": "async",
+        "aspectRatio": "4 / 3",
+        "objectFit": "cover",
+        "note": "Conteúdo (identifica a pessoa da história) — exige <img alt>, não background-image."
+      },
+      "categoryBadge": {
+        "border": "1px solid #765B00",
+        "padding": {
+          "top": "4px",
+          "right": "8px",
+          "bottom": "4px",
+          "left": "8px"
+        },
+        "background": "transparent",
+        "textColor": "#765B00"
+      },
+      "infoRow": {
+        "flow": "horizontal",
+        "width": "fill (373.33px)",
+        "height": "hug (34px)",
+        "justify": "space-between",
+        "paddingTop": "8px"
+      },
+      "heading": {
+        "flow": "vertical",
+        "width": "fill (373.33px)",
+        "height": "hug (40px)"
+      },
+      "descriptionContainer": {
+        "flow": "vertical",
+        "width": "fill (373.33px)",
+        "height": "hug (80px)",
+        "paddingBottom": "8px"
+      },
+      "ctaContainer": {
+        "flow": "horizontal",
+        "width": "fill (373.33px)",
+        "height": "hug (20px)"
+      }
+    },
+    "storyCard_feature": {
+      "name": "Article - Story Card 2 - Bento Influencer",
+      "description": "Large horizontal card — Maria do Carmo",
+      "flow": "horizontal",
+      "width": "fill (794.67px)",
+      "height": "fixed (712.66px)",
+      "padding": "32px",
+      "gap": "32px",
+      "background": "#F6F3F2",
+      "gridColumnStart": 2,
+      "gridColumnSpan": 2,
+      "gridRowSpan": 1,
+      "photo": {
+        "tag": "<img>",
+        "altRequired": true,
+        "altPattern": "Retrato de {Nome}, {Bairro} — testemunho sobre {categoria}",
+        "loading": "lazy",
+        "decoding": "async",
+        "objectFit": "cover",
+        "fills": "½ do card (grid 1fr 1fr)",
+        "note": "Conteúdo (identifica a pessoa da história) — exige <img alt>, não background-image."
+      },
+      "contentContainer": {
+        "flow": "vertical",
+        "width": "fill (349.33px)",
+        "height": "fill (648.66px)"
+      },
+      "headingContainer": {
+        "flow": "vertical",
+        "width": "fill (349.33px)",
+        "height": "hug (120px)",
+        "paddingBottom": "24px"
+      },
+      "descriptionContainer": {
+        "flow": "vertical",
+        "width": "fill (349.33px)",
+        "height": "hug (140px)"
+      }
+    },
+    "storyCard_structural": {
+      "name": "Article - Story Card 4",
+      "description": "Dark structural context CTA block",
+      "flow": "vertical",
+      "width": "fill (1216px)",
+      "height": "fixed (216px)",
+      "background": "#24103A",
+      "gridColumnSpan": 3
+    },
+    "newsletterCTA": {
+      "name": "Section - Newsletter / CTA",
+      "flow": "grid",
+      "width": "1216px",
+      "height": "248px",
+      "grid": {
+        "rows": 1,
+        "columns": 2,
+        "rowGap": "64px",
+        "columnGap": "64px"
+      },
+      "borderTop": {
+        "width": "8px",
+        "color": "#25113B"
+      }
+    },
+    "footer": {
+      "name": "Footer Execution",
+      "flow": "grid",
+      "width": "1280px",
+      "height": "366px",
+      "grid": {
+        "rows": 1,
+        "columns": 4,
+        "rowGap": "48px",
+        "columnGap": "48px"
+      },
+      "borderTop": {
+        "width": "8px",
+        "color": "#25113B"
+      },
+      "background": "#24103A"
+    }
+  }
+}
