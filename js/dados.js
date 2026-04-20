@@ -16,7 +16,7 @@ class LiDataCards extends LiSection {
     .num { font-family: var(--font-display); font-weight: 900; font-size: 3.2rem; line-height: .95; letter-spacing: -.03em; margin-bottom: .6rem; }
     .t { font-family: var(--font-display); font-weight: 800; font-size: 1rem; margin-bottom: .4rem; }
     .d { font-size: .82rem; line-height: 1.55; opacity: .75; flex: 1; }
-    .chart { height: 80px; margin-top: .8rem; background: linear-gradient(to top, rgba(22,12,48,.15), transparent); display: flex; align-items: flex-end; gap: 4px; padding: 0 .3rem; }
+    .chart { height: 80px; margin-top: .8rem; background: linear-gradient(to top, rgba(36,16,58,.15), transparent); display: flex; align-items: flex-end; gap: 4px; padding: 0 .3rem; }
     .bar { flex: 1; background: var(--purple-dark); opacity: .7; }
     .card.purple .bar { background: var(--yellow); }
     .more { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; margin-top: .8rem; }
@@ -89,7 +89,7 @@ class LiIntersection extends LiSection {
     .sub { color: rgba(255,255,255,.65); font-size: .95rem; line-height: 1.6; }
     .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
     .card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); padding: 1.8rem; transition: all .2s; cursor: pointer; }
-    .card:hover { border-color: var(--yellow); background: rgba(232,184,67,.06); }
+    .card:hover { border-color: var(--yellow); background: rgba(244,197,66,.06); }
     .ic { width: 36px; height: 36px; background: var(--yellow); color: var(--purple-dark); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
     .t { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: .6rem; }
     .d { font-size: .85rem; line-height: 1.55; color: rgba(255,255,255,.6); margin-bottom: .8rem; }
@@ -125,10 +125,10 @@ customElements.define('li-intersection', LiIntersection);
 
 class LiDataExport extends LiSection {
   styles() { return `
-    section { background: var(--cream); padding: 5rem 2rem; border-top: 1px solid rgba(26,16,48,.1); }
+    section { background: var(--cream); padding: 5rem 2rem; border-top: 1px solid rgba(28,27,27,.1); }
     .inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1.5rem; align-items: center; }
     h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.5rem, 3vw, 2.2rem); text-transform: uppercase; color: var(--text-dark); line-height: 1.1; margin-bottom: .8rem; }
-    .sub { font-size: .9rem; color: rgba(26,16,48,.65); max-width: 44ch; line-height: 1.6; }
+    .sub { font-size: .9rem; color: rgba(28,27,27,.65); max-width: 44ch; line-height: 1.6; }
     .btn { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem; font-family: var(--font-display); font-weight: 800; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: all .2s; border: 2px solid; }
     .btn.dark { background: var(--purple-dark); color: #fff; border-color: var(--purple-dark); }
     .btn.dark:hover { background: #fff; color: var(--purple-dark); }

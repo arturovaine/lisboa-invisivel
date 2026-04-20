@@ -10,7 +10,7 @@ class LiServicesList extends LiSection {
     section { background: var(--cream); padding: 3rem 2rem 5rem; }
     .inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; align-items: start; }
     .col-list { display: flex; flex-direction: column; gap: 1rem; }
-    .svc-head { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: rgba(26,16,48,.5); margin-bottom: .5rem; }
+    .svc-head { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: rgba(28,27,27,.5); margin-bottom: .5rem; }
     .svc { background: #fff; padding: 1.5rem 1.8rem; border-left: 4px solid var(--yellow); display: grid; grid-template-columns: 1fr auto; gap: 1rem; }
     .svc.purple { background: var(--purple-dark); color: #fff; border-left-color: var(--yellow); }
     .svc .tag { display: inline-block; background: var(--yellow); color: var(--purple-dark); font-family: var(--font-display); font-weight: 700; font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; padding: .2rem .6rem; margin-bottom: .6rem; }
@@ -28,28 +28,28 @@ class LiServicesList extends LiSection {
     .emerg-title { display: flex; flex-direction: column; font-family: var(--font-display); font-weight: 900; font-size: 1.15rem; line-height: 1.05; text-transform: uppercase; letter-spacing: .02em; }
     .emerg-ast { font-family: var(--font-display); font-weight: 900; font-size: 1.3rem; line-height: 1; color: var(--purple-dark); }
     .emerg-primary { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1.2rem; }
-    .erow { display: flex; align-items: center; justify-content: space-between; padding: .7rem 0; border-bottom: 1px solid rgba(22,12,48,.25); gap: .8rem; transition: transform .15s; }
+    .erow { display: flex; align-items: center; justify-content: space-between; padding: .7rem 0; border-bottom: 1px solid rgba(36,16,58,.25); gap: .8rem; transition: transform .15s; }
     .erow:hover { transform: translateX(3px); }
-    .erow:last-child { border-bottom: 1px solid rgba(22,12,48,.25); }
+    .erow:last-child { border-bottom: 1px solid rgba(36,16,58,.25); }
     .ecol { display: flex; flex-direction: column; gap: .2rem; }
-    .ename { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(22,12,48,.7); }
+    .ename { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(36,16,58,.7); }
     .etel { font-family: var(--font-display); font-weight: 900; font-size: 2rem; line-height: 1; letter-spacing: -.02em; color: var(--purple-dark); }
     .earrow { font-family: var(--font-display); font-weight: 900; font-size: 1.4rem; color: var(--purple-dark); }
-    .emerg-sec { display: flex; flex-direction: column; gap: 0; padding-top: .4rem; border-top: 1px dashed rgba(22,12,48,.25); }
+    .emerg-sec { display: flex; flex-direction: column; gap: 0; padding-top: .4rem; border-top: 1px dashed rgba(36,16,58,.25); }
     .srow { display: flex; justify-content: space-between; align-items: center; padding: .55rem 0; font-family: var(--font-display); }
-    .srow + .srow { border-top: 1px solid rgba(22,12,48,.12); }
-    .sname { font-weight: 700; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(22,12,48,.75); }
+    .srow + .srow { border-top: 1px solid rgba(36,16,58,.12); }
+    .sname { font-weight: 700; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(36,16,58,.75); }
     .stel { font-weight: 800; font-size: .95rem; color: var(--purple-dark); letter-spacing: .02em; }
 
     .map { background: #fff; padding: 1.5rem; }
     .map-box { height: 280px; width: 100%; background: #e9e3d3; position: relative; overflow: hidden; }
-    .map-box.loading::before { content: '⌖ A carregar mapa…'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: rgba(26,16,48,.4); font-family: var(--font-display); font-weight: 700; font-size: .75rem; letter-spacing: .15em; text-transform: uppercase; }
+    .map-box.loading::before { content: '⌖ A carregar mapa…'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: rgba(28,27,27,.4); font-family: var(--font-display); font-weight: 700; font-size: .75rem; letter-spacing: .15em; text-transform: uppercase; }
     .leaflet-popup-content-wrapper { border-radius: 0; }
     .leaflet-popup-content { font-family: var(--font-body); font-size: .8rem; line-height: 1.4; margin: .75rem 1rem; }
     .leaflet-popup-content strong { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: .7rem; letter-spacing: .08em; color: var(--purple-dark); display: block; margin-bottom: .3rem; }
     .map button { width: 100%; margin-top: 1rem; background: var(--purple-dark); color: #fff; border: none; font-family: var(--font-display); font-weight: 800; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; padding: .9rem; cursor: pointer; }
 
-    .ver { margin-top: 1rem; background: #fff; padding: 1rem 1.2rem; border-left: 3px solid var(--yellow); font-size: .78rem; line-height: 1.5; color: rgba(26,16,48,.65); }
+    .ver { margin-top: 1rem; background: #fff; padding: 1rem 1.2rem; border-left: 3px solid var(--yellow); font-size: .78rem; line-height: 1.5; color: rgba(28,27,27,.65); }
 
     @media (max-width: 860px) { .inner { grid-template-columns: 1fr; } .side { position: static; } }
   `;}
@@ -120,7 +120,7 @@ class LiServicesList extends LiSection {
       }).addTo(map);
       const icon = L.divIcon({
         className: 'li-pin',
-        html: '<div style="width:26px;height:26px;background:#E8B843;border:3px solid #160C30;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 6px rgba(0,0,0,.35)"></div>',
+        html: '<div style="width:26px;height:26px;background:#F4C542;border:3px solid #24103A;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 6px rgba(0,0,0,.35)"></div>',
         iconSize: [26,26], iconAnchor: [13,26]
       });
       const markers = services.map(s => L.marker([s.lat, s.lng], { icon })

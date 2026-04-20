@@ -10,7 +10,7 @@ class LiManifesto extends LiSection {
     .inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; align-items: start; }
     h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 4vw, 3.2rem); text-transform: uppercase; line-height: 1.05; color: var(--text-dark); margin-bottom: 2rem; max-width: 20ch; }
     h2 em { font-style: normal; background: var(--yellow); padding: 0 .15em; }
-    p { font-size: 1rem; line-height: 1.75; color: rgba(26,16,48,.75); margin-bottom: 1rem; max-width: 60ch; }
+    p { font-size: 1rem; line-height: 1.75; color: rgba(28,27,27,.75); margin-bottom: 1rem; max-width: 60ch; }
     .card { background: var(--purple-dark); color: #fff; padding: 2.5rem; position: relative; }
     .card::after { content: '◎'; position: absolute; top: 1.8rem; right: 1.8rem; color: var(--yellow); font-size: 1.5rem; }
     .card h3 { font-family: var(--font-display); font-weight: 800; font-size: 1rem; letter-spacing: .12em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1rem; }
@@ -50,7 +50,7 @@ class LiPillarsOfAction extends LiSection {
     .card { background: #fff; border-left: 4px solid var(--yellow); padding: 2rem; }
     .ic { width: 40px; height: 40px; background: var(--yellow); color: var(--purple-dark); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1.2rem; }
     .t { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; color: var(--text-dark); margin-bottom: .8rem; }
-    .d { font-size: .9rem; line-height: 1.65; color: rgba(26,16,48,.65); }
+    .d { font-size: .9rem; line-height: 1.65; color: rgba(28,27,27,.65); }
     @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
   `;}
   render() {
@@ -80,7 +80,7 @@ class LiEthics extends LiSection {
     section { background: var(--cream); padding: 5rem 2rem; }
     .inner { max-width: 900px; margin: 0 auto; border-left: 4px solid var(--yellow); padding-left: 2rem; }
     h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.5rem, 3vw, 2.2rem); text-transform: uppercase; color: var(--text-dark); margin-bottom: 1.5rem; }
-    .quote { font-size: 1.1rem; line-height: 1.7; color: rgba(26,16,48,.75); font-style: italic; margin-bottom: 1rem; }
+    .quote { font-size: 1.1rem; line-height: 1.7; color: rgba(28,27,27,.75); font-style: italic; margin-bottom: 1rem; }
     .sig { font-family: var(--font-display); font-weight: 700; font-size: .75rem; letter-spacing: .15em; text-transform: uppercase; color: var(--yellow-dark); }
   `;}
   render() { return `

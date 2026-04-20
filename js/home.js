@@ -19,7 +19,7 @@ class LiStoriesPreview extends LiSection {
     .tag { position: absolute; bottom: 1rem; left: 1rem; font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; background: var(--yellow); color: var(--purple-dark); padding: .3rem .7rem; }
     .body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; gap: .6rem; }
     h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: var(--text-dark); }
-    .q { font-size: .9rem; line-height: 1.6; color: rgba(26,16,48,.65); flex: 1; }
+    .q { font-size: .9rem; line-height: 1.6; color: rgba(28,27,27,.65); flex: 1; }
     .read { font-family: var(--font-display); font-weight: 700; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dark); margin-top: .5rem; border-bottom: 2px solid var(--yellow); align-self: flex-start; padding-bottom: .2rem; }
     @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
   `;}
@@ -60,10 +60,10 @@ class LiMyths extends LiSection {
     .inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
     .myth { background: var(--cream); color: var(--text-dark); padding: 2.5rem; }
     .badge { display: inline-block; background: var(--yellow); color: var(--purple-dark); font-family: var(--font-display); font-weight: 900; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; padding: .35rem .9rem; margin-bottom: 1.5rem; }
-    .lbl { font-family: var(--font-display); font-weight: 700; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(26,16,48,.45); margin-bottom: .5rem; }
-    .mt { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; line-height: 1.4; color: var(--text-dark); margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(26,16,48,.12); }
+    .lbl { font-family: var(--font-display); font-weight: 700; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(28,27,27,.45); margin-bottom: .5rem; }
+    .mt { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; line-height: 1.4; color: var(--text-dark); margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(28,27,27,.12); }
     .fl { text-align: right; }
-    .ft { font-size: .95rem; line-height: 1.65; color: rgba(26,16,48,.7); margin-bottom: .5rem; }
+    .ft { font-size: .95rem; line-height: 1.65; color: rgba(28,27,27,.7); margin-bottom: .5rem; }
     .fn { font-family: var(--font-display); font-weight: 900; font-size: 3rem; color: var(--text-dark); text-align: right; }
     .right h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.5rem, 4vw, 3.5rem); text-transform: uppercase; color: #fff; line-height: 1.0; margin-bottom: 1rem; }
     .right p { color: rgba(255,255,255,.6); font-size: 1rem; line-height: 1.65; margin-bottom: 2rem; }
@@ -123,9 +123,9 @@ class LiCategories extends LiSection {
     section { background: var(--cream); padding: 5rem 2rem; }
     .inner { max-width: 1200px; margin: 0 auto; }
     h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.5rem, 3vw, 2.2rem); text-transform: uppercase; letter-spacing: .05em; color: var(--text-dark); margin-bottom: 2rem; }
-    .grid { display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid rgba(26,16,48,.12); }
-    .cat { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .7rem; padding: 2rem 1rem; border-right: 1px solid rgba(26,16,48,.12); border-bottom: 1px solid rgba(26,16,48,.12); cursor: pointer; transition: background .2s; background: #fff; }
-    .cat:hover { background: rgba(232,184,67,.12); }
+    .grid { display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid rgba(28,27,27,.12); }
+    .cat { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .7rem; padding: 2rem 1rem; border-right: 1px solid rgba(28,27,27,.12); border-bottom: 1px solid rgba(28,27,27,.12); cursor: pointer; transition: background .2s; background: #fff; }
+    .cat:hover { background: rgba(244,197,66,.12); }
     .cat.active { background: var(--yellow); }
     .cat.dark { background: var(--purple-dark); }
     .cat:nth-child(4n) { border-right: none; }
@@ -135,7 +135,7 @@ class LiCategories extends LiSection {
     .cat.dark .ic { color: var(--yellow); opacity: 1; }
     .l { font-family: var(--font-display); font-weight: 700; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dark); text-align: center; }
     .cat.dark .l { color: var(--yellow); }
-    @media (max-width: 760px) { .grid { grid-template-columns: repeat(2,1fr); } .cat { border-right: 1px solid rgba(26,16,48,.12) !important; } .cat:nth-child(2n) { border-right: none !important; } }
+    @media (max-width: 760px) { .grid { grid-template-columns: repeat(2,1fr); } .cat { border-right: 1px solid rgba(28,27,27,.12) !important; } .cat:nth-child(2n) { border-right: none !important; } }
   `;}
   render() {
     const cats = [
