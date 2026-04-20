@@ -6,10 +6,11 @@
 <title>Histórias · Lisboa Invisível</title>
 <link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Inter', sans-serif; background: #F4EFE6; color: #1A1030; overflow-x: hidden; }
+  body { font-family: 'Manrope', sans-serif; background: #FAF8F2; color: #1C1B1B; overflow-x: hidden; }
   html { scroll-behavior: smooth; }
 </style>
 </head>
@@ -17,15 +18,14 @@
 
 <li-navbar active="historias"></li-navbar>
 
-<li-page-hero bg="./img/man-steps.jpg"
+<li-page-hero variant="light"
   kicker="Arquivo de Dignidade"
   sub="Um documentário digital vivo sobre quem habita às margens da capital. Onde o dado estatístico encontra o rosto humano que Lisboa insiste em não ver.">
-  Histórias reais, <span class="accent">causas estruturais.</span>
+  Histórias reais, <mark>causas estruturais.</mark>
 </li-page-hero>
 
-<li-data-filter></li-data-filter>
+<li-stories-filter></li-stories-filter>
 <li-stories-grid></li-stories-grid>
-<li-context-stat></li-context-stat>
 <li-newsletter title="Testemunhe a mudança."></li-newsletter>
 <li-footer></li-footer>
 
