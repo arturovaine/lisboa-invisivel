@@ -10,30 +10,58 @@ class LiPageHero extends LiSection {
     .hero { position: relative; min-height: 62vh; display: flex; align-items: center; overflow: hidden; background: var(--purple-dark); }
     .hero.tall { min-height: 92vh; }
     .bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .35; filter: grayscale(.3) contrast(1.1); }
-    .overlay { position: absolute; inset: 0; background: linear-gradient(110deg, rgba(22,12,48,.97) 0%, rgba(22,12,48,.82) 45%, rgba(22,12,48,.4) 100%); }
-    .content { position: relative; z-index: 2; padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; width: 100%; }
-    .kicker { font-family: var(--font-display); font-weight: 800; font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; display: inline-block; }
+    .overlay { position: absolute; inset: 0; background: linear-gradient(110deg, rgba(36,16,58,.97) 0%, rgba(36,16,58,.82) 45%, rgba(36,16,58,.4) 100%); }
+    .content { position: relative; z-index: 2; padding: 5rem 2rem; max-width: 1216px; margin: 0 auto; width: 100%; }
+    .kicker { font-family: var(--font-ui); font-weight: 400; font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1.2rem; display: inline-block; }
     h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.5rem, 7vw, 6rem); line-height: .95; color: #fff; letter-spacing: -.03em; max-width: 16ch; animation: in .9s cubic-bezier(.16,1,.3,1) both; }
     h1 mark { background: var(--yellow); color: var(--purple-dark); padding: 0 .12em; display: inline; }
     h1 .accent { color: var(--yellow); }
-    .sub { margin-top: 1.5rem; font-size: 1.05rem; color: rgba(255,255,255,.72); max-width: 54ch; line-height: 1.6; animation: in .9s .15s cubic-bezier(.16,1,.3,1) both; }
+    .sub { margin-top: 1.5rem; font-family: var(--font-body); font-size: 1.05rem; color: rgba(255,255,255,.72); max-width: 54ch; line-height: 1.6; animation: in .9s .15s cubic-bezier(.16,1,.3,1) both; }
     .actions { margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap; animation: in .9s .28s cubic-bezier(.16,1,.3,1) both; }
-    .btn-primary, .btn-outline, .btn-text { font-family: var(--font-display); font-weight: 800; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; padding: 1rem 1.8rem; cursor: pointer; transition: all .2s; border: 2px solid transparent; }
+    .btn-primary, .btn-outline, .btn-text { font-family: var(--font-ui); font-weight: 700; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; padding: 1rem 1.8rem; cursor: pointer; transition: all .2s; border: 2px solid transparent; }
     .btn-primary { background: var(--yellow); color: var(--purple-dark); }
-    .btn-primary:hover { background: #d4a52d; transform: translateY(-1px); }
+    .btn-primary:hover { background: var(--yellow-dark); transform: translateY(-1px); }
     .btn-outline { background: transparent; color: #fff; border-color: rgba(255,255,255,.7); }
     .btn-outline:hover { border-color: #fff; transform: translateY(-1px); }
     .btn-text { background: none; border: none; color: rgba(255,255,255,.7); text-decoration: underline; text-underline-offset: 4px; padding: 1rem 0; }
     .btn-text:hover { color: #fff; }
+
+    /* ── Light variant (Histórias) ───────────────────────────────── */
+    .hero.light { background: var(--cream); min-height: auto; }
+    .hero.light .bg, .hero.light .overlay { display: none; }
+    .hero.light .content { padding: 8rem 2rem 3rem; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 2rem; }
+    .hero.light .inner { grid-column: 1 / span 8; display: flex; flex-direction: column; gap: 1rem; }
+    .hero.light .kicker { font-family: var(--font-ui); font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: .1em; text-transform: uppercase; color: var(--label-category); margin: 0; }
+    .hero.light h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(3rem, 8vw, 96px); line-height: 1; letter-spacing: 0; color: var(--purple-mid); max-width: none; }
+    .hero.light h1 mark { background: var(--yellow); color: var(--purple-mid); padding: 0 .08em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero.light .sub { font-family: var(--font-body); font-weight: 400; font-size: 20px; line-height: 32.5px; color: var(--text-mid); max-width: 672px; padding-top: 14px; margin-top: 0; }
+
     @keyframes in { from { opacity:0; transform: translateY(40px);} to {opacity:1; transform:translateY(0);} }
+    @media (max-width: 860px) { .hero.light .content { grid-template-columns: 1fr; padding: 5rem 1.5rem 2rem; } .hero.light .inner { grid-column: 1; } }
   `;}
   render() {
+    const variant = this.getAttribute('variant') || '';
     const bg = this.getAttribute('bg') || IMG.heroStreet;
     const kicker = this.getAttribute('kicker') || '';
     const tall = this.hasAttribute('tall') ? 'tall' : '';
     const title = this.innerHTML || 'Tornar <mark>visível</mark> o que a cidade insiste em não ver.';
     const sub = this.getAttribute('sub') || '';
     const actions = this.getAttribute('actions') || '';
+
+    if (variant === 'light') {
+      return `
+        <section class="hero light">
+          <div class="content">
+            <div class="inner">
+              ${kicker ? `<span class="kicker">${kicker}</span>` : ''}
+              <h1>${title}</h1>
+              ${sub ? `<p class="sub">${sub}</p>` : ''}
+              ${actions ? `<div class="actions">${actions}</div>` : ''}
+            </div>
+          </div>
+        </section>
+      `;
+    }
     return `
       <section class="hero ${tall}">
         <div class="bg" style="background-image:url('${bg}')"></div>
@@ -96,14 +124,14 @@ class LiMission extends LiSection {
     section { background: var(--cream-dark); padding: 6rem 2rem; }
     .inner { max-width: 1200px; margin: 0 auto; }
     h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.05; text-transform: uppercase; color: var(--text-dark); max-width: 22ch; margin-bottom: 4rem; }
-    .pillars { display: grid; grid-template-columns: repeat(3,1fr); border-top: 2px solid rgba(26,16,48,.15); }
-    .pillar { padding: 2.5rem 2rem 2.5rem 0; border-right: 1px solid rgba(26,16,48,.1); }
+    .pillars { display: grid; grid-template-columns: repeat(3,1fr); border-top: 2px solid rgba(28,27,27,.15); }
+    .pillar { padding: 2.5rem 2rem 2.5rem 0; border-right: 1px solid rgba(28,27,27,.1); }
     .pillar:last-child { border-right: none; padding-right: 0; }
     .pillar:not(:first-child) { padding-left: 2rem; }
     .num { font-family: var(--font-display); font-weight: 900; font-size: 2.5rem; color: var(--yellow); line-height: 1; margin-bottom: .8rem; }
     .t { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dark); margin-bottom: .8rem; }
-    .d { font-size: .95rem; line-height: 1.65; color: rgba(26,16,48,.65); }
-    @media (max-width: 760px) { .pillars { grid-template-columns: 1fr; } .pillar { border-right: none; border-bottom: 1px solid rgba(26,16,48,.1); padding: 1.5rem 0 !important; } }
+    .d { font-size: .95rem; line-height: 1.65; color: rgba(28,27,27,.65); }
+    @media (max-width: 760px) { .pillars { grid-template-columns: 1fr; } .pillar { border-right: none; border-bottom: 1px solid rgba(28,27,27,.1); padding: 1.5rem 0 !important; } }
   `;}
   render() {
     const pillars = [
@@ -131,7 +159,7 @@ class LiServicesCta extends LiSection {
     section { background: var(--cream); padding: 3rem 2rem 5rem; }
     .card { max-width: 1200px; margin: 0 auto; background: var(--yellow); padding: 3.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
     h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.8rem, 3.5vw, 2.8rem); text-transform: uppercase; line-height: 1.05; color: var(--purple-dark); }
-    .desc { font-size: .95rem; color: rgba(22,12,48,.7); margin-top: .5rem; max-width: 38ch; }
+    .desc { font-size: .95rem; color: rgba(36,16,58,.7); margin-top: .5rem; max-width: 38ch; }
     .actions { display: flex; gap: 1rem; flex-wrap: wrap; }
     .btn-map, .btn-emerg { display: flex; align-items: center; gap: .5rem; font-family: var(--font-display); font-weight: 800; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; padding: .9rem 1.5rem; cursor: pointer; transition: all .2s; border: 2px solid var(--purple-dark); }
     .btn-map { background: var(--purple-dark); color: #fff; }
@@ -160,12 +188,12 @@ class LiDataFilter extends LiSection {
   styles() { return `
     section { background: var(--cream); padding: 2rem 2rem 1rem; }
     .inner { max-width: 1200px; margin: 0 auto; }
-    .search { display: flex; align-items: center; gap: .75rem; background: #fff; border: 1px solid rgba(26,16,48,.12); padding: .9rem 1.2rem; margin-bottom: 1.5rem; }
+    .search { display: flex; align-items: center; gap: .75rem; background: #fff; border: 1px solid rgba(28,27,27,.12); padding: .9rem 1.2rem; margin-bottom: 1.5rem; }
     .search input { flex: 1; border: none; outline: none; font-family: var(--font-body); font-size: .95rem; color: var(--text-dark); background: none; }
-    .search input::placeholder { color: rgba(26,16,48,.4); }
+    .search input::placeholder { color: rgba(28,27,27,.4); }
     .chips { display: flex; gap: .6rem; flex-wrap: wrap; }
-    .chip { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; padding: .5rem 1rem; border: 1px solid rgba(26,16,48,.2); background: #fff; color: var(--text-dark); cursor: pointer; transition: all .2s; }
-    .chip:hover { background: rgba(232,184,67,.1); }
+    .chip { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; padding: .5rem 1rem; border: 1px solid rgba(28,27,27,.2); background: #fff; color: var(--text-dark); cursor: pointer; transition: all .2s; }
+    .chip:hover { background: rgba(244,197,66,.1); }
     .chip.active { background: var(--purple-dark); color: #fff; border-color: var(--purple-dark); }
     .chip.yellow.active { background: var(--yellow); color: var(--purple-dark); border-color: var(--yellow); }
   `;}
