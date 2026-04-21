@@ -51,17 +51,17 @@ class LiPillarsOfAction extends LiSection {
     .kicker { font-family: var(--font-display); font-weight: 800; font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--yellow-dark); margin-bottom: 1rem; }
     h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 4vw, 3rem); text-transform: uppercase; color: var(--text-dark); margin-bottom: 3rem; }
     .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
-    .card { background: #fff; border-left: 4px solid var(--yellow); padding: 2rem; }
-    .ic { width: 40px; height: 40px; background: var(--yellow); color: var(--purple-dark); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1.2rem; }
+    .card { background: var(--cream); padding: 2rem; }
+    .ic { width: 32px; height: 32px; display: block; margin-bottom: 1.2rem; }
     .t { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; color: var(--text-dark); margin-bottom: .8rem; }
     .d { font-size: .9rem; line-height: 1.65; color: rgba(28,27,27,.65); }
     @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
   `;}
   render() {
     const items = [
-      ['📊','Observatório','Mapeamento em tempo real do contexto urbano e recolha de dados estatísticos rigorosos sobre a população flutuante da cidade.'],
-      ['📢','Mobilização','Campanhas de sensibilização para a pressão política baseada em factos para garantir o direito à habitação e dignidade.'],
-      ['🤝','Apoio','Ligação direta entre quem precisa e a rede de assistência informal na Área Metropolitana de Lisboa.'],
+      { svg: 'chart-bars-yellow',  title: 'Observatório', desc: 'Mapeamento em tempo real do contexto urbano e recolha de dados estatísticos rigorosos sobre a população flutuante da cidade.' },
+      { svg: 'megaphone-yellow',   title: 'Mobilização',  desc: 'Campanhas de sensibilização para a pressão política baseada em factos para garantir o direito à habitação e dignidade.' },
+      { svg: 'donate-yellow',      title: 'Apoio',         desc: 'Ligação direta entre quem precisa e a rede de assistência informal na Área Metropolitana de Lisboa.' },
     ];
     return `
       <section>
@@ -69,8 +69,12 @@ class LiPillarsOfAction extends LiSection {
           <p class="kicker">Pillars of Action</p>
           <h2>O que fazemos</h2>
           <div class="grid">
-            ${items.map(([ic,t,d]) => `
-              <div class="card"><div class="ic">${ic}</div><div class="t">${t}</div><p class="d">${d}</p></div>
+            ${items.map(i => `
+              <div class="card">
+                <img class="ic" src="./assets/icons/${i.svg}.svg" alt="" aria-hidden="true" width="32" height="32">
+                <div class="t">${i.title}</div>
+                <p class="d">${i.desc}</p>
+              </div>
             `).join('')}
           </div>
         </div>
@@ -82,7 +86,7 @@ customElements.define('li-pillars-of-action', LiPillarsOfAction);
 class LiEthics extends LiSection {
   styles() { return `
     section { background: var(--cream); padding: 5rem 2rem; }
-    .inner { max-width: 900px; margin: 0 auto; border-left: 4px solid var(--yellow); padding-left: 2rem; }
+    .inner { max-width: 900px; margin: 0 auto; border-left: 12px solid #765B00; padding-left: 2rem; }
     h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.5rem, 3vw, 2.2rem); text-transform: uppercase; color: var(--text-dark); margin-bottom: 1.5rem; }
     .quote { font-size: 1.1rem; line-height: 1.7; color: rgba(28,27,27,.75); font-style: italic; margin-bottom: 1rem; }
     .sig { font-family: var(--font-display); font-weight: 700; font-size: .75rem; letter-spacing: .15em; text-transform: uppercase; color: var(--yellow-dark); }
@@ -101,21 +105,23 @@ customElements.define('li-ethics', LiEthics);
 
 class LiJoinCta extends LiSection {
   styles() { return `
-    section { background: #000; color: #fff; padding: 5rem 2rem; border-top: 4px solid var(--yellow); }
+    section { background: #000; color: #fff; padding: 5rem 2rem; }
     .inner { max-width: 1200px; margin: 0 auto; }
     h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 4vw, 3rem); text-transform: uppercase; line-height: 1.05; margin-bottom: 2rem; }
     .btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-    button { font-family: var(--font-display); font-weight: 800; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; padding: 1rem 1.8rem; border: 2px solid var(--yellow); background: var(--yellow); color: var(--purple-dark); cursor: pointer; transition: all .2s; }
-    button.outline { background: transparent; color: var(--yellow); }
-    button:hover { background: #fff; color: var(--purple-dark); border-color: #fff; }
+    button { font-family: var(--font-display); font-weight: 700; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; padding: 1rem 1.8rem; cursor: pointer; transition: all .2s; background: transparent; }
+    .btn-yellow { border: 2px solid var(--yellow); color: var(--yellow); }
+    .btn-yellow:hover { background: var(--yellow); color: #000; }
+    .btn-white { border: 2px solid #fff; color: #fff; }
+    .btn-white:hover { background: #fff; color: #000; }
   `;}
   render() { return `
     <section id="participar">
       <div class="inner">
         <h2>Faça parte da rede.<br>Ajude a mapear a mudança.</h2>
         <div class="btns">
-          <button>Torne-se Parceiro</button>
-          <button class="outline">Contactar Equipa</button>
+          <button class="btn-yellow">Torne-se Parceiro</button>
+          <button class="btn-white">Contactar Equipa</button>
         </div>
       </div>
     </section>`;
