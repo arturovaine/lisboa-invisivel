@@ -45,6 +45,10 @@ class LiStoriesGrid extends LiSection {
 
     /* ── Small card (positions 1, 3, 5, 6) ───────────────────────── */
     .card-small { display: flex; flex-direction: column; gap: 16px; background: transparent; }
+    .card-small .photo-wrap { position: relative; display: block; }
+    .card-small .photo-wrap::before, .card-small .photo-wrap::after { content: ''; position: absolute; width: 24px; height: 24px; z-index: 1; }
+    .card-small .photo-wrap::before { top: 0; left: 0; border-top: 3px solid var(--yellow); border-left: 3px solid var(--yellow); }
+    .card-small .photo-wrap::after { bottom: 0; right: 0; border-bottom: 3px solid var(--yellow); border-right: 3px solid var(--yellow); }
     .card-small .photo { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #ddd; }
     .card-small .cat { align-self: flex-start; font-family: var(--font-ui); font-weight: 700; font-size: 12px; line-height: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--label-category); border: 1px solid var(--label-category); padding: 4px 8px; background: transparent; }
     .card-small .info-row { display: flex; justify-content: space-between; align-items: baseline; padding-top: 8px; }
@@ -55,6 +59,10 @@ class LiStoriesGrid extends LiSection {
 
     /* ── Feature card (position 2, bento, spans 2 cols) ──────────── */
     .card-feature { grid-column: 2 / span 2; grid-row: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; background: var(--card-bg); padding: 32px; }
+    .card-feature .photo-wrap { position: relative; display: block; }
+    .card-feature .photo-wrap::before, .card-feature .photo-wrap::after { content: ''; position: absolute; width: 24px; height: 24px; z-index: 1; }
+    .card-feature .photo-wrap::before { top: 0; left: 0; border-top: 3px solid var(--yellow); border-left: 3px solid var(--yellow); }
+    .card-feature .photo-wrap::after { bottom: 0; right: 0; border-bottom: 3px solid var(--yellow); border-right: 3px solid var(--yellow); }
     .card-feature .photo { display: block; width: 100%; height: 100%; min-height: 400px; object-fit: cover; }
     .card-feature .content { display: flex; flex-direction: column; gap: 16px; }
     .card-feature .cat { align-self: flex-start; font-family: var(--font-ui); font-weight: 700; font-size: 12px; line-height: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--label-category); border: 1px solid var(--label-category); padding: 4px 8px; }
@@ -87,17 +95,19 @@ class LiStoriesGrid extends LiSection {
   render() {
     const small = [
       { pos: 'p1', name: 'António, 54',  loc: 'Arroios, LX',    cat: 'Documentação', img: IMG.antonio, quote: '"O meu nome existe, mas os papéis dizem o contrário. Sem o número na folha, não sou cidadão, sou apenas uma sombra que atravessa a Praça d…"' },
-      { pos: 'p3', name: 'Ricardo, 41',   loc: 'Marvila, LX',    cat: 'Emprego',      img: IMG.mattress, quote: 'Trabalhei 22 horas por dia sobre uma estrutura precária. O corpo não aguenta, a cabeça também não.' },
-      { pos: 'p5', name: 'Inês, 29',      loc: 'Arroios, LX',    cat: 'Habitação',    img: IMG.tentFlag, quote: 'Mãe de dois. A renda subiu, o ordenado não. O centro histórico fechou-nos as portas.' },
+      { pos: 'p3', name: 'Ricardo, 41',   loc: 'Marvila, LX',    cat: 'Emprego',      img: IMG.mattress, quote: '"Trabalho 12 horas, mas a minha conta bancária não me deixa alugar um quarto. O paradoxo de ser um trabalhador pobre numa cidade que só cresce…"' },
+      { pos: 'p5', name: 'Inês, 29',      loc: 'Arroios, LX',    cat: 'Habitação',    img: IMG.tentFlag, quote: 'Mãe de dois, Inês luta para manter o teto sobre a cabeça enquanto os despejos avançam no seu bairro. Uma história de resistência comunitária.' },
       { pos: 'p6', name: 'João, 38',      loc: 'Martim Moniz, LX', cat: 'Migração',   img: IMG.praca, quote: 'Os papéis ficaram na última morada. Desde aí, a cidade diz que não existo — e cada esquina confirma.' },
     ];
-    const feature = { name: 'Maria do Carmo', loc: 'Chelas, LX', cat: 'Habitação', img: IMG.vizinhanca, quote: 'Às vezes esquecemo-nos que uma vida cabe numa mala. A Maria partilha connosco o dia em que a sua vida se tornou portátil.' };
+    const feature = { name: 'Maria do Carmo', loc: '', cat: 'Saúde Mental', img: IMG.tentFlag, quote: 'A solidão não é a falta de pessoas, é a falta de visibilidade. Maria partilha como a invisibilidade social acelera o declínio da saúde mental em idosos isolados no centro histórico.' };
 
     const altFor = (s) => `Retrato de ${s.name}, ${s.loc} — testemunho sobre ${s.cat.toLowerCase()}`;
 
     const smallCard = (s) => `
       <article class="card-small ${s.pos}">
-        <img class="photo" src="${s.img}" alt="${altFor(s)}" loading="lazy" decoding="async">
+        <div class="photo-wrap">
+          <img class="photo" src="${s.img}" alt="${altFor(s)}" loading="lazy" decoding="async">
+        </div>
         <span class="cat">${s.cat}</span>
         <div class="info-row">
           <h3>${s.name}</h3>
