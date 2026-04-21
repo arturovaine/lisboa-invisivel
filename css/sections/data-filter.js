@@ -1,0 +1,12 @@
+export const dataFilterCSS = `
+  section { background: var(--cream); padding: 2rem 2rem 1rem; }
+  .inner { max-width: 1200px; margin: 0 auto; }
+  .search { display: flex; align-items: center; gap: .75rem; background: #fff; border: 1px solid rgba(28,27,27,.12); padding: .9rem 1.2rem; margin-bottom: 1.5rem; }
+  .search input { flex: 1; border: none; outline: none; font-family: var(--font-body); font-size: .95rem; color: var(--text-dark); background: none; }
+  .search input::placeholder { color: rgba(28,27,27,.4); }
+  .chips { display: flex; gap: .6rem; flex-wrap: wrap; }
+  .chip { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; padding: .5rem 1rem; border: 1px solid rgba(28,27,27,.2); background: #fff; color: var(--text-dark); cursor: pointer; transition: all .2s; }
+  .chip:hover { background: rgba(244,197,66,.1); }
+  .chip.active { background: var(--purple-dark); color: #fff; border-color: var(--purple-dark); }
+  .chip.yellow.active { background: var(--yellow); color: var(--purple-dark); border-color: var(--yellow); }
+`;

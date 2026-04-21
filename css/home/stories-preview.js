@@ -1,0 +1,18 @@
+export const storiesPreviewCSS = `
+  section { background: var(--cream); padding: 6rem 2rem; }
+  .inner { max-width: 1200px; margin: 0 auto; }
+  .head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
+  h2 { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 72px; line-height: 1; letter-spacing: 0px; text-transform: uppercase; color: var(--text-dark); }
+  h2 em { font-style: normal; background: var(--yellow); padding: 0 .15em; }
+  .see-all { font-family: var(--font-display); font-weight: 700; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dark); white-space: nowrap; border-bottom: 2px solid var(--yellow); padding-bottom: .3rem; }
+  .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+  .card { display: flex; flex-direction: column; background: #fff; overflow: hidden; transition: transform .25s; }
+  .card:hover { transform: translateY(-4px); }
+  .img { height: 280px; background-size: cover; background-position: center top; position: relative; }
+  .tag { position: absolute; bottom: 1rem; left: 1rem; font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; background: var(--yellow); color: var(--purple-dark); padding: .3rem .7rem; }
+  .body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; gap: .6rem; }
+  h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: var(--text-dark); }
+  .q { font-size: .9rem; line-height: 1.6; color: rgba(28,27,27,.65); flex: 1; }
+  .read { font-family: var(--font-display); font-weight: 700; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dark); margin-top: .5rem; border-bottom: 2px solid var(--yellow); align-self: flex-start; padding-bottom: .2rem; }
+  @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+`;

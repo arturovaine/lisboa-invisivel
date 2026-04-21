@@ -1,0 +1,13 @@
+export const newsletterCSS = `
+  section { background: var(--cream); padding: 5rem 2rem; border-top: 8px solid var(--section-divider); }
+  .inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .left h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 4vw, 3rem); text-transform: uppercase; color: var(--text-dark); line-height: 1.05; letter-spacing: -.02em; }
+  .left .desc { margin-top: 1rem; font-family: var(--font-body); font-weight: 400; font-size: 18px; line-height: 28px; letter-spacing: 0; color: rgba(28,27,27,.6); max-width: 42ch; }
+  .form { display: flex; gap: 0; }
+  input { flex: 1; background: rgba(28,27,27,.06); border: none; outline: none; padding: .9rem 1rem; font-family: var(--font-body); font-size: .95rem; color: var(--text-dark); }
+  input::placeholder { color: rgba(28,27,27,.35); }
+  .btn-sub { font-family: var(--font-display); font-weight: 800; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; background: var(--purple-dark); color: #fff; border: none; padding: .9rem 1.6rem; cursor: pointer; transition: background .2s; white-space: nowrap; }
+  .btn-sub:hover { background: var(--purple-light); }
+  .legal { margin-top: .75rem; font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; color: rgba(28,27,27,.35); }
+  @media (max-width: 760px) { .inner { grid-template-columns: 1fr; gap: 2rem; } }
+`;

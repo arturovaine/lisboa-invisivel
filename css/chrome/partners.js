@@ -1,0 +1,10 @@
+export const partnersCSS = `
+  section { background: var(--cream); padding: 5rem 2rem; border-top: 1px solid rgba(28,27,27,.1); border-bottom: 1px solid rgba(28,27,27,.1); }
+  .inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 2.5rem; text-align: center; }
+  .label { font-family: var(--font-display); font-weight: 700; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(28,27,27,.4); }
+  .partners { display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+  .partner { display: flex; align-items: center; opacity: .55; transition: opacity .2s; cursor: pointer; }
+  .partner:hover { opacity: 1; }
+  .partner img { display: block; height: var(--h, 36px); width: auto; }
+  .partner img.invert { filter: invert(1); }
+`;

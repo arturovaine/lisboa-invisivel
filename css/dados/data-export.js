@@ -1,0 +1,13 @@
+export const dataExportCSS = `
+  section { background: var(--cream); padding: 5rem 2rem; border-top: 1px solid rgba(28,27,27,.1); }
+  .inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1.5rem; align-items: center; }
+  h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.5rem, 3vw, 2.2rem); text-transform: uppercase; color: var(--text-dark); line-height: 1.1; margin-bottom: .8rem; }
+  .sub { font-size: .9rem; color: rgba(28,27,27,.65); max-width: 44ch; line-height: 1.6; }
+  .btn { display: flex; align-items: center; gap: .75rem; justify-content: center; padding: 1.5rem; font-family: var(--font-display); font-weight: 800; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: all .2s; border: 2px solid; }
+  .btn img { width: 18px; height: 18px; display: block; flex-shrink: 0; }
+  .btn.dark { background: var(--purple-dark); color: #fff; border-color: var(--purple-dark); }
+  .btn.dark:hover { background: #fff; color: var(--purple-dark); }
+  .btn.light { background: #fff; color: var(--purple-dark); border-color: var(--purple-dark); }
+  .btn.light:hover { background: var(--yellow); border-color: var(--yellow); }
+  @media (max-width: 860px) { .inner { grid-template-columns: 1fr; } }
+`;
