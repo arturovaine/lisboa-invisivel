@@ -11,8 +11,9 @@ class LiManifesto extends LiSection {
     h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 4vw, 3.2rem); text-transform: uppercase; line-height: 1.05; color: var(--text-dark); margin-bottom: 2rem; max-width: 20ch; }
     h2 em { font-style: normal; background: var(--yellow); padding: 0 .15em; }
     p { font-size: 1rem; line-height: 1.75; color: rgba(28,27,27,.75); margin-bottom: 1rem; max-width: 60ch; }
-    .card { background: var(--purple-dark); color: #fff; padding: 2.5rem; position: relative; }
-    .card::after { content: '◎'; position: absolute; top: 1.8rem; right: 1.8rem; color: var(--yellow); font-size: 1.5rem; }
+    .card { background: #000; color: #fff; padding: 2.5rem; position: relative; overflow: visible; }
+    .card .eye-badge { position: absolute; top: -1.1rem; right: -1.1rem; width: 52px; height: 52px; background: var(--yellow); display: flex; align-items: center; justify-content: center; }
+    .card .eye-badge img { width: 26px; height: 26px; display: block; }
     .card h3 { font-family: var(--font-display); font-weight: 800; font-size: 1rem; letter-spacing: .12em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1rem; }
     .card ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; font-size: .9rem; line-height: 1.5; color: rgba(255,255,255,.85); }
     .card li::before { content: '→'; color: var(--yellow); margin-right: .6rem; }
@@ -27,6 +28,9 @@ class LiManifesto extends LiSection {
           <p>Acreditamos que o primeiro passo para a mudança é a visibilidade. Ao documentar histórias de vida e métricas de infraestrutura, construímos um mapa humano da capital que serve tanto para apoio imediato como para a transformação estrutural a longo prazo.</p>
         </div>
         <div class="card">
+          <div class="eye-badge">
+            <img src="./assets/icons/eye-black.svg" alt="" aria-hidden="true" width="26" height="26">
+          </div>
           <h3>Origens</h3>
           <ul>
             <li>Fundado em 2021</li>
