@@ -9,7 +9,7 @@ class LiStoriesPreview extends LiSection {
     section { background: var(--cream); padding: 6rem 2rem; }
     .inner { max-width: 1200px; margin: 0 auto; }
     .head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
-    h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 4vw, 3.5rem); text-transform: uppercase; line-height: 1.05; color: var(--text-dark); }
+    h2 { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 72px; line-height: 1; letter-spacing: 0px; text-transform: uppercase; color: var(--text-dark); }
     h2 em { font-style: normal; background: var(--yellow); padding: 0 .15em; }
     .see-all { font-family: var(--font-display); font-weight: 700; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dark); white-space: nowrap; border-bottom: 2px solid var(--yellow); padding-bottom: .3rem; }
     .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
