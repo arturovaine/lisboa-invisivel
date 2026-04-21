@@ -83,24 +83,28 @@ customElements.define('li-newsletter', LiNewsletter);
 class LiPartners extends HTMLElement {
   connectedCallback() {
     const shadow = this.attachShadow({ mode: 'open' });
-    const partners = ['CRIA', 'FCT', 'ISCTE-IUL', 'CML', 'NPISA Lisboa'];
+    const partners = [
+      { name: 'CRIA',                    src: './assets/logos/logotipo-cria.svg',                    h: 60, url: 'https://cria.org.pt/pt' },
+      { name: 'FCT',                     src: './assets/logos/logotipo-fct-black.svg',               h: 56, url: 'https://www.fct.pt/' },
+      { name: 'ISCTE-IUL',               src: './assets/logos/logotipo_ISCTE-white.svg',             h: 48, invert: true, url: 'https://www.iscte-iul.pt/' },
+      { name: 'Câmara Municipal Lisboa', src: './assets/logos/logotipo_camara-municipal-lisboa.png', h: 64, url: 'https://www.cm-lisboa.pt/pt' },
+    ];
     const items = partners.map(p => `
-      <div class="partner">
-        <div class="logo-placeholder">${p.split(' ').map(w=>w[0]).join('').slice(0,3)}</div>
-        <span>${p}</span>
-      </div>
+      <a class="partner" href="${p.url}" target="_blank" rel="noopener" style="--h:${p.h}px">
+        <img src="${p.src}" alt="${p.name}"${p.invert ? ' class="invert"' : ''}>
+      </a>
     `).join('');
     shadow.innerHTML = `
       <style>
         ${baseStyles}
-        section { background: var(--cream); padding: 3rem 2rem; border-top: 1px solid rgba(28,27,27,.1); border-bottom: 1px solid rgba(28,27,27,.1); }
-        .inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
-        .label { font-family: var(--font-display); font-weight: 700; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(28,27,27,.4); white-space: nowrap; }
-        .partners { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
-        .partner { display: flex; align-items: center; gap: .6rem; opacity: .55; transition: opacity .2s; cursor: pointer; }
+        section { background: var(--cream); padding: 5rem 2rem; border-top: 1px solid rgba(28,27,27,.1); border-bottom: 1px solid rgba(28,27,27,.1); }
+        .inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 2.5rem; text-align: center; }
+        .label { font-family: var(--font-display); font-weight: 700; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(28,27,27,.4); }
+        .partners { display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .partner { display: flex; align-items: center; opacity: .55; transition: opacity .2s; cursor: pointer; }
         .partner:hover { opacity: 1; }
-        .logo-placeholder { width: 36px; height: 36px; background: var(--purple-dark); color: var(--yellow); font-family: var(--font-display); font-weight: 900; font-size: .7rem; display: flex; align-items: center; justify-content: center; letter-spacing: .05em; }
-        .partner span { font-family: var(--font-display); font-weight: 700; font-size: .75rem; letter-spacing: .05em; text-transform: uppercase; color: var(--text-dark); }
+        .partner img { display: block; height: var(--h, 36px); width: auto; }
+        .partner img.invert { filter: invert(1); }
       </style>
       <section>
         <div class="inner">
