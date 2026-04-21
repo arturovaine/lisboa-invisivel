@@ -45,7 +45,7 @@ class LiStoriesGrid extends LiSection {
 
     /* ── Small card (positions 1, 3, 5, 6) ───────────────────────── */
     .card-small { display: flex; flex-direction: column; gap: 16px; background: transparent; }
-    .card-small .photo { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #ddd; }
+    .card-small .photo { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #ddd; }
     .card-small .cat { align-self: flex-start; font-family: var(--font-ui); font-weight: 700; font-size: 12px; line-height: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--label-category); border: 1px solid var(--label-category); padding: 4px 8px; background: transparent; }
     .card-small .info-row { display: flex; justify-content: space-between; align-items: baseline; padding-top: 8px; }
     .card-small h3 { font-family: var(--font-display); font-weight: 800; font-size: 36px; line-height: 40px; color: var(--text-dark); }
