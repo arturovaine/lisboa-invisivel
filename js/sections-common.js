@@ -86,12 +86,14 @@ class LiStats extends LiSection {
     .card.dark { background: var(--purple-dark); color: #fff; }
     .card.yellow { background: var(--yellow); color: var(--purple-dark); }
     .label { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; opacity: .65; margin-bottom: 1.2rem; }
-    .num { font-family: var(--font-display); font-weight: 900; font-size: clamp(4rem, 9vw, 7rem); line-height: .9; letter-spacing: -.04em; }
-    .desc { margin-top: 1rem; font-size: 1rem; line-height: 1.55; max-width: 36ch; opacity: .85; }
+    .num { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 128px; line-height: .9; letter-spacing: 0px; }
+    .card.yellow .num { font-size: 60px; }
+    .desc { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 24px; line-height: 1.45; letter-spacing: 0px; margin-top: 1rem; max-width: 36ch; opacity: .85; }
     .footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.15); display: flex; justify-content: space-between; align-items: center; }
     .yellow .footer { border-color: rgba(0,0,0,.15); }
     .meta { font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; opacity: .6; font-family: var(--font-display); }
-    .share { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; background: none; border: none; color: var(--yellow); display: flex; align-items: center; gap: .4rem; }
+    .share { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; background: none; border: none; color: var(--yellow); display: flex; align-items: center; gap: .4rem; cursor: pointer; }
+    .share img { width: 14px; height: 14px; display: block; }
     .yellow .share { color: var(--purple-dark); }
     @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
   `;}
@@ -104,7 +106,7 @@ class LiStats extends LiSection {
           <p class="desc">Pessoas em situação de sem-abrigo registadas em Lisboa.</p>
           <div class="footer">
             <span class="meta">Fonte: NPISA Lisboa · Atualizado em Jan 2024</span>
-            <button class="share">⟨ Partilhar este Dado</button>
+            <button class="share"><img src="./assets/icons/share-yellow.svg" alt="" aria-hidden="true"> Partilhar este Dado</button>
           </div>
         </div>
         <div class="card yellow">
