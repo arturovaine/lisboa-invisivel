@@ -73,17 +73,20 @@ class LiStoriesGrid extends LiSection {
     .card-feature .cta { font-family: var(--font-ui); font-weight: 700; font-size: 14px; line-height: 20px; letter-spacing: .04em; text-transform: uppercase; color: var(--text-dark); border-bottom: 2px solid var(--yellow); padding-bottom: 2px; align-self: flex-start; }
 
     /* ── Structural card (position 4, full width) ────────────────── */
-    .card-structural { grid-column: 1 / span 3; grid-row: 2; background: var(--purple-dark); color: var(--text-light); padding: 2.5rem 3rem; min-height: 216px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 2.5rem; border-left: 4px solid var(--yellow); }
-    .card-structural .n { font-family: var(--font-display); font-weight: 900; font-size: clamp(3.5rem, 7vw, 5.5rem); line-height: 1; color: var(--yellow); }
-    .card-structural .t { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.2rem, 2vw, 1.6rem); text-transform: uppercase; line-height: 1.1; margin-bottom: .6rem; }
-    .card-structural .d { font-family: var(--font-body); font-size: .95rem; line-height: 1.55; color: rgba(250,248,242,.75); max-width: 58ch; }
-    .card-structural .link { font-family: var(--font-ui); font-weight: 700; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--yellow); border-bottom: 2px solid var(--yellow); padding-bottom: 2px; white-space: nowrap; }
+    .card-structural { grid-column: 1 / span 3; grid-row: 3; background: var(--purple-dark); color: var(--text-light); padding: 2.5rem 3rem; min-height: 216px; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 2.5rem; }
+    .card-structural .body { display: flex; flex-direction: column; gap: .6rem; }
+    .card-structural .stat-col { display: flex; flex-direction: column; gap: .5rem; width: 225px; border-left: 4px solid var(--yellow); padding-left: 1.5rem; }
+    .card-structural .n { font-family: var(--font-display); font-weight: 900; font-size: 48px; line-height: 48px; letter-spacing: 0; color: var(--yellow); }
+    .card-structural .stat-sub { font-family: var(--font-ui); font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: -0.6px; text-transform: uppercase; color: rgba(250,248,242,.55); }
+    .card-structural .t { font-family: var(--font-display); font-weight: 700; font-size: 24px; line-height: 32px; letter-spacing: 0; margin-bottom: .6rem; }
+    .card-structural .d { font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: 0; color: rgba(250,248,242,.75); max-width: 58ch; }
+    .card-structural .link { font-family: var(--font-ui); font-weight: 700; font-size: 12px; line-height: 16px; letter-spacing: 0; text-transform: uppercase; color: var(--yellow); white-space: nowrap; }
 
     /* Grid positioning: cards 1/3/5/6 occupy col 1 row 1, col 1/2/3 row 3 */
     .card-small.p1 { grid-column: 1; grid-row: 1; }
-    .card-small.p3 { grid-column: 1; grid-row: 3; }
-    .card-small.p5 { grid-column: 2; grid-row: 3; }
-    .card-small.p6 { grid-column: 3; grid-row: 3; }
+    .card-small.p3 { grid-column: 1; grid-row: 2; }
+    .card-small.p5 { grid-column: 2; grid-row: 2; }
+    .card-small.p6 { grid-column: 3; grid-row: 2; }
 
     @media (max-width: 960px) {
       .grid { grid-template-columns: 1fr; }
@@ -138,12 +141,15 @@ class LiStoriesGrid extends LiSection {
           </article>
 
           <article class="card-structural">
-            <div class="n">60%</div>
-            <div>
-              <div class="t">O Contexto Estrutural</div>
-              <p class="d">Não é apenas um problema de urgência. É um sistema de desvantagem social acumulada pelas instituições responsáveis pela integração e pela justiça pública.</p>
+            <div class="stat-col">
+              <div class="n">60%</div>
+              <p class="stat-sub">Taxa de Desemprego de Longa<br>Duração nos Inquiridos</p>
             </div>
-            <a class="link" href="dados.html">Explorar Dados →</a>
+            <div class="body">
+              <div class="t">O Contexto Estrutural</div>
+              <p class="d">"Não é apenas azar. É um sistema de barreiras administrativas e preconceitos que impedem a reintegração."</p>
+              <a class="link" href="dados.html">Explorar Observatório de Dados →</a>
+            </div>
           </article>
 
           ${small.slice(1).map(smallCard).join('')}
