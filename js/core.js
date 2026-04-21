@@ -20,6 +20,7 @@ const IMG = {
   vizinhanca:       './img/vizinhanca-banner.jpg',
   donations:        './img/donations-box.jpg',
   mattress:         './img/mattress-street.jpg',
+  ricardo:          './img/ricardo-portrait.jpg',
   praca:            './img/praca-comercio.jpg',
   pets:             './img/pets-street.jpg',
 };
