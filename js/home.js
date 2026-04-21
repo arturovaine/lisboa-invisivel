@@ -64,7 +64,7 @@ class LiMyths extends LiSection {
     .mt { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; line-height: 1.4; color: var(--text-dark); margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(28,27,27,.12); }
     .fl { text-align: right; }
     .ft { font-size: .95rem; line-height: 1.65; color: rgba(28,27,27,.7); margin-bottom: .5rem; }
-    .fn { font-family: var(--font-display); font-weight: 900; font-size: 3rem; color: var(--text-dark); text-align: right; }
+    .fn { font-family: var(--font-display); font-weight: 900; font-size: 3rem; color: var(--yellow); text-align: right; }
     .right h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.5rem, 4vw, 3.5rem); text-transform: uppercase; color: #fff; line-height: 1.0; margin-bottom: 1rem; }
     .right p { color: rgba(255,255,255,.6); font-size: 1rem; line-height: 1.65; margin-bottom: 2rem; }
     .acc { display: flex; flex-direction: column; }
