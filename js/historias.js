@@ -98,7 +98,7 @@ class LiStoriesGrid extends LiSection {
   render() {
     const small = [
       { pos: 'p1', name: 'António, 54',  loc: 'Arroios, LX',    cat: 'Documentação', img: IMG.antonio, quote: '"O meu nome existe, mas os papéis dizem o contrário. Sem o número na folha, não sou cidadão, sou apenas uma sombra que atravessa a Praça d…"' },
-      { pos: 'p3', name: 'Ricardo, 41',   loc: 'Marvila, LX',    cat: 'Emprego',      img: IMG.mattress, quote: '"Trabalho 12 horas, mas a minha conta bancária não me deixa alugar um quarto. O paradoxo de ser um trabalhador pobre numa cidade que só cresce…"' },
+      { pos: 'p3', name: 'Ricardo, 41',   loc: 'Marvila, LX',    cat: 'Emprego',      img: IMG.ricardo, quote: '"Trabalho 12 horas, mas a minha conta bancária não me deixa alugar um quarto. O paradoxo de ser um trabalhador pobre numa cidade que só cresce…"' },
       { pos: 'p5', name: 'Inês, 29',      loc: 'Arroios, LX',    cat: 'Habitação',    img: IMG.tentFlag, quote: 'Mãe de dois, Inês luta para manter o teto sobre a cabeça enquanto os despejos avançam no seu bairro. Uma história de resistência comunitária.' },
       { pos: 'p6', name: 'João, 38',      loc: 'Martim Moniz, LX', cat: 'Migração',   img: IMG.praca, quote: 'Os papéis ficaram na última morada. Desde aí, a cidade diz que não existo — e cada esquina confirma.' },
     ];
