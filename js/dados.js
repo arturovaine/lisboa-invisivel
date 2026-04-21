@@ -90,7 +90,7 @@ class LiIntersection extends LiSection {
     .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
     .card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); padding: 1.8rem; transition: all .2s; cursor: pointer; }
     .card:hover { border-color: var(--yellow); background: rgba(244,197,66,.06); }
-    .ic { width: 36px; height: 36px; background: var(--yellow); color: var(--purple-dark); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .ic { width: 32px; height: 32px; display: block; margin-bottom: 1rem; opacity: .85; }
     .t { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: .6rem; }
     .d { font-size: .85rem; line-height: 1.55; color: rgba(255,255,255,.6); margin-bottom: .8rem; }
     .link { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--yellow); }
@@ -98,9 +98,9 @@ class LiIntersection extends LiSection {
   `;}
   render() {
     const items = [
-      ['♀','Mulheres & Género','Intersecções entre desigualdade de género e vulnerabilidade urbana.'],
-      ['✈','Migração & Visto','Barreiras burocráticas e documentação na integração social.'],
-      ['⚕','Saúde Mental','Trauma, dependência e rede pública de saúde mental em Lisboa.'],
+      { svg: 'female-white',      title: 'Mulheres & Género', desc: 'Intersecções entre desigualdade de género e vulnerabilidade urbana.',         cta: '32 Indicadores' },
+      { svg: 'globe-search-white', title: 'Migração & Visto',  desc: 'Barreiras burocráticas e documentação na integração social.',                  cta: '18 Indicadores' },
+      { svg: 'head-gear-white',   title: 'Saúde Mental',      desc: 'Trauma, dependência e rede pública de saúde mental em Lisboa.',                cta: '24 Indicadores' },
     ];
     return `
       <section>
@@ -113,8 +113,13 @@ class LiIntersection extends LiSection {
             <p class="sub">Navegue pelas dimensões da exclusão social através de filtros cruzados e análises de impacto.</p>
           </div>
           <div class="grid">
-            ${items.map(([ic,t,d]) => `
-              <div class="card"><div class="ic">${ic}</div><div class="t">${t}</div><p class="d">${d}</p><p class="link">Ir para Dados →</p></div>
+            ${items.map(i => `
+              <div class="card">
+                <img class="ic" src="./assets/icons/${i.svg}.svg" alt="" aria-hidden="true" width="32" height="32">
+                <div class="t">${i.title}</div>
+                <p class="d">${i.desc}</p>
+                <p class="link">${i.cta} →</p>
+              </div>
             `).join('')}
           </div>
         </div>
@@ -129,7 +134,8 @@ class LiDataExport extends LiSection {
     .inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1.5rem; align-items: center; }
     h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.5rem, 3vw, 2.2rem); text-transform: uppercase; color: var(--text-dark); line-height: 1.1; margin-bottom: .8rem; }
     .sub { font-size: .9rem; color: rgba(28,27,27,.65); max-width: 44ch; line-height: 1.6; }
-    .btn { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem; font-family: var(--font-display); font-weight: 800; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: all .2s; border: 2px solid; }
+    .btn { display: flex; align-items: center; gap: .75rem; justify-content: center; padding: 1.5rem; font-family: var(--font-display); font-weight: 800; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: all .2s; border: 2px solid; }
+    .btn img { width: 18px; height: 18px; display: block; flex-shrink: 0; }
     .btn.dark { background: var(--purple-dark); color: #fff; border-color: var(--purple-dark); }
     .btn.dark:hover { background: #fff; color: var(--purple-dark); }
     .btn.light { background: #fff; color: var(--purple-dark); border-color: var(--purple-dark); }
@@ -143,8 +149,8 @@ class LiDataExport extends LiSection {
           <h2>Descarregue os Dados Brutos</h2>
           <p class="sub">Para investigadores, jornalistas e decisores políticos. Promovemos a transparência total sobre a realidade social de Lisboa.</p>
         </div>
-        <button class="btn dark">📄 Relatório Anual PDF</button>
-        <button class="btn light">📊 Exportar CSV / JSON</button>
+        <button class="btn dark"><img src="./assets/icons/download-white.svg" alt="" aria-hidden="true"> Relatório Anual PDF</button>
+        <button class="btn light"><img src="./assets/icons/database-black.svg" alt="" aria-hidden="true"> Exportar CSV / JSON</button>
       </div>
     </section>`;
   }
