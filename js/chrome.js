@@ -160,7 +160,7 @@ class LiFooter extends HTMLElement {
             <div>
               <p class="col-title">Legal &amp; Apoio</p>
               <ul class="col-links">
-                <li><a href="#">Newsletter</a></li>
+                <li><a href="#" style="display:flex;align-items:center;gap:.4rem"><img src="./assets/icons/envelope-yellow.svg" alt="" aria-hidden="true" width="14" height="11" style="opacity:.6">Newsletter</a></li>
                 <li><a href="#">Acessibilidade</a></li>
                 <li><a href="#">Legal</a></li>
                 <li><a href="#">Contacto</a></li>
