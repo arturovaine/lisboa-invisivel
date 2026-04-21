@@ -4,25 +4,13 @@
    Requires: core.js
    ══════════════════════════════════════════════════════════════════ */
 
+import { LiSection, IMG } from './core.js';
+import { storiesPreviewCSS } from '../css/home/stories-preview.js';
+import { mythsCSS } from '../css/home/myths.js';
+import { categoriesCSS } from '../css/home/categories.js';
+
 class LiStoriesPreview extends LiSection {
-  styles() { return `
-    section { background: var(--cream); padding: 6rem 2rem; }
-    .inner { max-width: 1200px; margin: 0 auto; }
-    .head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
-    h2 { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 72px; line-height: 1; letter-spacing: 0px; text-transform: uppercase; color: var(--text-dark); }
-    h2 em { font-style: normal; background: var(--yellow); padding: 0 .15em; }
-    .see-all { font-family: var(--font-display); font-weight: 700; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dark); white-space: nowrap; border-bottom: 2px solid var(--yellow); padding-bottom: .3rem; }
-    .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
-    .card { display: flex; flex-direction: column; background: #fff; overflow: hidden; transition: transform .25s; }
-    .card:hover { transform: translateY(-4px); }
-    .img { height: 280px; background-size: cover; background-position: center top; position: relative; }
-    .tag { position: absolute; bottom: 1rem; left: 1rem; font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; background: var(--yellow); color: var(--purple-dark); padding: .3rem .7rem; }
-    .body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; gap: .6rem; }
-    h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: var(--text-dark); }
-    .q { font-size: .9rem; line-height: 1.6; color: rgba(28,27,27,.65); flex: 1; }
-    .read { font-family: var(--font-display); font-weight: 700; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dark); margin-top: .5rem; border-bottom: 2px solid var(--yellow); align-self: flex-start; padding-bottom: .2rem; }
-    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
-  `;}
+  styles() { return storiesPreviewCSS; }
   render() {
     const stories = [
       { name: 'António, 58 anos', tag: 'Saúde Mental', quote: '"A rua não é um lugar, é um estado de espera constante por algo que não chega."', img: IMG.antonio },
@@ -55,28 +43,7 @@ class LiStoriesPreview extends LiSection {
 customElements.define('li-stories-preview', LiStoriesPreview);
 
 class LiMyths extends LiSection {
-  styles() { return `
-    section { background: var(--purple-dark); padding: 6rem 2rem; }
-    .inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-    .myth { background: var(--cream); color: var(--text-dark); padding: 2.5rem; }
-    .badge { display: inline-block; background: var(--yellow); color: var(--purple-dark); font-family: var(--font-display); font-weight: 900; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; padding: .35rem .9rem; margin-bottom: 1.5rem; }
-    .lbl { font-family: var(--font-display); font-weight: 700; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(28,27,27,.45); margin-bottom: .5rem; }
-    .mt { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; line-height: 1.4; color: var(--text-dark); margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(28,27,27,.12); }
-    .fl { text-align: right; }
-    .ft { font-size: .95rem; line-height: 1.65; color: rgba(28,27,27,.7); margin-bottom: .5rem; }
-    .fn { font-family: var(--font-display); font-weight: 900; font-size: 3rem; color: var(--yellow); text-align: right; }
-    .right h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.5rem, 4vw, 3.5rem); text-transform: uppercase; color: #fff; line-height: 1.0; margin-bottom: 1rem; }
-    .right p { color: rgba(255,255,255,.6); font-size: 1rem; line-height: 1.65; margin-bottom: 2rem; }
-    .acc { display: flex; flex-direction: column; }
-    .item { border-top: 1px solid rgba(255,255,255,.12); cursor: pointer; }
-    .item:last-child { border-bottom: 1px solid rgba(255,255,255,.12); }
-    .h { display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 0; font-family: var(--font-display); font-weight: 700; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; color: #fff; }
-    .ic { color: var(--yellow); font-size: 1.1rem; transition: transform .25s; }
-    .item.open .ic { transform: rotate(90deg); }
-    .b { max-height: 0; overflow: hidden; transition: max-height .35s, padding .35s; color: rgba(255,255,255,.6); font-size: .9rem; line-height: 1.65; }
-    .item.open .b { max-height: 260px; padding-bottom: 1rem; }
-    @media (max-width: 860px) { .inner { grid-template-columns: 1fr; } }
-  `;}
+  styles() { return mythsCSS; }
   render() {
     const myths = [
       ['Mito da Toxicodependência', 'Apenas 22% das pessoas sem-abrigo têm problemas de dependência. A maioria enfrenta problemas económicos, familiares e de saúde mental sem qualquer relação com substâncias.'],
@@ -119,24 +86,7 @@ class LiMyths extends LiSection {
 customElements.define('li-myths', LiMyths);
 
 class LiCategories extends LiSection {
-  styles() { return `
-    section { background: var(--cream); padding: 5rem 2rem; }
-    .inner { max-width: 1200px; margin: 0 auto; }
-    h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.5rem, 3vw, 2.2rem); text-transform: uppercase; letter-spacing: .05em; color: var(--text-dark); margin-bottom: 2rem; }
-    .grid { display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid rgba(28,27,27,.12); }
-    .cat { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .7rem; padding: 2rem 1rem; border-right: 1px solid rgba(28,27,27,.12); border-bottom: 1px solid rgba(28,27,27,.12); cursor: pointer; transition: background .2s; background: var(--cream-dark); }
-    .cat:hover { background: rgba(244,197,66,.12); }
-    .cat.active { background: var(--yellow); }
-    .cat.dark { background: var(--purple-dark); }
-    .cat:nth-child(4n) { border-right: none; }
-    .cat:nth-last-child(-n+4) { border-bottom: none; }
-    .ic { width: 24px; height: 24px; opacity: .65; display: block; }
-    .cat.active .ic { opacity: 1; }
-    .cat.dark .ic { opacity: 1; }
-    .l { font-family: var(--font-display); font-weight: 700; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dark); text-align: center; }
-    .cat.dark .l { color: var(--yellow); }
-    @media (max-width: 760px) { .grid { grid-template-columns: repeat(2,1fr); } .cat { border-right: 1px solid rgba(28,27,27,.12) !important; } .cat:nth-child(2n) { border-right: none !important; } }
-  `;}
+  styles() { return categoriesCSS; }
   render() {
     const cats = [
       { svg: 'female-black',        label: 'Mulheres' },

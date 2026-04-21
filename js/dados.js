@@ -4,25 +4,13 @@
    Requires: core.js
    ══════════════════════════════════════════════════════════════════ */
 
+import { LiSection } from './core.js';
+import { dataCardsCSS } from '../css/dados/data-cards.js';
+import { intersectionCSS } from '../css/dados/intersection.js';
+import { dataExportCSS } from '../css/dados/data-export.js';
+
 class LiDataCards extends LiSection {
-  styles() { return `
-    section { background: var(--cream); padding: 2rem 2rem 5rem; }
-    .inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 1.2rem; }
-    .card { background: #fff; padding: 1.8rem; border-top: 3px solid var(--yellow); min-height: 220px; display: flex; flex-direction: column; }
-    .card.purple { background: var(--purple-dark); color: #fff; border-top-color: var(--purple-light); }
-    .card.yellow { background: var(--yellow); color: var(--purple-dark); border-top-color: var(--yellow-dark); }
-    .card.sand { background: #D4BE7A; color: var(--purple-dark); border-top-color: #B89A50; }
-    .lbl { font-family: var(--font-display); font-weight: 700; font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; opacity: .65; margin-bottom: .8rem; }
-    .num { font-family: var(--font-display); font-weight: 900; font-size: 3.2rem; line-height: .95; letter-spacing: -.03em; margin-bottom: .6rem; }
-    .t { font-family: var(--font-display); font-weight: 800; font-size: 1rem; margin-bottom: .4rem; }
-    .d { font-size: .82rem; line-height: 1.55; opacity: .75; flex: 1; }
-    .chart { height: 80px; margin-top: .8rem; background: linear-gradient(to top, rgba(36,16,58,.15), transparent); display: flex; align-items: flex-end; gap: 4px; padding: 0 .3rem; }
-    .bar { flex: 1; background: var(--purple-dark); opacity: .7; }
-    .card.purple .bar { background: var(--yellow); }
-    .more { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; margin-top: .8rem; }
-    @media (max-width: 960px) { .inner { grid-template-columns: repeat(2,1fr); } }
-    @media (max-width: 560px) { .inner { grid-template-columns: 1fr; } }
-  `;}
+  styles() { return dataCardsCSS; }
   render() {
     const bars = (n) => Array.from({length:n}).map(() => `<div class="bar" style="height:${30+Math.random()*70}%"></div>`).join('');
     return `
@@ -80,22 +68,7 @@ class LiDataCards extends LiSection {
 customElements.define('li-data-cards', LiDataCards);
 
 class LiIntersection extends LiSection {
-  styles() { return `
-    section { background: var(--purple-dark); color: #fff; padding: 5rem 2rem; }
-    .inner { max-width: 1200px; margin: 0 auto; }
-    .head { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: end; margin-bottom: 3rem; }
-    .kicker { font-family: var(--font-display); font-weight: 800; font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--yellow); margin-bottom: 1rem; }
-    h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 4vw, 3rem); text-transform: uppercase; line-height: 1.05; }
-    .sub { color: rgba(255,255,255,.65); font-size: .95rem; line-height: 1.6; }
-    .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
-    .card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); padding: 1.8rem; transition: all .2s; cursor: pointer; }
-    .card:hover { border-color: var(--yellow); background: rgba(244,197,66,.06); }
-    .ic { width: 32px; height: 32px; display: block; margin-bottom: 1rem; opacity: .85; }
-    .t { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: .6rem; }
-    .d { font-size: .85rem; line-height: 1.55; color: rgba(255,255,255,.6); margin-bottom: .8rem; }
-    .link { font-family: var(--font-display); font-weight: 700; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--yellow); }
-    @media (max-width: 860px) { .head, .grid { grid-template-columns: 1fr; } }
-  `;}
+  styles() { return intersectionCSS; }
   render() {
     const items = [
       { svg: 'female-white',      title: 'Mulheres & Género', desc: 'Intersecções entre desigualdade de género e vulnerabilidade urbana.',         cta: '32 Indicadores' },
@@ -129,19 +102,7 @@ class LiIntersection extends LiSection {
 customElements.define('li-intersection', LiIntersection);
 
 class LiDataExport extends LiSection {
-  styles() { return `
-    section { background: var(--cream); padding: 5rem 2rem; border-top: 1px solid rgba(28,27,27,.1); }
-    .inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1.5rem; align-items: center; }
-    h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.5rem, 3vw, 2.2rem); text-transform: uppercase; color: var(--text-dark); line-height: 1.1; margin-bottom: .8rem; }
-    .sub { font-size: .9rem; color: rgba(28,27,27,.65); max-width: 44ch; line-height: 1.6; }
-    .btn { display: flex; align-items: center; gap: .75rem; justify-content: center; padding: 1.5rem; font-family: var(--font-display); font-weight: 800; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: all .2s; border: 2px solid; }
-    .btn img { width: 18px; height: 18px; display: block; flex-shrink: 0; }
-    .btn.dark { background: var(--purple-dark); color: #fff; border-color: var(--purple-dark); }
-    .btn.dark:hover { background: #fff; color: var(--purple-dark); }
-    .btn.light { background: #fff; color: var(--purple-dark); border-color: var(--purple-dark); }
-    .btn.light:hover { background: var(--yellow); border-color: var(--yellow); }
-    @media (max-width: 860px) { .inner { grid-template-columns: 1fr; } }
-  `;}
+  styles() { return dataExportCSS; }
   render() { return `
     <section>
       <div class="inner">
@@ -152,7 +113,6 @@ class LiDataExport extends LiSection {
         <button class="btn dark"><img src="./assets/icons/download-white.svg" alt="" aria-hidden="true"> Relatório Anual PDF</button>
         <button class="btn light"><img src="./assets/icons/database-black.svg" alt="" aria-hidden="true"> Exportar CSV / JSON</button>
       </div>
-    </section>`;
-  }
+    </section>`;}
 }
 customElements.define('li-data-export', LiDataExport);

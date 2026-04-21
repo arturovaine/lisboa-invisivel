@@ -6,7 +6,7 @@
    Load this FIRST on every page.
    ══════════════════════════════════════════════════════════════════ */
 
-const IMG = {
+export const IMG = {
   heroStreet:       './img/hero-street.jpg',
   antonio:          './img/antonio-portrait.jpg',
   tentFlag:         './img/tent-flag.jpg',
@@ -21,13 +21,14 @@ const IMG = {
   donations:        './img/donations-box.jpg',
   mattress:         './img/mattress-street.jpg',
   ricardo:          './img/ricardo-portrait.jpg',
+  ines:             './img/ines-portrait.jpg',
   praca:            './img/praca-comercio.jpg',
   pets:             './img/pets-street.jpg',
 };
 
-const LOGO_SVG = `<img src="./assets/logo.svg" alt="Lisboa Invisível" width="89" height="32" style="display:block;filter:brightness(0) invert(1)" />`;
+export const LOGO_SVG = `<img src="./assets/logo.svg" alt="Lisboa Invisível" width="89" height="32" style="display:block;filter:brightness(0) invert(1)" />`;
 
-const baseStyles = `
+export const baseStyles = `
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :host {
     --purple-dark:     #24103A;
@@ -55,10 +56,13 @@ const baseStyles = `
 `;
 
 /* LiSection — subclasses override styles() + render() (+ optional afterRender) */
-class LiSection extends HTMLElement {
+export class LiSection extends HTMLElement {
   connectedCallback() {
     const shadow = this.attachShadow({ mode: 'open' });
-    shadow.innerHTML = `<style>${baseStyles}${this.styles()}</style>${this.render()}`;
+    const sheet = new CSSStyleSheet();
+    sheet.replaceSync(baseStyles + this.styles());
+    shadow.adoptedStyleSheets = [sheet];
+    shadow.innerHTML = this.render();
     this.afterRender && this.afterRender(shadow);
   }
   styles() { return ''; }
