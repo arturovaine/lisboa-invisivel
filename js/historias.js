@@ -123,7 +123,9 @@ class LiStoriesGrid extends LiSection {
           ${smallCard(small[0])}
 
           <article class="card-feature">
-            <img class="photo" src="${feature.img}" alt="${altFor(feature)}" loading="lazy" decoding="async">
+            <div class="photo-wrap">
+              <img class="photo" src="${feature.img}" alt="${altFor(feature)}" loading="lazy" decoding="async">
+            </div>
             <div class="content">
               <span class="cat">${feature.cat}</span>
               <div class="info-row">
