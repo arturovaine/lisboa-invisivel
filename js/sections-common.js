@@ -35,13 +35,13 @@ class LiPageHero extends LiSection {
     .hero.light h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(3rem, 8vw, 96px); line-height: 1; letter-spacing: 0; color: var(--purple-mid); max-width: none; }
     .hero.light h1 mark { background: var(--yellow); color: var(--purple-mid); padding: 0 .08em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
     .hero.light .sub { font-family: var(--font-body); font-weight: 400; font-size: 20px; line-height: 32.5px; color: var(--text-mid); max-width: 672px; padding-top: 14px; margin-top: 0; }
-    .hero.light .stat-card { grid-column: 9 / span 4; align-self: center; background: #EBE7E7; padding: 32px; min-height: 256px; display: flex; flex-direction: column; gap: 0; position: relative; }
+    .hero.light .stat-card { grid-column: 9 / span 4; align-self: center; background: #EBE7E7; padding: 32px; min-height: 256px; display: flex; flex-direction: column; justify-content: center; gap: 0; position: relative; }
     .hero.light .stat-card::before, .hero.light .stat-card::after { content: ''; position: absolute; width: 24px; height: 24px; }
-    .hero.light .stat-card::before { top: 0; left: 0; border-top: 2px solid var(--yellow); border-left: 2px solid var(--yellow); }
-    .hero.light .stat-card::after { bottom: 0; right: 0; border-bottom: 2px solid var(--yellow); border-right: 2px solid var(--yellow); }
+    .hero.light .stat-card::before { top: 0; left: 0; border-top: 3px solid var(--yellow); border-left: 3px solid var(--yellow); }
+    .hero.light .stat-card::after { bottom: 0; right: 0; border-bottom: 3px solid var(--yellow); border-right: 3px solid var(--yellow); }
     .hero.light .stat-num { font-family: var(--font-display); font-weight: 700; font-size: 36px; line-height: 40px; letter-spacing: 0; color: var(--purple-dark); }
     .hero.light .stat-label { font-family: var(--font-ui); font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: 0; text-transform: uppercase; color: rgba(28,27,27,.5); margin-top: .6rem; }
-    .hero.light .stat-desc { font-family: var(--font-body); font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: 0; color: rgba(28,27,27,.75); margin-top: 1rem; border-top: 1px solid rgba(28,27,27,.12); padding-top: 1rem; }
+    .hero.light .stat-desc { font-family: var(--font-body); font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: 0; color: rgba(28,27,27,.75); margin-top: 1rem; }
 
     @keyframes in { from { opacity:0; transform: translateY(40px);} to {opacity:1; transform:translateY(0);} }
     @media (max-width: 860px) { .hero.light .content { grid-template-columns: 1fr; padding: 5rem 1.5rem 2rem; } .hero.light .inner { grid-column: 1; } .hero.light .stat-card { grid-column: 1; } }
