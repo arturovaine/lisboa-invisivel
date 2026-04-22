@@ -296,7 +296,8 @@
   }
 
   .hero.white h1 .accent {
-    color: var(--yellow);
+    background: var(--yellow);
+    color: #1C1B1B;
   }
 
   .hero.white .sub {
