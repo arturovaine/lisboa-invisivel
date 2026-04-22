@@ -12,8 +12,8 @@ class LiServicesList extends LiSection {
 
   get services() {
     return [
-      { name:'Balneário Público de Alcântara', tag:'Higiene', addr:'Rua Estêvão Encostada, 5 Lisboa', d:'Serviços de duche quente, lavandaria e apoio social básico. Acesso gratuito para pessoas em situação de sem-abrigo.', h:'Seg-Sex 08:00-18:00', phone:'+351 213 615 800', dark:false, lat:38.7067, lng:-9.1785 },
-      { name:'Cozinha Comunitária de Marvila', tag:'Alimentação', addr:'R. Comarca de Marvila, 2000 Lisboa', d:'Fornecimento diário de refeições quentes e cabazes de emergência. Requer triagem prévia no local.', h:'Ter-Dom 12:00-14:00 / 19:00-21:00', phone:'+351 218 596 700', dark:true, lat:38.7464, lng:-9.1014 },
+      { name:'Balneário Público de Alcântara', tag:'Higiene', addr:'Rua Cozinha Económica, 1300-149 Lisboa', d:'Serviços de duche quente, lavandaria e apoio social básico. Acesso gratuito para pessoas em situação de sem-abrigo.', h:'08:00 — 19:00 (Seg a Sex)', phone:'+351 213 621 450', dark:false, lat:38.7067, lng:-9.1785 },
+      { name:'Cozinha Comunitária de Marvila', tag:'Alimentação', addr:'Estrada de Marvila, 1900-321 Lisboa', d:'Fornecimento diário de refeições quentes e cabazes de emergência. Requer triagem prévia no local.', h:'12:00 — 14:30 / 19:00 — 21:00', phone:'+351 218 310 100', dark:false, lat:38.7464, lng:-9.1014 },
     ];
   }
 
