@@ -23,7 +23,13 @@ class LiServicesList extends LiSection {
       <section>
         <div class="inner">
           <div class="col-list">
-            <div class="svc-head">Listagem de Resultados</div>
+            <div class="svc-head">
+              <span>Listagem de Resultados</span>
+              <div class="svc-head-filters">
+                <button class="view-filter active">LISTA</button>
+                <button class="view-filter">MAPA</button>
+              </div>
+            </div>
             ${services.map(s => `
               <article class="svc ${s.dark?'purple':''}">
                 <div>
