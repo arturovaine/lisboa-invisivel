@@ -53,11 +53,11 @@
   }
 
   .btn-white {
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid #F4C542;
+    color: #F4C542;
   }
 
   .btn-white:hover {
-    background: #fff;
-    color: #000;
+    background: #F4C542;
+    color: #1C1B1B;
   }
