@@ -39,6 +39,13 @@
     text-transform: uppercase;
   }
 
+  .hero.tall .btn-text {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-underline-offset: 0;
+    text-decoration-thickness: auto;
+  }
+
   .bg {
     position: absolute;
     inset: 0;
