@@ -103,7 +103,6 @@ class LiBentoGrid extends LiSection {
               <p class="desc">Indivíduos que reportam sintomas severos de isolamento e depressão.</p>
               <div class="bars">${this.bars(8)}</div>
               <span class="source">Sondagem 2024</span>
-              <a class="ext-link" href="#">Ver relatório ↗</a>
             </div>
 
             <!-- Card 3 · Comparison — Refeições Servidas -->
@@ -127,7 +126,7 @@ class LiBentoGrid extends LiSection {
               <span class="tag">Migração</span>
               <div class="stat">42%</div>
               <p class="desc">Dos novos registos são de cidadãos em situação de migração irregular ou precária.</p>
-              <span class="source">Dados INE 2026</span>
+              <span class="source">DADOS DSE 2024</span>
             </div>
 
             <!-- Card 5 · Geographic Focus — 2 cols -->
