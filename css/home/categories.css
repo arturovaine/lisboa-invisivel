@@ -21,7 +21,7 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    border: 1px solid rgba(28, 27, 27, .12);
+    gap: 16px;
   }
 
   .cat {
@@ -31,8 +31,6 @@
     justify-content: center;
     gap: .7rem;
     padding: 2rem 1rem;
-    border-right: 1px solid rgba(28, 27, 27, .12);
-    border-bottom: 1px solid rgba(28, 27, 27, .12);
     cursor: pointer;
     transition: background .2s;
     background: var(--cream-dark);
@@ -48,14 +46,6 @@
 
   .cat.dark {
     background: var(--purple-dark);
-  }
-
-  .cat:nth-child(4n) {
-    border-right: none;
-  }
-
-  .cat:nth-last-child(-n+4) {
-    border-bottom: none;
   }
 
   .ic {
@@ -90,13 +80,5 @@
   @media (max-width: 760px) {
     .grid {
       grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cat {
-      border-right: 1px solid rgba(28, 27, 27, .12) !important;
-    }
-
-    .cat:nth-child(2n) {
-      border-right: none !important;
     }
   }
