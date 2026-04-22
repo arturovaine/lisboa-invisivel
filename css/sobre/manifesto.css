@@ -12,7 +12,7 @@
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 731px 341px;
+    grid-template-columns: 2fr 1fr;
     column-gap: 48px;
     row-gap: 2rem;
     align-items: start;
@@ -59,8 +59,9 @@
   .card {
     background: var(--bg-dark);
     color: #fff;
-    width: 341px;
-    height: 236px;
+    width: 100%;
+    height: auto;
+    min-height: 236px;
     padding: 40px;
     gap: 16px;
     display: flex;
@@ -117,7 +118,17 @@
   }
 
   @media (max-width: 860px) {
+    section {
+      padding: 3rem 1.5rem;
+      min-height: auto;
+    }
+
     .inner {
       grid-template-columns: 1fr;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 6vw, 48px);
+      line-height: 1.1;
     }
   }
