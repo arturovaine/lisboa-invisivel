@@ -12,8 +12,22 @@ class LiServicesList extends LiSection {
 
   get services() {
     return [
-      { name:'Balneário Público de Alcântara', tag:'Higiene', addr:'Rua Cozinha Económica, 1300-149 Lisboa', d:'Serviços de duche quente, lavandaria e apoio social básico. Acesso gratuito para pessoas em situação de sem-abrigo.', h:'08:00 — 19:00 (Seg a Sex)', phone:'+351 213 621 450', dark:false, lat:38.7067, lng:-9.1785 },
+      { name:'Balneário Público de Alcântara', tag:'Higiene', addr:'Rua Padre Adriano Botelho 5, 1300-257 Lisboa', d:'Serviços de duche quente, lavandaria e apoio social básico. Acesso gratuito para pessoas em situação de sem-abrigo.', h:'08:00 — 19:00 (Seg a Sex)', phone:'911 761 897', dark:false, lat:38.7068, lng:-9.1784 },
       { name:'Cozinha Comunitária de Marvila', tag:'Alimentação', addr:'Estrada de Marvila, 1900-321 Lisboa', d:'Fornecimento diário de refeições quentes e cabazes de emergência. Requer triagem prévia no local.', h:'12:00 — 14:30 / 19:00 — 21:00', phone:'+351 218 310 100', dark:false, lat:38.7464, lng:-9.1014 },
+    ];
+  }
+
+  get mapServices() {
+    return [
+      { name:'Balneário Público de Alcântara',           tag:'Higiene',       addr:'Rua Padre Adriano Botelho 5, 1300-257 Lisboa',    lat:38.7061, lng:-9.1761 },
+      { name:'Cozinha Comunitária de Marvila',           tag:'Alimentação',   addr:'Estrada de Marvila, 1900-321 Lisboa',             lat:38.7332, lng:-9.1098 },
+      { name:'João 13 – NAL+ de São Vicente',            tag:'Higiene',       addr:'Calçada do Cascão 39, 1100-122 Lisboa',           lat:38.7144, lng:-9.1253 },
+      { name:'UAPSA / NPISA – SCML',                    tag:'Apoio Social',   addr:'Cais do Gás, Rua da Cintura do Porto de Lisboa',  lat:38.7030, lng:-9.1689 },
+      { name:'CASA – Centro de Apoio ao Sem Abrigo',    tag:'Apoio Social',   addr:'Rua Dr. João de Barros 17G, 1500-230 Lisboa',     lat:38.7536, lng:-9.1993 },
+      { name:'Exército de Salvação',                    tag:'Abrigo',         addr:'Rua da Manutenção 7, 1900-318 Lisboa',            lat:38.7273, lng:-9.1099 },
+      { name:'Vitae – Associação para o Desenvolvimento', tag:'Abrigo',       addr:'Rua de Cascais 1, 1300-145 Lisboa',               lat:38.7033, lng:-9.1750 },
+      { name:'Centro de Dia Santa Isabel (Cruz Vermelha)', tag:'Apoio Social', addr:'Rua Saraiva de Carvalho 8, 1250-243 Lisboa',     lat:38.7154, lng:-9.1645 },
+      { name:'CASL – IASFA',                            tag:'Abrigo',         addr:'Rua de São José 24, 1150-323 Lisboa',             lat:38.7186, lng:-9.1424 },
     ];
   }
 
@@ -90,12 +104,7 @@ class LiServicesList extends LiSection {
     leafletLink.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
     shadow.appendChild(leafletLink);
 
-    const services = this.services;
-    const icon = () => L.divIcon({
-      className: 'li-pin',
-      html: '<div style="width:26px;height:26px;background:#F4C542;border:3px solid #24103A;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 6px rgba(0,0,0,.35)"></div>',
-      iconSize: [26,26], iconAnchor: [13,26]
-    });
+    const mapServices = this.mapServices;
 
     const initMap = (box, onReady) => {
       const run = () => {
@@ -105,9 +114,14 @@ class LiServicesList extends LiSection {
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
           maxZoom: 19, attribution: '© OpenStreetMap © CARTO'
         }).addTo(map);
-        const markers = services.map(s => L.marker([s.lat, s.lng], { icon: icon() })
-          .addTo(map)
-          .bindPopup(`<strong>${s.tag}</strong>${s.name}<br/><em>${s.addr}</em>`));
+        const markers = mapServices.map(s => L.circleMarker([s.lat, s.lng], {
+          radius: 7,
+          fillColor: '#F4C542',
+          color: '#24103A',
+          weight: 2,
+          opacity: 1,
+          fillOpacity: 1
+        }).addTo(map).bindPopup(`<strong>${s.tag}</strong>${s.name}<br/><em>${s.addr}</em>`));
         const group = L.featureGroup(markers);
         map.fitBounds(group.getBounds(), { padding: [40, 40], maxZoom: 13 });
         setTimeout(() => map.invalidateSize(), 100);
