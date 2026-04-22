@@ -38,6 +38,8 @@
   .partner {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 244px;
     opacity: .55;
     transition: opacity .2s;
     cursor: pointer;
