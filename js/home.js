@@ -55,7 +55,7 @@ class LiMyths extends LiSection {
           <div class="myth">
             <div class="badge">Falso</div>
             <p class="lbl">O Mito</p>
-            <p class="mt">"Quem está na rua está lá porque quer ou porque não quer trabalhar."</p>
+            <p class="mt">"Quem está na rua está lá<br>porque quer ou porque não<br>quer trabalhar."</p>
             <p class="lbl fl">O Facto</p>
             <p class="ft">Mais de 80% das situações decorrem de desemprego inesperado, traumas familiares ou problemas graves de saúde mental sem rede de apoio.</p>
             <div class="fn">82%</div>
