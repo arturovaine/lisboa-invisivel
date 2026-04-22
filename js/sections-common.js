@@ -62,6 +62,7 @@ class LiPageHero extends LiSection {
       <section class="hero ${tall}">
         <div class="bg" style="background-image:url('${bg}')"></div>
         <div class="overlay"></div>
+        ${tall ? '<div class="blur-lens"></div>' : ''}
         <div class="content">
           ${kicker ? `<span class="kicker">${kicker}</span>` : ''}
           <h1>${title}</h1>
@@ -70,6 +71,41 @@ class LiPageHero extends LiSection {
         </div>
       </section>
     `;
+  }
+
+  afterRender(shadow) {
+    const hero = shadow.querySelector('.hero.tall');
+    const lens = shadow.querySelector('.blur-lens');
+    if (!hero || !lens) return;
+
+    const R = 140;
+    let raf;
+
+    const moveLens = (mouseX, mouseY) => {
+      const W = hero.offsetWidth * 3;
+      const H = hero.offsetHeight * 3;
+      const cx = W / 2;
+      const cy = H / 2;
+      const path = `M 0 0 L ${W} 0 L ${W} ${H} L 0 ${H} Z ` +
+                   `M ${cx - R} ${cy} a ${R} ${R} 0 1 0 ${R * 2} 0 a ${R} ${R} 0 1 0 -${R * 2} 0 Z`;
+      lens.style.clipPath = `path('${path}')`;
+      lens.style.transform = `translate(${mouseX - W / 2}px, ${mouseY - H / 2}px)`;
+    };
+
+    moveLens(hero.offsetWidth / 2, hero.offsetHeight / 2);
+
+    hero.addEventListener('mousemove', e => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const rect = hero.getBoundingClientRect();
+        moveLens(e.clientX - rect.left, e.clientY - rect.top);
+      });
+    });
+
+    hero.addEventListener('mouseleave', () => {
+      cancelAnimationFrame(raf);
+      moveLens(hero.offsetWidth / 2, hero.offsetHeight / 2);
+    });
   }
 }
 customElements.define('li-page-hero', LiPageHero);
