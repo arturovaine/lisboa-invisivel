@@ -128,8 +128,8 @@ class LiServicesCta extends LiSection {
   render() { return `
     <section>
       <div class="card">
-        <div>
-          <h2>Precisa de Ajuda<br>ou Quer Ajudar Alguém?</h2>
+        <div class="text">
+          <h2>Precisa de Ajuda ou Quer Ajudar Alguém?</h2>
           <p class="desc">Mapa interativo de serviços de emergência, alimentação e apoio em Lisboa.</p>
         </div>
         <div class="actions">

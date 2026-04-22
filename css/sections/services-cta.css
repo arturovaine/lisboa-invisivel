@@ -36,6 +36,12 @@
     margin-top: .5rem;
   }
 
+  .text {
+    width: 465px;
+    height: 144px;
+    flex-shrink: 0;
+  }
+
   .actions {
     display: flex;
     gap: 1rem;
