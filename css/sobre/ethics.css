@@ -6,6 +6,7 @@
   }
 
   .inner {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     border-left: 12px solid #765B00;
