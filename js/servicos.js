@@ -27,7 +27,6 @@ class LiServicesList extends LiSection {
             ${services.map(s => `
               <article class="svc ${s.dark?'purple':''}">
                 <div>
-                  <span class="tag">${s.tag}</span>
                   <h3>${s.name}</h3>
                   <p class="addr">${s.addr}</p>
                   <p class="d">${s.d}</p>
@@ -36,7 +35,10 @@ class LiServicesList extends LiSection {
                     <div class="meta-item"><span class="meta-label">CONTACTO</span><span class="meta-val phone">${s.phone}</span></div>
                   </div>
                 </div>
-                <button class="cta">Traçar Rota →</button>
+                <div class="svc-right">
+                  <span class="tag">${s.tag}</span>
+                  <button class="cta"><span>TRAÇAR<br>ROTA</span><svg width="10.5" height="10.5" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.775 10.5L4.1125 6.3875L0 4.725V3.90833L10.5 0L6.59167 10.5H5.775ZM6.15417 8.34167L8.51667 1.98333L2.15833 4.34583L5.01667 5.48333L6.15417 8.34167Z" fill="white"/></svg></button>
+                </div>
               </article>
             `).join('')}
           </div>
