@@ -30,13 +30,17 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 352px);
+    gap: 64px;
   }
 
   .card {
     background: var(--cream);
-    padding: 2rem;
+    padding: 40px;
+    height: 297px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     position: relative;
     overflow: hidden;
   }
