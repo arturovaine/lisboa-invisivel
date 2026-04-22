@@ -15,8 +15,14 @@
   .myth {
     background: var(--cream);
     color: var(--text-dark);
-    padding: 5rem 2.5rem 2.5rem;
+    width: 528px;
+    height: 509px;
+    padding: 48px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
     position: relative;
+    box-sizing: border-box;
   }
 
   .badge {
