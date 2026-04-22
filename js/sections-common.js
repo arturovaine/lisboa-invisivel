@@ -144,17 +144,20 @@ customElements.define('li-services-cta', LiServicesCta);
 class LiDataFilter extends LiSection {
   styles() { return dataFilterCSS; }
   render() {
-    const chips = ['Todos', 'Habitação', 'Saúde Mental', 'Refeições', 'Emprego', 'Apoio Social', 'Mulheres', 'Migração'];
+    const chips = ['Alimentação', 'Higiene', 'Saúde', 'Abrigo'];
     return `
       <section>
         <div class="inner">
           <div class="search">
-            <span>🔍</span>
-            <input type="text" placeholder="Ex: Alojamento, Almoço, Saúde..."/>
-            <button class="chip active yellow">⏷ Filtrar</button>
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 14L10.4 10.4M11.3333 6.66667C11.3333 9.24399 9.24399 11.3333 6.66667 11.3333C4.08934 11.3333 2 9.24399 2 6.66667C2 4.08934 4.08934 2 6.66667 2C9.24399 2 11.3333 4.08934 11.3333 6.66667Z" stroke="#1C1B1B" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <input type="text" placeholder="Procurar por nome ou localização..."/>
           </div>
+          <button class="btn-filter">
+            <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.08333 7V5.83333H6.41667V7H4.08333ZM1.75 4.08333V2.91667H8.75V4.08333H1.75ZM0 1.16667V0H10.5V1.16667H0Z" fill="white"/></svg>
+            FILTRAR
+          </button>
           <div class="chips">
-            ${chips.map((c,i) => `<button class="chip ${i===0?'active':''}">${c}</button>`).join('')}
+            ${chips.map(c => `<button class="chip">${c}</button>`).join('')}
           </div>
         </div>
       </section>`;
