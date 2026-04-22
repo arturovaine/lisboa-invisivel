@@ -44,9 +44,15 @@
   .card {
     background: #000;
     color: #fff;
-    padding: 2.5rem;
+    width: 341px;
+    height: 236px;
+    padding: 40px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
     position: relative;
     overflow: visible;
+    box-sizing: border-box;
   }
 
   .card .eye-badge {
@@ -73,7 +79,7 @@
     font-size: 1rem;
     letter-spacing: .12em;
     text-transform: uppercase;
-    color: var(--yellow);
+    color: #fff;
     margin-bottom: 1rem;
   }
 
@@ -82,8 +88,12 @@
     display: flex;
     flex-direction: column;
     gap: .6rem;
-    font-size: .9rem;
-    line-height: 1.5;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
     color: rgba(255, 255, 255, .85);
   }
 
