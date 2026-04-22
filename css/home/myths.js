@@ -1,13 +1,13 @@
 export const mythsCSS = `
   section { background: var(--purple-dark); padding: 6rem 2rem; }
   .inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-  .myth { background: var(--cream); color: var(--text-dark); padding: 2.5rem; }
-  .badge { display: inline-block; background: var(--yellow); color: var(--purple-dark); font-family: var(--font-display); font-weight: 900; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; padding: .35rem .9rem; margin-bottom: 1.5rem; }
+  .myth { background: var(--cream); color: var(--text-dark); padding: 5rem 2.5rem 2.5rem; position: relative; }
+  .badge { position: absolute; top: -16px; left: -16px; width: 112px; height: 64px; display: flex; align-items: center; justify-content: center; background: var(--yellow); color: var(--purple-dark); font-family: var(--font-display); font-weight: 900; font-size: .95rem; letter-spacing: .12em; text-transform: uppercase; }
   .lbl { font-family: var(--font-display); font-weight: 700; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(28,27,27,.45); margin-bottom: .5rem; }
-  .mt { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; line-height: 1.4; color: var(--text-dark); margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(28,27,27,.12); }
+  .mt { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 30px; line-height: 37.5px; letter-spacing: 0px; color: #24103A; max-width: 432px; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(28,27,27,.12); }
   .fl { text-align: right; }
-  .ft { font-size: .95rem; line-height: 1.65; color: rgba(28,27,27,.7); margin-bottom: .5rem; }
-  .fn { font-family: var(--font-display); font-weight: 900; font-size: 3rem; color: var(--yellow); text-align: right; }
+  .ft { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 20px; line-height: 28px; letter-spacing: 0px; text-align: right; color: rgba(28,27,27,.7); margin-bottom: .5rem; }
+  .fn { font-family: var(--font-display); font-weight: 900; font-size: 3rem; color: #24103A; text-align: right; }
   .right h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.5rem, 4vw, 3.5rem); text-transform: uppercase; color: #fff; line-height: 1.0; margin-bottom: 1rem; }
   .right p { color: rgba(255,255,255,.6); font-size: 1rem; line-height: 1.65; margin-bottom: 2rem; }
   .acc { display: flex; flex-direction: column; }
