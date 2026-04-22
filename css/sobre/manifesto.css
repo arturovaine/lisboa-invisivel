@@ -107,10 +107,8 @@
     color: rgba(255, 255, 255, .85);
   }
 
-  .card li::before {
-    content: '→';
-    color: var(--yellow);
-    margin-right: .6rem;
+  .card li {
+    white-space: nowrap;
   }
 
   @media (max-width: 860px) {
