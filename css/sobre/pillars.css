@@ -37,6 +37,30 @@
   .card {
     background: var(--cream);
     padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before,
+  .card::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+  }
+
+  .card::before {
+    top: 0;
+    left: 0;
+    border-top: 3px solid var(--yellow, #F4C542);
+    border-left: 3px solid var(--yellow, #F4C542);
+  }
+
+  .card::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 3px solid var(--yellow, #F4C542);
+    border-right: 3px solid var(--yellow, #F4C542);
   }
 
   .ic {
