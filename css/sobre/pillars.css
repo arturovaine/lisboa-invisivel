@@ -76,4 +76,8 @@
     .grid {
       grid-template-columns: 1fr;
     }
+
+    .card {
+      height: auto;
+    }
   }
