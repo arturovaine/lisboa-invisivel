@@ -4,15 +4,16 @@
   }
 
   .card {
-    max-width: 1200px;
+    max-width: 1120px;
     margin: 0 auto;
     background: var(--yellow);
-    padding: 3.5rem;
+    padding: 80px;
+    height: 376px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
+    gap: 48px;
+    box-sizing: border-box;
   }
 
   h2 {
