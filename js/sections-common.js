@@ -111,7 +111,7 @@ class LiMission extends LiSection {
     return `
       <section>
         <div class="inner">
-          <h2>Um observatório social digital para consciencializar, desmistificar e mobilizar.</h2>
+          <h2>Um observatório social<br>digital para<br>consciencializar,<br>desmistificar e mobilizar.</h2>
           <div class="pillars">
             ${pillars.map(([n,t,d]) => `
               <div class="pillar"><div class="num">${n}</div><div class="t">${t}</div><p class="d">${d}</p></div>
