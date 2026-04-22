@@ -33,10 +33,23 @@
   }
 
   .sig {
-    font-family: var(--font-display);
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: .75rem;
-    letter-spacing: .15em;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1.4px;
     text-transform: uppercase;
-    color: var(--yellow-dark);
+    color: #1C1B1B;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+  }
+
+  .sig::before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 2px;
+    background: #765B00;
+    flex-shrink: 0;
   }
