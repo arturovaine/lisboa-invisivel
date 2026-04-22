@@ -23,6 +23,17 @@ class LiPageHero extends LiSection {
     const sub = this.getAttribute('sub') || '';
     const actions = this.getAttribute('actions') || '';
 
+    if (variant === 'white') {
+      return `
+        <section class="hero white">
+          <div class="content">
+            ${kicker ? `<span class="kicker">${kicker}</span>` : ''}
+            <h1>${title}</h1>
+            ${sub ? `<p class="sub">${sub}</p>` : ''}
+          </div>
+        </section>
+      `;
+    }
     if (variant === 'light') {
       const statNum   = this.getAttribute('stat-num') || '';
       const statLabel = this.getAttribute('stat-label') || '';
