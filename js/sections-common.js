@@ -133,7 +133,7 @@ class LiServicesCta extends LiSection {
           <p class="desc">Mapa interativo de serviços de emergência, alimentação e apoio em Lisboa.</p>
         </div>
         <div class="actions">
-          <a href="servicos.html"><button class="btn-map"><img src="./assets/icons/map-yellow.svg" alt="" aria-hidden="true" width="20" height="20"> Ver Mapa</button></a>
+          <a href="servicos.html"><button class="btn-map"><img src="./assets/icons/globe-search-white.svg" alt="" aria-hidden="true" width="20" height="20"> Ver Mapa</button></a>
           <a href="tel:112"><button class="btn-emerg">☎ Emergência</button></a>
         </div>
       </div>
