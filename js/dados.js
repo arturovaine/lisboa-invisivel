@@ -217,9 +217,9 @@ class LiIntersection extends LiSection {
   styles() { return intersectionCSS; }
   render() {
     const items = [
-      { svg: 'female-white',      title: 'Mulheres & Género', desc: 'Intersecções entre desigualdade de género e vulnerabilidade urbana.',         cta: '32 Indicadores' },
-      { svg: 'globe-search-white', title: 'Migração & Visto',  desc: 'Barreiras burocráticas e documentação na integração social.',                  cta: '18 Indicadores' },
-      { svg: 'head-gear-white',   title: 'Saúde Mental',      desc: 'Trauma, dependência e rede pública de saúde mental em Lisboa.',                cta: '24 Indicadores' },
+      { svg: 'female-white',      title: 'Mulheres & Género', desc: 'Intersecções entre desigualdade de género e vulnerabilidade urbana.',        cta: '32 Indicadores' },
+      { svg: 'globe-search-white', title: 'Migração & Visto',  desc: 'Barreiras burocráticas e documentação na integração social.',                cta: '18 Indicadores' },
+      { svg: 'head-gear-white',   title: 'Saúde Mental',      desc: 'Trauma, dependência e rede pública de saúde mental em Lisboa.',              cta: '24 Indicadores' },
     ];
     return `
       <section>
@@ -237,7 +237,7 @@ class LiIntersection extends LiSection {
                 <img class="ic" src="./assets/icons/${i.svg}.svg" alt="" aria-hidden="true" width="32" height="32">
                 <div class="t">${i.title}</div>
                 <p class="d">${i.desc}</p>
-                <p class="link">${i.cta} →</p>
+                <p class="link">${i.cta}</p>
               </div>
             `).join('')}
           </div>
@@ -256,8 +256,8 @@ class LiDataExport extends LiSection {
           <h2>Descarregue os Dados Brutos</h2>
           <p class="sub">Para investigadores, jornalistas e decisores políticos. Promovemos a transparência total sobre a realidade social de Lisboa.</p>
         </div>
-        <button class="btn dark"><img src="./assets/icons/download-white.svg" alt="" aria-hidden="true"> Relatório Anual PDF</button>
-        <button class="btn light"><img src="./assets/icons/database-black.svg" alt="" aria-hidden="true"> Exportar CSV / JSON</button>
+        <button class="btn dark"><img src="./assets/icons/download-white.svg" alt="" aria-hidden="true"><span>Relatório Anual<br>PDF</span></button>
+        <button class="btn light"><img src="./assets/icons/database-black.svg" alt="" aria-hidden="true"><span>Exportar<br>CSV / JSON</span></button>
       </div>
     </section>`;}
 }
