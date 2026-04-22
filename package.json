@@ -1,0 +1,29 @@
+{
+  "name": "pagina-institucional",
+  "version": "1.0.0",
+  "description": "Observatório social digital sobre a situação de sem-abrigo em Lisboa. Dados abertos, histórias reais, mapa de serviços de apoio e mobilização cívica.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --port 8090",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturovaine/lisboa-invisivel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arturovaine/lisboa-invisivel/issues"
+  },
+  "homepage": "https://github.com/arturovaine/lisboa-invisivel#readme",
+  "devDependencies": {
+    "vite": "^6.4.2"
+  }
+}
