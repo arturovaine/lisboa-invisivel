@@ -65,7 +65,7 @@ class LiNewsletter extends HTMLElement {
           <div class="right">
             <div class="form">
               <input type="email" placeholder="O seu e-mail">
-              <button class="btn-sub">Aderir</button>
+              <button class="btn-sub">Subscrever</button>
             </div>
             <p class="legal">Ao subscrever, aceita a nossa política de privacidade e o compromisso ético de Lisboa Invisível.</p>
           </div>
