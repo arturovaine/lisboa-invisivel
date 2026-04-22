@@ -145,7 +145,7 @@
     color: #1C1B1B;
     opacity: .55;
   }
-  .card-chart .stat  { color: #1C1B1B; }
+  .card-chart .stat  { color: #1C1B1B; font-weight: 700; font-size: 36px; line-height: 40px; letter-spacing: 0px; }
   .card-chart .desc  { color: rgba(28,27,27,.7); }
   .card-chart .source { color: #927AAB; }
 
