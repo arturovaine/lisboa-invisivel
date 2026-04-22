@@ -70,6 +70,7 @@
   .fact {
     width: 432px;
     height: 252px;
+    margin-top: -8px;
     border-top: 4px solid var(--purple-dark);
     padding-top: 48px;
     display: flex;
