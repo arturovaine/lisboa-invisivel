@@ -1,16 +1,19 @@
   section {
     background: var(--cream);
-    padding: 5rem 2rem;
-    border-top: 1px solid rgba(28, 27, 27, .1);
+    padding: 64px 2rem 192px;
   }
 
   .inner {
-    max-width: 1200px;
+    max-width: 1216px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    height: 240px;
+    border-top: 8px solid #1C1B1B;
+    padding-top: 64px;
+    box-sizing: border-box;
   }
 
   h2 {
