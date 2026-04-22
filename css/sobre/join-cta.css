@@ -2,6 +2,7 @@
     background: var(--bg-dark);
     color: #fff;
     padding: 5rem 2rem;
+    box-sizing: border-box;
   }
 
   .inner {
