@@ -6,7 +6,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    border-left: 12px solid #765B00;
+    border-left: 12px solid var(--label-category);
     padding: 96px 80px 96px 80px;
     box-sizing: border-box;
   }
@@ -21,24 +21,24 @@
   }
 
   .quote {
-    font-family: 'Manrope', sans-serif;
+    font-family: var(--font-body);
     font-weight: 400;
     font-size: 20px;
     line-height: 32.5px;
     letter-spacing: 0px;
-    color: rgba(28, 27, 27, .75);
+    color: var(--text-dark-75);
     width: 768px;
     margin-bottom: 1rem;
   }
 
   .sig {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-ui);
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 1.4px;
     text-transform: uppercase;
-    color: #1C1B1B;
+    color: var(--text-dark);
     display: flex;
     align-items: center;
     gap: .75rem;
@@ -49,6 +49,6 @@
     display: block;
     width: 48px;
     height: 2px;
-    background: #765B00;
+    background: var(--label-category);
     flex-shrink: 0;
   }
