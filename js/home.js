@@ -48,7 +48,6 @@ class LiMyths extends LiSection {
     const myths = [
       ['Mito da Toxicodependência', 'Apenas 22% das pessoas sem-abrigo têm problemas de dependência. A maioria enfrenta problemas económicos, familiares e de saúde mental sem qualquer relação com substâncias.'],
       ['Mito da Nacionalidade', '68% das pessoas registadas em situação de sem-abrigo em Lisboa são de nacionalidade portuguesa, contrariando a narrativa migratória dominante.'],
-      ['Mito da Escolha', 'Estudos mostram que a esmagadora maioria prefere ter habitação e estabilidade, mas enfrenta barreiras sistémicas que impedem esse acesso.'],
     ];
     return `
       <section>
@@ -66,7 +65,7 @@ class LiMyths extends LiSection {
             <p>A desinformação é a barreira mais alta que as pessoas em situação de sem-abrigo enfrentam todos os dias.</p>
             <div class="acc">
               ${myths.map(([t,d]) => `
-                <div class="item"><div class="h">${t}<span class="ic">›</span></div><div class="b">${d}</div></div>
+                <div class="item"><div class="h">${t}<img class="ic" src="./assets/icons/chevron-right-cream.svg" alt="" aria-hidden="true" width="8" height="12"></div><div class="b">${d}</div></div>
               `).join('')}
             </div>
           </div>
