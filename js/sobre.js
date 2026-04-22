@@ -15,7 +15,7 @@ class LiManifesto extends LiSection {
   render() { return `
     <section>
       <div class="inner">
-        <div>
+        <div class="text-col">
           <h2>A nossa missão é<br><em>desocultar o que a cidade<br>ignora.</em></h2>
           <p>Nascido da urgência de dados rigorosos sobre a exclusão social urbana, o Lisboa Invisível não é apenas uma plataforma de arquivo. É um instrumento de cidadania que utiliza a investigação académica para informar a intervenção social e a política pública.</p>
           <p>Acreditamos que o primeiro passo para a mudança é a visibilidade. Ao documentar histórias de vida e métricas de infraestrutura, construímos um mapa humano da capital que serve tanto para apoio imediato como para a transformação estrutural a longo prazo.</p>

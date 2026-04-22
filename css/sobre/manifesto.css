@@ -1,15 +1,25 @@
   section {
     background: var(--cream);
-    padding: 6rem 2rem;
+    min-height: 620px;
+    padding: 96px 80px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
   }
 
   .inner {
-    max-width: 1200px;
+    max-width: 1120px;
+    width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
     align-items: start;
+  }
+
+  .text-col {
+    background: #FCF8F8;
+    padding: 40px;
   }
 
   h2 {
