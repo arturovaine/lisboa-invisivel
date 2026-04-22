@@ -1,0 +1,355 @@
+  section {
+    background: #fff;
+    padding: 5rem 0 5rem 0;
+  }
+
+  .inner {
+    max-width: 1216px;
+    margin: 0 auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 32px;
+  }
+
+  /* ── shared card base ── */
+  .card {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: auto;
+  }
+
+  .stat {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 1;
+    margin: 1rem 0 .5rem;
+  }
+
+  .desc {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .source {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: .75rem;
+  }
+
+  /* ── card 1: large highlight — col 1-2, row 1 ── */
+  .card-large {
+    grid-column: span 2;
+    background: #25113B;
+    padding: 40px;
+    color: #FAF8F2;
+    height: 401px;
+    min-height: unset;
+  }
+
+  .card-large .tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #FFDF94;
+  }
+
+  .card-large .stat  { color: #FAF8F2; }
+  .card-large .desc  { color: rgba(250,248,242,.75); }
+
+  .card-large .img-placeholder {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(37,17,59,0) 40%, #25113B 100%),
+                repeating-linear-gradient(45deg, rgba(146,122,171,.06) 0, rgba(146,122,171,.06) 1px, transparent 0, transparent 50%);
+    background-size: auto, 12px 12px;
+  }
+
+  .card-large .body {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  /* ── corner brackets (::before top-left, ::after bottom-right) ── */
+  .card-large::before,
+  .card-large::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    z-index: 2;
+  }
+
+  .card-large::before {
+    top: 0;
+    left: 0;
+    border-top: 3px solid var(--yellow, #F4C542);
+    border-left: 3px solid var(--yellow, #F4C542);
+  }
+
+  .card-large::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 3px solid var(--yellow, #F4C542);
+    border-right: 3px solid var(--yellow, #F4C542);
+  }
+
+  /* ── card 2: chart small — col 3, row 1 ── */
+  .card-chart {
+    background: #E5E2E1;
+    color: #1C1B1B;
+  }
+
+  .card-chart .tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #1C1B1B;
+    opacity: .55;
+  }
+  .card-chart .stat  { color: #1C1B1B; }
+  .card-chart .desc  { color: rgba(28,27,27,.7); }
+  .card-chart .source { color: #927AAB; }
+
+  .bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 72px;
+    margin-top: 1.25rem;
+  }
+
+  .bar {
+    flex: 1;
+    background: #4A454D;
+    border-radius: 1px;
+  }
+
+  .bar.accent { background: var(--yellow, #F4C542); }
+
+  .ext-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #1C1B1B;
+    margin-top: .5rem;
+    display: inline-block;
+  }
+
+  /* ── card 3: comparison — col 4, row 1 ── */
+  .card-comparison {
+    background: #FAF8F2;
+    border-left: 8px solid #25113B;
+    color: #1C1B1B;
+    gap: 32px;
+    padding-bottom: 156px;
+  }
+
+  .card-comparison .tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #1C1B1B;
+    opacity: .55;
+  }
+
+  .cmp-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .cmp-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(28,27,27,.55);
+  }
+
+  .cmp-value {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: #1C1B1B;
+  }
+
+  .cmp-bar {
+    height: 4px;
+    background: #4A454D;
+    margin-top: 4px;
+  }
+
+  .cmp-bar.accent { background: var(--yellow, #F4C542); }
+
+  .card-comparison .desc { color: rgba(28,27,27,.65); font-size: 13px; }
+
+  /* ── card 4: migration profile — col 1, row 2 ── */
+  .card-migration {
+    background: #E5E2E1;
+    color: #1C1B1B;
+    padding: 32px 32px 66px;
+    gap: 16px;
+    min-height: 318px;
+  }
+
+  .card-migration .tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #1C1B1B;
+    opacity: .55;
+  }
+  .card-migration .stat  { color: #1C1B1B; font-size: 56px; }
+  .card-migration .desc  { color: rgba(28,27,27,.7); }
+  .card-migration .source { color: #927AAB; }
+
+  /* ── card 5: geographic focus — col 2-3, row 2 ── */
+  .card-geo {
+    grid-column: span 2;
+    background: #F6F3F2;
+    padding: 40px;
+    flex-direction: row;
+    gap: 40px;
+    min-height: 318px;
+    align-items: center;
+  }
+
+  .card-geo .text-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .card-geo .territory {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #4A454D;
+  }
+
+  .card-geo h3 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0px;
+    color: #1C1B1B;
+  }
+
+  .card-geo .body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(28,27,27,.65);
+    margin-top: auto;
+  }
+
+  .card-geo .map-img {
+    width: 192px;
+    height: 192px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  /* ── card 6: women highlight — col 4, row 2 ── */
+  .card-women {
+    background: #765B00;
+    color: #FAF8F2;
+    min-height: 318px;
+  }
+
+  .card-women .tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: rgba(250,248,242,.6);
+  }
+  .card-women .stat { color: #FAF8F2; }
+  .card-women .desc { color: rgba(250,248,242,.8); }
+
+  .card-women .cta-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FAF8F2;
+    display: inline-block;
+    width: 150.69px;
+    height: 34px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #FAF8F2;
+    margin-top: 1rem;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 860px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .card-large,
+    .card-geo { grid-column: span 2; }
+  }
+
+  @media (max-width: 560px) {
+    .grid { grid-template-columns: 1fr; }
+    .card-large,
+    .card-geo { grid-column: span 1; }
+  }

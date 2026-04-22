@@ -7,6 +7,7 @@
 import { LiSection } from './core.js';
 import dadosHeroCSS from '../css/dados/dados-hero.css?inline';
 import dadosFilterCSS from '../css/dados/dados-filter.css?inline';
+import bentoGridCSS from '../css/dados/bento-grid.css?inline';
 import dataCardsCSS from '../css/dados/data-cards.css?inline';
 import intersectionCSS from '../css/dados/intersection.css?inline';
 import dataExportCSS from '../css/dados/data-export.css?inline';
@@ -71,6 +72,88 @@ class LiDadosFilter extends LiSection {
   }
 }
 customElements.define('li-dados-filter', LiDadosFilter);
+
+class LiBentoGrid extends LiSection {
+  styles() { return bentoGridCSS; }
+
+  bars(n, accentLast = true) {
+    return Array.from({length: n}).map((_, i) =>
+      `<div class="bar ${accentLast && i === n - 1 ? 'accent' : ''}" style="height:${30 + Math.random() * 70}%"></div>`
+    ).join('');
+  }
+
+  render() {
+    return `
+      <section>
+        <div class="inner">
+          <div class="grid">
+
+            <!-- Card 1 · Large Highlight — 2 cols -->
+            <div class="card card-large">
+              <div class="img-placeholder"></div>
+              <div class="body">
+                <span class="tag">Habitação Emergencial</span>
+              </div>
+            </div>
+
+            <!-- Card 2 · Chart Small — Saúde Mental -->
+            <div class="card card-chart">
+              <span class="tag">Saúde Mental</span>
+              <div class="stat">68%</div>
+              <p class="desc">Indivíduos que reportam sintomas severos de isolamento e depressão.</p>
+              <div class="bars">${this.bars(8)}</div>
+              <span class="source">Sondagem 2024</span>
+              <a class="ext-link" href="#">Ver relatório ↗</a>
+            </div>
+
+            <!-- Card 3 · Comparison — Refeições Servidas -->
+            <div class="card card-comparison">
+              <span class="tag">Refeições Servidas</span>
+              <div class="cmp-row">
+                <span class="cmp-label">Inverno 23</span>
+                <span class="cmp-value">45.000</span>
+                <div class="cmp-bar" style="width:73%"></div>
+              </div>
+              <div class="cmp-row">
+                <span class="cmp-label">Inverno 24</span>
+                <span class="cmp-value">62.000</span>
+                <div class="cmp-bar accent" style="width:100%"></div>
+              </div>
+              <p class="desc">Aumento da pressão sobre as cantinas sociais e pontos de distribuição móvel.</p>
+            </div>
+
+            <!-- Card 4 · Migration Profile -->
+            <div class="card card-migration">
+              <span class="tag">Migração</span>
+              <div class="stat">42%</div>
+              <p class="desc">Dos novos registos são de cidadãos em situação de migração irregular ou precária.</p>
+              <span class="source">Dados INE 2026</span>
+            </div>
+
+            <!-- Card 5 · Geographic Focus — 2 cols -->
+            <div class="card card-geo">
+              <div class="text-col">
+                <span class="territory">Território: Arroios</span>
+                <h3>A freguesia com a maior concentração de pedidos de apoio.</h3>
+                <p class="body">O mapeamento geográfico revela que o centro histórico continua a ser o epicentro da invisibilidade social.</p>
+              </div>
+              <img class="map-img" src="./assets/map-arroios.svg" alt="Mapa da freguesia de Arroios, Lisboa — concentração de pedidos de apoio" width="192" height="192" loading="lazy" decoding="async">
+            </div>
+
+            <!-- Card 6 · Women Highlight -->
+            <div class="card card-women">
+              <span class="tag">Foco · Mulheres</span>
+              <div class="stat">1/4</div>
+              <p class="desc">Das pessoas em situação de rua são mulheres, muitas com filhos a cargo.</p>
+              <a class="cta-link" href="#">Ver Relatório Completo</a>
+            </div>
+
+          </div>
+        </div>
+      </section>`;
+  }
+}
+customElements.define('li-bento-grid', LiBentoGrid);
 
 class LiDataCards extends LiSection {
   styles() { return dataCardsCSS; }
