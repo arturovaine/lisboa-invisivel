@@ -129,6 +129,10 @@
   .card-chart {
     background: #E5E2E1;
     color: #1C1B1B;
+    height: 411px;
+    min-height: unset;
+    padding: 32px;
+    justify-content: space-between;
   }
 
   .card-chart .tag {
