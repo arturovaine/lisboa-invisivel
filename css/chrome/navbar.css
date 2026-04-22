@@ -6,7 +6,8 @@
 
   nav {
     background: var(--purple-dark);
-    padding: .9rem 2rem;
+    height: 90px;
+    padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
