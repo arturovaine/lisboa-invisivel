@@ -44,7 +44,8 @@
     font-size: 18px;
     line-height: 28px;
     letter-spacing: 0px;
-    width: 369.89px;
+    max-width: 370px;
+    width: 100%;
   }
 
   .grid {
