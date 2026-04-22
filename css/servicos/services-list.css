@@ -31,9 +31,9 @@
   }
 
   .svc {
-    background: #fff;
+    background: #F6F3F2;
     padding: 1.5rem 1.8rem;
-    border-left: 4px solid var(--yellow);
+    border-left: 8px solid var(--yellow);
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 1rem;
