@@ -11,6 +11,10 @@
     height: 800px;
   }
 
+  .hero.tall h1 {
+    text-transform: none;
+  }
+
   .bg {
     position: absolute;
     inset: 0;
