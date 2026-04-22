@@ -30,7 +30,8 @@
     align-items: center;
     justify-content: center;
     gap: .7rem;
-    padding: 2rem 1rem;
+    height: 160px;
+    padding: 24px;
     cursor: pointer;
     transition: background .2s;
     background: var(--cream-dark);
