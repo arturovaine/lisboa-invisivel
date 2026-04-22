@@ -1,0 +1,99 @@
+  :host {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav {
+    background: var(--purple-dark);
+    padding: .9rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    cursor: pointer;
+  }
+
+  .logo img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: .85rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .75);
+    transition: color .2s;
+    position: relative;
+    padding-bottom: .3rem;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--yellow);
+  }
+
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 2px;
+    background: var(--yellow);
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn-cta {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: .8rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background: var(--yellow);
+    color: var(--purple-dark);
+    border: none;
+    padding: .55rem 1.2rem;
+    cursor: pointer;
+    transition: background .2s;
+  }
+
+  .btn-cta:hover {
+    background: var(--yellow-dark);
+  }
+
+  .menu-icon {
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, .3);
+    padding: .3rem .5rem;
+    line-height: 1;
+  }
+
+  @media (max-width: 860px) {
+    .nav-links {
+      display: none;
+    }
+  }

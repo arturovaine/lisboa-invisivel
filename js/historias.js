@@ -5,8 +5,8 @@
    ══════════════════════════════════════════════════════════════════ */
 
 import { LiSection, IMG } from './core.js';
-import { storiesFilterCSS } from '../css/historias/filter.js';
-import { storiesGridCSS } from '../css/historias/grid.js';
+import storiesFilterCSS from '../css/historias/filter.css?inline';
+import storiesGridCSS from '../css/historias/grid.css?inline';
 
 class LiStoriesFilter extends LiSection {
   styles() { return storiesFilterCSS; }

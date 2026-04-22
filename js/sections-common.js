@@ -6,11 +6,11 @@
    ══════════════════════════════════════════════════════════════════ */
 
 import { LiSection, IMG } from './core.js';
-import { pageHeroCSS } from '../css/sections/page-hero.js';
-import { statsCSS } from '../css/sections/stats.js';
-import { missionCSS } from '../css/sections/mission.js';
-import { servicesCtaCSS } from '../css/sections/services-cta.js';
-import { dataFilterCSS } from '../css/sections/data-filter.js';
+import pageHeroCSS from '../css/sections/page-hero.css?inline';
+import statsCSS from '../css/sections/stats.css?inline';
+import missionCSS from '../css/sections/mission.css?inline';
+import servicesCtaCSS from '../css/sections/services-cta.css?inline';
+import dataFilterCSS from '../css/sections/data-filter.css?inline';
 
 class LiPageHero extends LiSection {
   styles() { return pageHeroCSS; }

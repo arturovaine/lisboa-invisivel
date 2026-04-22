@@ -5,9 +5,9 @@
    ══════════════════════════════════════════════════════════════════ */
 
 import { LiSection } from './core.js';
-import { dataCardsCSS } from '../css/dados/data-cards.js';
-import { intersectionCSS } from '../css/dados/intersection.js';
-import { dataExportCSS } from '../css/dados/data-export.js';
+import dataCardsCSS from '../css/dados/data-cards.css?inline';
+import intersectionCSS from '../css/dados/intersection.css?inline';
+import dataExportCSS from '../css/dados/data-export.css?inline';
 
 class LiDataCards extends LiSection {
   styles() { return dataCardsCSS; }

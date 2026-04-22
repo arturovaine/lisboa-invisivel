@@ -5,7 +5,7 @@
    ══════════════════════════════════════════════════════════════════ */
 
 import { LiSection } from './core.js';
-import { servicesListCSS } from '../css/servicos/services-list.js';
+import servicesListCSS from '../css/servicos/services-list.css?inline';
 
 class LiServicesList extends LiSection {
   styles() { return servicesListCSS; }

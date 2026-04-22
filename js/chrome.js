@@ -5,10 +5,10 @@
    ══════════════════════════════════════════════════════════════════ */
 
 import { baseStyles, LOGO_SVG } from './core.js';
-import { navbarCSS } from '../css/chrome/navbar.js';
-import { newsletterCSS } from '../css/chrome/newsletter.js';
-import { partnersCSS } from '../css/chrome/partners.js';
-import { footerCSS } from '../css/chrome/footer.js';
+import navbarCSS from '../css/chrome/navbar.css?inline';
+import newsletterCSS from '../css/chrome/newsletter.css?inline';
+import partnersCSS from '../css/chrome/partners.css?inline';
+import footerCSS from '../css/chrome/footer.css?inline';
 
 class LiNavbar extends HTMLElement {
   connectedCallback() {

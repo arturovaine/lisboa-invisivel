@@ -5,10 +5,10 @@
    ══════════════════════════════════════════════════════════════════ */
 
 import { LiSection } from './core.js';
-import { manifestoCSS } from '../css/sobre/manifesto.js';
-import { pillarsCSS } from '../css/sobre/pillars.js';
-import { ethicsCSS } from '../css/sobre/ethics.js';
-import { joinCtaCSS } from '../css/sobre/join-cta.js';
+import manifestoCSS from '../css/sobre/manifesto.css?inline';
+import pillarsCSS from '../css/sobre/pillars.css?inline';
+import ethicsCSS from '../css/sobre/ethics.css?inline';
+import joinCtaCSS from '../css/sobre/join-cta.css?inline';
 
 class LiManifesto extends LiSection {
   styles() { return manifestoCSS; }
