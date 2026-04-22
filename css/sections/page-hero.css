@@ -8,7 +8,7 @@
   }
 
   .hero.tall {
-    min-height: 92vh;
+    height: 800px;
   }
 
   .bg {
