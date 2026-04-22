@@ -73,15 +73,6 @@ class LiMyths extends LiSection {
         </div>
       </section>`;
   }
-  afterRender(shadow) {
-    shadow.querySelectorAll('.item').forEach(item => {
-      item.addEventListener('click', () => {
-        const open = item.classList.contains('open');
-        shadow.querySelectorAll('.item').forEach(i => i.classList.remove('open'));
-        if (!open) item.classList.add('open');
-      });
-    });
-  }
 }
 customElements.define('li-myths', LiMyths);
 
