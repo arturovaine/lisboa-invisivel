@@ -36,14 +36,14 @@
   }
 
   .kicker {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-ui);
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0px;
     text-transform: uppercase;
     background: var(--yellow);
-    color: #1C1B1B;
+    color: var(--text-dark);
     margin-bottom: 1.2rem;
     display: inline-block;
   }
@@ -72,7 +72,7 @@
 
   .sub {
     margin-top: 1.5rem;
-    font-family: 'Manrope', sans-serif;
+    font-family: var(--font-body);
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
@@ -205,36 +205,13 @@
   .hero.light .stat-card {
     grid-column: 9 / span 4;
     align-self: center;
-    background: #EBE7E7;
+    background: var(--bg-subtle);
     padding: 32px;
     min-height: 256px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0;
-    position: relative;
-  }
-
-  .hero.light .stat-card::before,
-  .hero.light .stat-card::after {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 24px;
-  }
-
-  .hero.light .stat-card::before {
-    top: 0;
-    left: 0;
-    border-top: 3px solid var(--yellow);
-    border-left: 3px solid var(--yellow);
-  }
-
-  .hero.light .stat-card::after {
-    bottom: 0;
-    right: 0;
-    border-bottom: 3px solid var(--yellow);
-    border-right: 3px solid var(--yellow);
   }
 
   .hero.light .stat-num {
@@ -263,12 +240,12 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0;
-    color: rgba(28, 27, 27, .75);
+    color: var(--text-dark-75);
     margin-top: 1rem;
   }
 
   .hero.white {
-    background: #fff;
+    background: var(--bg-white);
     height: auto;
     min-height: 144px;
   }
@@ -289,29 +266,29 @@
   }
 
   .hero.white h1 {
-    font-family: 'Epilogue', sans-serif;
+    font-family: var(--font-display);
     font-weight: 900;
     font-size: 72px;
     line-height: 72px;
     letter-spacing: -3.6px;
     text-transform: uppercase;
-    color: #1C1B1B;
+    color: var(--text-dark);
     animation: none;
     max-width: none;
   }
 
   .hero.white h1 .accent {
     background: var(--yellow);
-    color: #1C1B1B;
+    color: var(--text-dark);
   }
 
   .hero.white .sub {
-    font-family: 'Manrope', sans-serif;
+    font-family: var(--font-body);
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
     letter-spacing: 0px;
-    color: rgba(28, 27, 27, .75);
+    color: var(--text-dark-75);
     margin-top: .75rem;
     animation: none;
   }

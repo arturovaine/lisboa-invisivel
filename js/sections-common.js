@@ -39,7 +39,7 @@ class LiPageHero extends LiSection {
       const statLabel = this.getAttribute('stat-label') || '';
       const statDesc  = this.getAttribute('stat-desc') || '';
       const statCard  = statNum ? `
-        <aside class="stat-card" aria-label="Estatística de destaque">
+        <aside class="stat-card bracket-card" aria-label="Estatística de destaque">
           <div class="stat-num">${statNum}</div>
           <div class="stat-label">${statLabel}</div>
           <p class="stat-desc">${statDesc}</p>
