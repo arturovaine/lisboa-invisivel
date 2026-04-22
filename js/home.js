@@ -22,7 +22,7 @@ class LiStoriesPreview extends LiSection {
         <div class="inner">
           <div class="head">
             <h2>Antes dos números,<br>vieram as <em>histórias.</em></h2>
-            <a class="see-all" href="historias.html">Ver todos os testemunhos →</a>
+            <a class="see-all" href="historias.html">Ver todos os testemunhos</a>
           </div>
           <div class="grid">
             ${stories.map(s => `
