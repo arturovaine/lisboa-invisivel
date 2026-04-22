@@ -253,8 +253,8 @@ class LiDataExport extends LiSection {
     <section>
       <div class="inner">
         <div>
-          <h2>Descarregue os Dados Brutos</h2>
-          <p class="sub">Para investigadores, jornalistas e decisores políticos. Promovemos a transparência total sobre a realidade social de Lisboa.</p>
+          <h2>Descarregue os Dados<br>Brutos</h2>
+          <p class="sub">Para investigadores, jornalistas e decisores políticos.<br>Promovemos a transparência total sobre a realidade social<br>de Lisboa.</p>
         </div>
         <button class="btn dark"><img src="./assets/icons/download-white.svg" alt="" aria-hidden="true"><span>Relatório Anual<br>PDF</span></button>
         <button class="btn light"><img src="./assets/icons/database-black.svg" alt="" aria-hidden="true"><span>Exportar<br>CSV / JSON</span></button>
