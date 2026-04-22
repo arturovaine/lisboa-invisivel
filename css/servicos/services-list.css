@@ -45,6 +45,10 @@
     border-left-color: var(--yellow);
   }
 
+  article.svc:nth-of-type(even) {
+    border-left-color: var(--purple-dark);
+  }
+
   .svc .tag {
     display: inline-block;
     background: var(--yellow);
