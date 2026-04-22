@@ -50,13 +50,17 @@
   }
 
   .label {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: .7rem;
-    letter-spacing: .18em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1.4px;
     text-transform: uppercase;
-    opacity: .65;
     margin-bottom: 1.2rem;
+  }
+
+  .card.dark .label {
+    color: #F4C542;
   }
 
   .num {
