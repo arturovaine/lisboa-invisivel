@@ -1,5 +1,5 @@
   section {
-    background: #E5E2E1;
+    background: var(--bg-silver);
     height: 340px;
     display: flex;
     align-items: center;
@@ -17,14 +17,14 @@
   }
 
   .label {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-ui);
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: -0.7px;
     text-transform: uppercase;
     text-align: center;
-    color: #1C1B1B;
+    color: var(--text-dark);
   }
 
   .partners {
