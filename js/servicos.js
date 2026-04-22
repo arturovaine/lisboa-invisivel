@@ -34,7 +34,7 @@ class LiServicesList extends LiSection {
               <article class="svc ${s.dark?'purple':''}">
                 <div>
                   <h3>${s.name}</h3>
-                  <p class="addr">${s.addr}</p>
+                  <p class="addr"><svg class="pin" width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 0C2.239 0 0 2.239 0 5c0 3.75 5 8 5 8s5-4.25 5-8c0-2.761-2.239-5-5-5zm0 6.75A1.75 1.75 0 1 1 5 3.25a1.75 1.75 0 0 1 0 3.5z" fill="rgba(28,27,27,.5)"/></svg>${s.addr}</p>
                   <p class="d">${s.d}</p>
                   <div class="meta">
                     <div class="meta-item"><span class="meta-label">HORÁRIO</span><span class="meta-val">${s.h}</span></div>
@@ -82,30 +82,34 @@ class LiServicesList extends LiSection {
   }
 
   afterRender(shadow) {
-    const box = shadow.getElementById('li-leaflet');
-    if (!box) return;
     const services = this.services;
-    const init = () => {
-      if (typeof L === 'undefined') { setTimeout(init, 80); return; }
-      box.classList.remove('loading');
-      const map = L.map(box, { scrollWheelZoom: false }).setView([38.7223, -9.1393], 12);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '© OpenStreetMap'
-      }).addTo(map);
-      const icon = L.divIcon({
-        className: 'li-pin',
-        html: '<div style="width:26px;height:26px;background:#F4C542;border:3px solid #24103A;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 6px rgba(0,0,0,.35)"></div>',
-        iconSize: [26,26], iconAnchor: [13,26]
-      });
-      const markers = services.map(s => L.marker([s.lat, s.lng], { icon })
-        .addTo(map)
-        .bindPopup(`<strong>${s.tag}</strong>${s.name}<br/><em>${s.addr}</em>`));
-      const group = L.featureGroup(markers);
-      map.fitBounds(group.getBounds(), { padding: [30, 30], maxZoom: 13 });
-      setTimeout(() => map.invalidateSize(), 150);
+    const icon = () => L.divIcon({
+      className: 'li-pin',
+      html: '<div style="width:26px;height:26px;background:#F4C542;border:3px solid #24103A;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 6px rgba(0,0,0,.35)"></div>',
+      iconSize: [26,26], iconAnchor: [13,26]
+    });
+
+    const initMap = (box, onReady) => {
+      const run = () => {
+        if (typeof L === 'undefined') { setTimeout(run, 80); return; }
+        box.classList.remove('loading');
+        const map = L.map(box, { scrollWheelZoom: false }).setView([38.7223, -9.1393], 12);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+          maxZoom: 19, attribution: '© OpenStreetMap © CARTO'
+        }).addTo(map);
+        const markers = services.map(s => L.marker([s.lat, s.lng], { icon: icon() })
+          .addTo(map)
+          .bindPopup(`<strong>${s.tag}</strong>${s.name}<br/><em>${s.addr}</em>`));
+        const group = L.featureGroup(markers);
+        map.fitBounds(group.getBounds(), { padding: [40, 40], maxZoom: 13 });
+        map.invalidateSize();
+        if (onReady) onReady(map);
+      };
+      run();
     };
-    init();
+
+    const miniBox = shadow.getElementById('li-leaflet');
+    if (miniBox) initMap(miniBox);
   }
 }
 customElements.define('li-services-list', LiServicesList);

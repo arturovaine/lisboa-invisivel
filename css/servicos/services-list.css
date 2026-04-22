@@ -1,23 +1,24 @@
   @import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
 
   section {
-    background: var(--cream);
-    padding: 3rem 2rem 5rem;
+    background: #fff;
+    padding: 48px 2rem 5rem;
   }
 
   .inner {
-    max-width: 1200px;
+    max-width: 1184px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1.5rem;
     align-items: start;
+    overflow: hidden;
   }
 
   .col-list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
   }
 
   .results-footer {
@@ -167,9 +168,15 @@
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0px;
-    vertical-align: middle;
     opacity: .65;
     margin-bottom: .8rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .svc .addr .pin {
+    flex-shrink: 0;
   }
 
   .svc .d {
