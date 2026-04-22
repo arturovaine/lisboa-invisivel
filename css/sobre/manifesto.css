@@ -23,12 +23,12 @@
   }
 
   .text-col {
-    background: #FCF8F8;
+    background: var(--bg-card-alt);
     padding: 40px 40px 40px 0;
   }
 
   h2 {
-    font-family: 'Epilogue', sans-serif;
+    font-family: var(--font-display);
     font-weight: 800;
     font-size: 48px;
     line-height: 48px;
@@ -40,24 +40,24 @@
 
   h2 em {
     font-style: normal;
-    background: #F4C5424D;
+    background: var(--yellow-highlight);
     padding: 0 .08em;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
   }
 
   p {
-    font-family: 'Manrope', sans-serif;
+    font-family: var(--font-body);
     font-weight: 400;
     font-size: 18px;
     line-height: 29.25px;
     letter-spacing: 0px;
-    color: rgba(28, 27, 27, .75);
+    color: var(--text-dark-75);
     margin-bottom: 1rem;
   }
 
   .card {
-    background: #000;
+    background: var(--bg-dark);
     color: #fff;
     width: 341px;
     height: 236px;
@@ -103,7 +103,7 @@
     display: flex;
     flex-direction: column;
     gap: .6rem;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-ui);
     font-weight: 500;
     font-size: 14px;
     line-height: 28px;
