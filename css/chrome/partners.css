@@ -58,3 +58,14 @@
   .partner img.invert {
     filter: invert(1);
   }
+
+  @media (max-width: 760px) {
+    section {
+      height: auto;
+      padding: 3rem 2rem;
+    }
+
+    .partner {
+      width: auto;
+    }
+  }
