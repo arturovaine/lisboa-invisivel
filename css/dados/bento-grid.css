@@ -183,7 +183,9 @@
     border-left: 8px solid #25113B;
     color: #1C1B1B;
     gap: 32px;
-    padding-bottom: 156px;
+    height: 416px;
+    min-height: unset;
+    padding: 32px 32px 156px 32px;
   }
 
   .card-comparison .tag {
@@ -227,7 +229,14 @@
 
   .cmp-bar.accent { background: var(--yellow, #F4C542); }
 
-  .card-comparison .desc { color: rgba(28,27,27,.65); font-size: 13px; }
+  .card-comparison .desc {
+    color: rgba(28,27,27,.65);
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
 
   /* ── card 4: migration profile — col 1, row 2 ── */
   .card-migration {
