@@ -92,7 +92,7 @@ class LiStats extends LiSection {
           <p class="label">Resposta Solidária</p>
           <div class="num">15.000+</div>
           <p class="desc">Refeições diárias servidas pela rede de apoio.</p>
-          <div class="meta" style="margin-top:2rem;">Fonte: Rede Social LX · 2023</div>
+          <div class="footer"><span class="meta">Fonte: Rede Social LX | 2023</span></div>
         </div>
       </div>
     </section>

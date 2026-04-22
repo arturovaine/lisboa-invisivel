@@ -106,7 +106,13 @@
   }
 
   .yellow .footer {
-    border-color: rgba(0, 0, 0, .15);
+    width: 256px;
+    height: 49px;
+    border-top: 1px solid #24103A33;
+    border-color: #24103A33;
+    padding-top: 32px;
+    margin-top: auto;
+    box-sizing: border-box;
   }
 
   .yellow .meta {
