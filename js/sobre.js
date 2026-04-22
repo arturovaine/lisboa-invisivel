@@ -8,6 +8,7 @@ import { LiSection } from './core.js';
 import manifestoCSS from '../css/sobre/manifesto.css?inline';
 import pillarsCSS from '../css/sobre/pillars.css?inline';
 import ethicsCSS from '../css/sobre/ethics.css?inline';
+import partnersCSS from '../css/sobre/partners.css?inline';
 import joinCtaCSS from '../css/sobre/join-cta.css?inline';
 
 class LiManifesto extends LiSection {
@@ -76,6 +77,17 @@ class LiEthics extends LiSection {
     </section>`;}
 }
 customElements.define('li-ethics', LiEthics);
+
+class LiPartners extends LiSection {
+  styles() { return partnersCSS; }
+  render() { return `
+    <section>
+      <div class="inner">
+        <span class="kicker">Apoio Institucional e Científico</span>
+      </div>
+    </section>`;}
+}
+customElements.define('li-partners', LiPartners);
 
 class LiJoinCta extends LiSection {
   styles() { return joinCtaCSS; }
