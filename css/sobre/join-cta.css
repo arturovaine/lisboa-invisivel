@@ -45,6 +45,7 @@
     width: 266px;
     height: 76px;
     padding: 24px 40px;
+    white-space: nowrap;
   }
 
   .btn-yellow:hover {
