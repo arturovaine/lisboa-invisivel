@@ -2,3 +2,9 @@
 .playwright-mcp/
 node_modules/
 *.log
+
+# Dev screenshots
+docs/screenshots/
+
+# Node
+node_modules/
