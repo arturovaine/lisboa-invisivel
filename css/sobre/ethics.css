@@ -1,6 +1,8 @@
   section {
     background: var(--cream);
-    padding: 5rem 2rem;
+    height: 442px;
+    display: flex;
+    align-items: center;
   }
 
   .inner {
@@ -20,10 +22,14 @@
   }
 
   .quote {
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32.5px;
+    letter-spacing: 0px;
     color: rgba(28, 27, 27, .75);
     font-style: italic;
+    width: 768px;
     margin-bottom: 1rem;
   }
 
