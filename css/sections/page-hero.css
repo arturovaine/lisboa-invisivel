@@ -52,6 +52,18 @@
     text-decoration-color: var(--cream);
   }
 
+  .blur-lens {
+    position: absolute;
+    width: 300vw;
+    height: 300vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    backdrop-filter: blur(12px);
+    pointer-events: none;
+    will-change: transform;
+  }
+
   .bg {
     position: absolute;
     inset: 0;
