@@ -57,7 +57,7 @@
     max-width: 432px;
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(28, 27, 27, .12);
+    border-bottom: 4px solid var(--purple-dark);
   }
 
   .fl {
