@@ -94,7 +94,7 @@
     padding: 18px 24px;
     height: 52px;
     box-sizing: border-box;
-    border: 1px solid rgba(28, 27, 27, .25);
+    border: none;
     background: #F6F3F2;
     color: var(--text-dark);
     cursor: pointer;
@@ -103,13 +103,12 @@
   }
 
   .chip:hover {
-    border-color: rgba(28, 27, 27, .5);
+    background: #EBE7E7;
   }
 
   .chip.active {
     background: var(--purple-dark);
     color: #fff;
-    border-color: var(--purple-dark);
   }
 
   @media (max-width: 860px) {

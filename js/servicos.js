@@ -26,34 +26,37 @@ class LiServicesList extends LiSection {
             <div class="svc-head">
               <span>Listagem de Resultados</span>
               <div class="svc-head-filters">
-                <button class="view-filter active">LISTA</button>
-                <button class="view-filter">MAPA</button>
+                <button class="view-filter active" data-view="list">LISTA</button>
+                <button class="view-filter" data-view="map">MAPA</button>
               </div>
             </div>
-            ${services.map(s => `
-              <article class="svc ${s.dark?'purple':''}">
-                <div>
-                  <h3>${s.name}</h3>
-                  <p class="addr"><svg class="pin" width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 0C2.239 0 0 2.239 0 5c0 3.75 5 8 5 8s5-4.25 5-8c0-2.761-2.239-5-5-5zm0 6.75A1.75 1.75 0 1 1 5 3.25a1.75 1.75 0 0 1 0 3.5z" fill="rgba(28,27,27,.5)"/></svg>${s.addr}</p>
-                  <p class="d">${s.d}</p>
-                  <div class="meta">
-                    <div class="meta-item"><span class="meta-label">HORÁRIO</span><span class="meta-val">${s.h}</span></div>
-                    <div class="meta-item"><span class="meta-label">CONTACTO</span><span class="meta-val phone">${s.phone}</span></div>
+            <div class="list-content">
+              ${services.map(s => `
+                <article class="svc ${s.dark?'purple':''}">
+                  <div>
+                    <h3>${s.name}</h3>
+                    <p class="addr"><svg class="pin" width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 0C2.239 0 0 2.239 0 5c0 3.75 5 8 5 8s5-4.25 5-8c0-2.761-2.239-5-5-5zm0 6.75A1.75 1.75 0 1 1 5 3.25a1.75 1.75 0 0 1 0 3.5z" fill="rgba(28,27,27,.5)"/></svg>${s.addr}</p>
+                    <p class="d">${s.d}</p>
+                    <div class="meta">
+                      <div class="meta-item"><span class="meta-label">HORÁRIO</span><span class="meta-val">${s.h}</span></div>
+                      <div class="meta-item"><span class="meta-label">CONTACTO</span><span class="meta-val phone">${s.phone}</span></div>
+                    </div>
                   </div>
+                  <div class="svc-right">
+                    <span class="tag">${s.tag}</span>
+                    <button class="cta"><span>TRAÇAR<br>ROTA</span><svg width="10.5" height="10.5" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.775 10.5L4.1125 6.3875L0 4.725V3.90833L10.5 0L6.59167 10.5H5.775ZM6.15417 8.34167L8.51667 1.98333L2.15833 4.34583L5.01667 5.48333L6.15417 8.34167Z" fill="white"/></svg></button>
+                  </div>
+                </article>
+              `).join('')}
+              <div class="results-footer">
+                <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="rf-icon" flex-shrink="0"><path d="M7.6 21L5.7 17.8L2.1 17L2.45 13.3L0 10.5L2.45 7.7L2.1 4L5.7 3.2L7.6 0L11 1.45L14.4 0L16.3 3.2L19.9 4L19.55 7.7L22 10.5L19.55 13.3L19.9 17L16.3 17.8L14.4 21L11 19.55L7.6 21ZM8.45 18.45L11 17.35L13.6 18.45L15 16.05L17.75 15.4L17.5 12.6L19.35 10.5L17.5 8.35L17.75 5.55L15 4.95L13.55 2.55L11 3.65L8.4 2.55L7 4.95L4.25 5.55L4.5 8.35L2.65 10.5L4.5 12.6L4.25 15.45L7 16.05L8.45 18.45ZM9.95 14.05L15.6 8.4L14.2 6.95L9.95 11.2L7.8 9.1L6.4 10.5L9.95 14.05Z" fill="#765B00"/></svg>
+                <div class="rf-text">
+                  <span class="rf-title">VERIFICAÇÃO DE DADOS</span>
+                  <p class="rf-body">Última atualização: 24 de Maio de 2024. Se encontrar informações incorretas, por favor utilize o botão de reportar em cada ficha de serviço.</p>
                 </div>
-                <div class="svc-right">
-                  <span class="tag">${s.tag}</span>
-                  <button class="cta"><span>TRAÇAR<br>ROTA</span><svg width="10.5" height="10.5" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.775 10.5L4.1125 6.3875L0 4.725V3.90833L10.5 0L6.59167 10.5H5.775ZM6.15417 8.34167L8.51667 1.98333L2.15833 4.34583L5.01667 5.48333L6.15417 8.34167Z" fill="white"/></svg></button>
-                </div>
-              </article>
-            `).join('')}
-            <div class="results-footer">
-              <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="rf-icon" flex-shrink="0"><path d="M7.6 21L5.7 17.8L2.1 17L2.45 13.3L0 10.5L2.45 7.7L2.1 4L5.7 3.2L7.6 0L11 1.45L14.4 0L16.3 3.2L19.9 4L19.55 7.7L22 10.5L19.55 13.3L19.9 17L16.3 17.8L14.4 21L11 19.55L7.6 21ZM8.45 18.45L11 17.35L13.6 18.45L15 16.05L17.75 15.4L17.5 12.6L19.35 10.5L17.5 8.35L17.75 5.55L15 4.95L13.55 2.55L11 3.65L8.4 2.55L7 4.95L4.25 5.55L4.5 8.35L2.65 10.5L4.5 12.6L4.25 15.45L7 16.05L8.45 18.45ZM9.95 14.05L15.6 8.4L14.2 6.95L9.95 11.2L7.8 9.1L6.4 10.5L9.95 14.05Z" fill="#765B00"/></svg>
-              <div class="rf-text">
-                <span class="rf-title">VERIFICAÇÃO DE DADOS</span>
-                <p class="rf-body">Última atualização: 24 de Maio de 2024. Se encontrar informações incorretas, por favor utilize o botão de reportar em cada ficha de serviço.</p>
               </div>
             </div>
+            <div class="map-full loading" id="li-leaflet-full"></div>
           </div>
           <div class="side">
             <div class="emerg">
@@ -82,6 +85,11 @@ class LiServicesList extends LiSection {
   }
 
   afterRender(shadow) {
+    const leafletLink = document.createElement('link');
+    leafletLink.rel = 'stylesheet';
+    leafletLink.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+    shadow.appendChild(leafletLink);
+
     const services = this.services;
     const icon = () => L.divIcon({
       className: 'li-pin',
@@ -102,7 +110,7 @@ class LiServicesList extends LiSection {
           .bindPopup(`<strong>${s.tag}</strong>${s.name}<br/><em>${s.addr}</em>`));
         const group = L.featureGroup(markers);
         map.fitBounds(group.getBounds(), { padding: [40, 40], maxZoom: 13 });
-        map.invalidateSize();
+        setTimeout(() => map.invalidateSize(), 100);
         if (onReady) onReady(map);
       };
       run();
@@ -110,6 +118,52 @@ class LiServicesList extends LiSection {
 
     const miniBox = shadow.getElementById('li-leaflet');
     if (miniBox) initMap(miniBox);
+
+    const inner = shadow.querySelector('.inner');
+    const listContent = shadow.querySelector('.list-content');
+    const side = shadow.querySelector('.side');
+    const fullBox = shadow.getElementById('li-leaflet-full');
+    let fullMap = null;
+
+    shadow.querySelectorAll('.view-filter').forEach(btn => {
+      btn.addEventListener('click', () => {
+        shadow.querySelectorAll('.view-filter').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const isMap = btn.dataset.view === 'map';
+        const FADE = 200;
+
+        if (isMap) {
+          listContent.style.opacity = '0';
+          side.style.opacity = '0';
+          setTimeout(() => {
+            listContent.style.display = 'none';
+            side.style.display = 'none';
+            inner.style.gridTemplateColumns = '1fr';
+            fullBox.style.cssText = 'display:block;width:100%;height:560px;opacity:0;transition:opacity 0.2s ease;';
+            requestAnimationFrame(() => requestAnimationFrame(() => {
+              fullBox.style.opacity = '1';
+              if (!fullMap) {
+                initMap(fullBox, map => { fullMap = map; });
+              } else {
+                fullMap.invalidateSize();
+              }
+            }));
+          }, FADE);
+        } else {
+          fullBox.style.opacity = '0';
+          setTimeout(() => {
+            fullBox.style.cssText = 'display:none;';
+            inner.style.gridTemplateColumns = '';
+            listContent.style.display = '';
+            side.style.display = '';
+            requestAnimationFrame(() => requestAnimationFrame(() => {
+              listContent.style.opacity = '1';
+              side.style.opacity = '1';
+            }));
+          }, FADE);
+        }
+      });
+    });
   }
 }
 customElements.define('li-services-list', LiServicesList);
