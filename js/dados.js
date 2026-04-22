@@ -5,9 +5,24 @@
    ══════════════════════════════════════════════════════════════════ */
 
 import { LiSection } from './core.js';
+import dadosHeroCSS from '../css/dados/dados-hero.css?inline';
 import dataCardsCSS from '../css/dados/data-cards.css?inline';
 import intersectionCSS from '../css/dados/intersection.css?inline';
 import dataExportCSS from '../css/dados/data-export.css?inline';
+
+class LiDadosHero extends LiSection {
+  styles() { return dadosHeroCSS; }
+  render() {
+    return `
+      <section>
+        <div class="content">
+          <span class="kicker">Observatório Social</span>
+          <h1>DADOS QUE <mark>REVELAM</mark> O<br>INVISÍVEL.</h1>
+        </div>
+      </section>`;
+  }
+}
+customElements.define('li-dados-hero', LiDadosHero);
 
 class LiDataCards extends LiSection {
   styles() { return dataCardsCSS; }

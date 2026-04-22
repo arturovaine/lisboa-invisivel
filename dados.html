@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Manrope', sans-serif; background: #FAF8F2; color: #1C1B1B; overflow-x: hidden; }
+  body { font-family: 'Manrope', sans-serif; background: #fff; color: #1C1B1B; overflow-x: hidden; }
   html { scroll-behavior: smooth; }
 </style>
 </head>
@@ -18,13 +18,9 @@
 
 <li-navbar active="dados"></li-navbar>
 
-<li-page-hero bg="./img/mattress-street.jpg"
-  kicker="Observatório Social"
-  sub="Dados abertos, verificados e atualizados sobre a exclusão social em Lisboa. Explore, filtre e partilhe.">
-  Dados que <span class="accent">revelam</span> o invisível.
-</li-page-hero>
+<li-dados-hero></li-dados-hero>
 
-<li-data-filter></li-data-filter>
+<li-dados-filter></li-dados-filter>
 <li-data-cards></li-data-cards>
 <li-intersection></li-intersection>
 <li-data-export></li-data-export>
