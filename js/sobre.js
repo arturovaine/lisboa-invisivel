@@ -51,7 +51,7 @@ class LiPillarsOfAction extends LiSection {
           <h2>O que fazemos</h2>
           <div class="grid">
             ${items.map(i => `
-              <div class="card">
+              <div class="card bracket-card">
                 <img class="ic" src="./assets/icons/${i.svg}.svg" alt="" aria-hidden="true" width="32" height="32">
                 <div class="t">${i.title}</div>
                 <p class="d">${i.desc}</p>
