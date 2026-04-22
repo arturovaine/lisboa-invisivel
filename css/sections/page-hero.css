@@ -12,6 +12,11 @@
   }
 
   .hero.tall h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 96px;
+    letter-spacing: -4.8px;
     text-transform: none;
   }
 
