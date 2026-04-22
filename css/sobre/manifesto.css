@@ -13,20 +13,22 @@
   }
 
   h2 {
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -1.2px;
     text-transform: uppercase;
-    line-height: 1.05;
     color: var(--text-dark);
     margin-bottom: 2rem;
-    max-width: 20ch;
   }
 
   h2 em {
     font-style: normal;
-    background: var(--yellow);
-    padding: 0 .15em;
+    background: #F4C5424D;
+    padding: 0 .08em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
 
   p {
