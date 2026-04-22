@@ -269,6 +269,7 @@
 
   .hero.white {
     background: #fff;
+    height: auto;
     min-height: 144px;
   }
 
