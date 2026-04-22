@@ -47,20 +47,28 @@ class LiServicesList extends LiSection {
                 </div>
               </article>
             `).join('')}
+            <div class="results-footer">
+              <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="rf-icon" flex-shrink="0"><path d="M7.6 21L5.7 17.8L2.1 17L2.45 13.3L0 10.5L2.45 7.7L2.1 4L5.7 3.2L7.6 0L11 1.45L14.4 0L16.3 3.2L19.9 4L19.55 7.7L22 10.5L19.55 13.3L19.9 17L16.3 17.8L14.4 21L11 19.55L7.6 21ZM8.45 18.45L11 17.35L13.6 18.45L15 16.05L17.75 15.4L17.5 12.6L19.35 10.5L17.5 8.35L17.75 5.55L15 4.95L13.55 2.55L11 3.65L8.4 2.55L7 4.95L4.25 5.55L4.5 8.35L2.65 10.5L4.5 12.6L4.25 15.45L7 16.05L8.45 18.45ZM9.95 14.05L15.6 8.4L14.2 6.95L9.95 11.2L7.8 9.1L6.4 10.5L9.95 14.05Z" fill="#765B00"/></svg>
+              <div class="rf-text">
+                <span class="rf-title">VERIFICAÇÃO DE DADOS</span>
+                <p class="rf-body">Última atualização: 24 de Maio de 2024. Se encontrar informações incorretas, por favor utilize o botão de reportar em cada ficha de serviço.</p>
+              </div>
+            </div>
           </div>
           <div class="side">
             <div class="emerg">
               <div class="emerg-head">
                 <div class="emerg-title"><span>Contactos de</span><span>Emergência</span></div>
-                <span class="emerg-ast">✳</span>
+                <span class="emerg-ast"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.75 23.9375V17.5625L3.21875 20.75L0 15.1875L5.53125 11.9688L0 8.8125L3.21875 3.21875L8.75 6.40625V0H15.1875V6.40625L20.7188 3.21875L23.9375 8.8125L18.4062 11.9688L23.9375 15.1875L20.7188 20.75L15.1875 17.5625V23.9375H8.75Z" fill="#1C1B1B"/></svg></span>
               </div>
               <div class="emerg-primary">
-                <a class="erow" href="tel:112"><div class="ecol"><span class="ename">Emergência Nacional</span><span class="etel">112</span></div><span class="earrow">→</span></a>
-                <a class="erow" href="tel:144"><div class="ecol"><span class="ename">Emergência Social</span><span class="etel">144</span></div><span class="earrow">→</span></a>
+                <a class="erow" href="tel:112"><div class="ecol"><span class="ename">Emergência Nacional</span><span class="etel">112</span></div><span class="earrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="#1C1B1B"/></svg></span></a>
+                <a class="erow" href="tel:144"><div class="ecol"><span class="ename">Emergência Social</span><span class="etel">144</span></div><span class="earrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="#1C1B1B"/></svg></span></a>
               </div>
               <div class="emerg-sec">
-                <a class="srow" href="tel:800207700"><span class="sname">Unidade Sem-Abrigo</span><span class="stel">800 207 700</span></a>
-                <a class="srow" href="tel:218711000"><span class="sname">Proteção Civil</span><span class="stel">218 711 000</span></a>
+                <span class="emerg-sec-label">Apoio Municipal (CML)</span>
+                <a class="srow" href="tel:800910110"><span class="sname">Unidade Sem-Abrigo</span><span class="stel">800 910 110</span></a>
+                <a class="srow" href="tel:218171100"><span class="sname">Proteção Civil</span><span class="stel">218 171 100</span></a>
               </div>
             </div>
             <div class="map">
