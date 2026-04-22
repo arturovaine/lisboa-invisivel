@@ -1,6 +1,6 @@
   .hero {
     position: relative;
-    min-height: 62vh;
+    height: 716px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -16,7 +16,7 @@
     inset: 0;
     background-size: cover;
     background-position: center;
-    opacity: .35;
+    opacity: .4;
     filter: grayscale(.3) contrast(1.1);
   }
 
