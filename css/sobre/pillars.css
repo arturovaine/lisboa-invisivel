@@ -1,5 +1,5 @@
   section {
-    background: var(--cream-dark);
+    background: #F6F3F2;
     padding: 5rem 2rem;
   }
 
@@ -20,9 +20,11 @@
   }
 
   h2 {
-    font-family: var(--font-display);
+    font-family: 'Epilogue', sans-serif;
     font-weight: 900;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0px;
     text-transform: uppercase;
     color: var(--text-dark);
     margin-bottom: 3rem;
