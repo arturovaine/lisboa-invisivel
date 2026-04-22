@@ -109,6 +109,11 @@
     border-color: rgba(0, 0, 0, .15);
   }
 
+  .yellow .meta {
+    font-weight: 700;
+    color: #24103A;
+  }
+
   .meta {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
