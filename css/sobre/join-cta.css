@@ -40,8 +40,11 @@
   }
 
   .btn-yellow {
-    background: var(--yellow);
+    background: #F4C542;
     color: #1C1B1B;
+    width: 266px;
+    height: 76px;
+    padding: 24px 40px;
   }
 
   .btn-yellow:hover {
