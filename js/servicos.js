@@ -31,7 +31,10 @@ class LiServicesList extends LiSection {
                   <h3>${s.name}</h3>
                   <p class="addr">${s.addr}</p>
                   <p class="d">${s.d}</p>
-                  <div class="meta"><span>⏱ ${s.h}</span><span>📞 ${s.phone}</span></div>
+                  <div class="meta">
+                    <div class="meta-item"><span class="meta-label">HORÁRIO</span><span class="meta-val">${s.h}</span></div>
+                    <div class="meta-item"><span class="meta-label">CONTACTO</span><span class="meta-val phone">${s.phone}</span></div>
+                  </div>
                 </div>
                 <button class="cta">Traçar Rota →</button>
               </article>
