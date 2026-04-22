@@ -14,9 +14,9 @@
   .hero.tall h1 {
     font-family: 'Inter', sans-serif;
     font-weight: 900;
-    font-size: 96px;
-    line-height: 96px;
-    letter-spacing: -4.8px;
+    font-size: clamp(2.2rem, 9vw, 96px);
+    line-height: 1.05;
+    letter-spacing: clamp(-1px, -0.5vw, -4.8px);
     text-transform: none;
   }
 
@@ -371,5 +371,28 @@
 
     .hero.light .stat-card {
       grid-column: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero.tall {
+      height: auto;
+      min-height: 100svh;
+    }
+
+    .hero.tall .sub {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    .hero.tall .btn-primary,
+    .hero.tall .btn-outline,
+    .hero.tall .btn-text {
+      font-size: 15px;
+      padding: .8rem 1.2rem;
+    }
+
+    .content {
+      padding: 5rem 1.5rem 3rem;
     }
   }
