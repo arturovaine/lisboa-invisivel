@@ -6,6 +6,7 @@
 
 import { LiSection } from './core.js';
 import dadosHeroCSS from '../css/dados/dados-hero.css?inline';
+import dadosFilterCSS from '../css/dados/dados-filter.css?inline';
 import dataCardsCSS from '../css/dados/data-cards.css?inline';
 import intersectionCSS from '../css/dados/intersection.css?inline';
 import dataExportCSS from '../css/dados/data-export.css?inline';
@@ -23,6 +24,53 @@ class LiDadosHero extends LiSection {
   }
 }
 customElements.define('li-dados-hero', LiDadosHero);
+
+class LiDadosFilter extends LiSection {
+  styles() { return dadosFilterCSS; }
+
+  get filters() {
+    return [
+      { id: 'filter-perfil',     label: 'PERFIL',     options: ['TODOS', 'Sem-Abrigo', 'Migrante', 'Mulheres'],      span: 2 },
+      { id: 'filter-tema',       label: 'TEMA',       options: ['HABITAÇÃO', 'Saúde Mental', 'Alimentação', 'Emprego'], span: 2 },
+      { id: 'filter-territorio', label: 'TERRITÓRIO', options: ['LISBOA (TOTAL)', 'Arroios', 'Alcântara', 'Marvila'],  span: 2 },
+      { id: 'filter-causa',      label: 'CAUSA',      options: ['DESEMPREGO', 'Violência', 'Migração'],                span: 1 },
+    ];
+  }
+
+  searchField() {
+    return `
+      <div class="search-field">
+        <label class="field-label" for="dados-search">PESQUISAR INDICADORES</label>
+        <div class="search-wrap">
+          <input id="dados-search" type="text" placeholder="Ex: Alojamento, Arroios, Saúde…" aria-label="Pesquisar indicadores">
+          <button class="search-btn" type="button" aria-label="Pesquisar">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 14L10.4 10.4M11.3333 6.66667C11.3333 9.24399 9.24399 11.3333 6.66667 11.3333C4.08934 11.3333 2 9.24399 2 6.66667C2 4.08934 4.08934 2 6.66667 2C9.24399 2 11.3333 4.08934 11.3333 6.66667Z" stroke="#4A454D" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>`;
+  }
+
+  dropdownField({ id, label, options, span }) {
+    return `
+      <div class="filter-field" style="grid-column: span ${span}">
+        <label class="field-label" for="${id}">${label}</label>
+        <select id="${id}">
+          ${options.map(o => `<option>${o}</option>`).join('')}
+        </select>
+      </div>`;
+  }
+
+  render() {
+    return `
+      <section>
+        <div class="inner">
+          ${this.searchField()}
+          ${this.filters.map(f => this.dropdownField(f)).join('')}
+        </div>
+      </section>`;
+  }
+}
+customElements.define('li-dados-filter', LiDadosFilter);
 
 class LiDataCards extends LiSection {
   styles() { return dataCardsCSS; }
