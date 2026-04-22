@@ -72,7 +72,7 @@ class LiEthics extends LiSection {
       <div class="inner">
         <h2>Compromisso Ético</h2>
         <p class="quote">"Tratamos cada dado como uma vida e cada história como um testemunho sagrado. A nossa metodologia garante o anonimato e a segurança total de todos os intervenientes, priorizando sempre o respeito pela autodeterminação e pela privacidade individual acima de qualquer métrica estatística."</p>
-        <p class="sig">— Conselho de Ética L.I.</p>
+        <p class="sig">Conselho de Ética L.I.</p>
       </div>
     </section>`;}
 }
