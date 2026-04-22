@@ -5,9 +5,9 @@
    ══════════════════════════════════════════════════════════════════ */
 
 import { LiSection, IMG } from './core.js';
-import { storiesPreviewCSS } from '../css/home/stories-preview.js';
-import { mythsCSS } from '../css/home/myths.js';
-import { categoriesCSS } from '../css/home/categories.js';
+import storiesPreviewCSS from '../css/home/stories-preview.css?inline';
+import mythsCSS from '../css/home/myths.css?inline';
+import categoriesCSS from '../css/home/categories.css?inline';
 
 class LiStoriesPreview extends LiSection {
   styles() { return storiesPreviewCSS; }
@@ -90,13 +90,13 @@ class LiCategories extends LiSection {
   render() {
     const cats = [
       { svg: 'female-black',        label: 'Mulheres' },
-      { svg: 'luggage-black',       label: 'Alojamento',  active: true },
+      { svg: 'globe-purple',        label: 'Migração' },
       { svg: 'head-gear-black',     label: 'Saúde Mental' },
       { svg: 'house-black',         label: 'Habitação' },
-      { svg: 'donate-yellow',       label: 'Famílias' },
-      { svg: 'share-yellow',        label: 'Apoio Social' },
+      { svg: 'luggage-black',       label: 'Emprego' },
+      { svg: 'luggage-plus-black',  label: 'Apoio Social' },
       { svg: 'feather-paper-black', label: 'Formação' },
-      { svg: 'chart-bars-yellow',   label: 'Ver os Dados', dark: true },
+      { svg: 'chart-bars-yellow',   label: 'Todos os Dados', dark: true },
     ];
     return `
       <section>
