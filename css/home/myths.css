@@ -179,4 +179,14 @@
     .inner {
       grid-template-columns: 1fr;
     }
+
+    .myth {
+      width: 100%;
+      height: auto;
+    }
+
+    .fact {
+      width: 100%;
+      height: auto;
+    }
   }
