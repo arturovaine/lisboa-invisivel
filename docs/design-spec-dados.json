@@ -1,0 +1,751 @@
+{
+  "project": "Lisboa Invisível",
+  "page": "Dados",
+
+  "accessibility": {
+    "images": {
+      "rule": "Imagens de conteúdo (mapas, gráficos informativos) → <img> com alt descritivo. Elementos puramente decorativos (ícones temáticos, fundos escuros com overlay) → background-image ou <img alt=\"\" role=\"presentation\"> aceitável.",
+      "contentImages": "Mapa geográfico no Card 5 (Geographic Focus) → <img alt>",
+      "decorativeImages": "Ícones SVG nos thematic cards (♀ género, 🔍 migração, 🧠 saúde mental), fundos de secção escuros → decorativos; usar aria-hidden=\"true\""
+    },
+    "altPattern_mapCard": "Mapa de {Bairro/Freguesia}, Lisboa — concentração de pedidos de apoio",
+    "altPattern_chartCard": "Gráfico: {título do indicador} — {valor principal}",
+    "lazyLoading": "loading=\"lazy\" decoding=\"async\" em imagens fora da fold inicial (mapa, gráficos como imagens)",
+    "focusVisible": "Estados de foco visíveis em todos os filtros, dropdowns, botões — pendente (ver docs/TODO.md)",
+    "skipLink": "Skip-link 'Saltar para conteúdo' — pendente (ver docs/TODO.md)",
+    "searchInput": "Input de pesquisa deve ter <label> ou aria-label='Pesquisar indicadores'",
+    "filterDropdowns": "Cada dropdown deve ter <label> associado: Perfil, Tema, Território, Causa"
+  },
+
+  "colors": {
+    "backgroundDark": "#24103A",
+    "backgroundLight": "#FAF8F2",
+    "backgroundCard": "#F6F3F2",
+    "highlightYellow": "#F4C542",
+    "bodyTextDark": "#1C1B1B",
+    "bodyTextMid": "#4A454D",
+    "navTextWhite": "#FAF8F2",
+    "labelCategory": "#765B00",
+    "sectionDivider": "#25113B",
+    "statCardBorder": "#25113B",
+    "cardDarkPurple": "#25113B",
+    "cardNeutral": "#E5E2E1",
+    "cardGeoLight": "#F6F3F2",
+    "cardGold": "#765B00",
+    "thematicGroupsBg": "#24103A",
+    "thematicGroupsBorder": "#927AAB",
+    "thematicGroupsBorderOpacity": "20%",
+    "exportCtaBorderTop": "#000000",
+    "note_exportCtaBorder": "⚠️ Design usa #000000 para o border-top do Section-Export&CTA — verificar se deve ser #25113B (padrão das outras secções com border-top)"
+  },
+
+  "typography": {
+    "fonts": {
+      "heading": "Epilogue",
+      "ui": "Space Grotesk",
+      "body": "Manrope"
+    },
+    "scale": {
+      "h1_hero": {
+        "font": "Epilogue",
+        "weight": 900,
+        "style": "Black",
+        "size": "96px",
+        "lineHeight": "96px",
+        "letterSpacing": "0px",
+        "color": "#1C1B1B",
+        "note": "Palavra 'REVELAM' envolvida em highlight background #F4C542. Mesmo padrão que Histórias."
+      },
+      "label_section": {
+        "font": "Space Grotesk",
+        "weight": 400,
+        "style": "Regular",
+        "size": "14px",
+        "lineHeight": "20px",
+        "letterSpacing": "1.4px",
+        "textTransform": "uppercase",
+        "color": "#765B00",
+        "example": "OBSERVATÓRIO SOCIAL / AGRUPAMENTOS TEMÁTICOS"
+      },
+      "search_placeholder": {
+        "font": "Manrope",
+        "weight": 400,
+        "size": "16px",
+        "color": "#4A454D",
+        "example": "Ex: Alojamento, Arroios, Saúde…"
+      },
+      "filter_label": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "10px",
+        "letterSpacing": "1px",
+        "textTransform": "uppercase",
+        "color": "#765B00",
+        "example": "PERFIL / TEMA / TERRITÓRIO / CAUSA"
+      },
+      "bento_category_tag": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "10px",
+        "letterSpacing": "1.2px",
+        "textTransform": "uppercase",
+        "example": "HABITAÇÃO EMERGENCIAL / SAÚDE MENTAL / MIGRAÇÃO"
+      },
+      "bento_stat_large": {
+        "font": "Epilogue",
+        "weight": 900,
+        "style": "Black",
+        "size": "64px",
+        "lineHeight": "1",
+        "color": "#FAF8F2",
+        "example": "68% / 1/4 / 42%",
+        "note": "Valor principal dos cards de destaque"
+      },
+      "bento_stat_description": {
+        "font": "Manrope",
+        "weight": 400,
+        "size": "14px",
+        "lineHeight": "22px",
+        "color": "#FAF8F2",
+        "example": "Indivíduos que reportam sintomas severos de isolamento e depressão."
+      },
+      "bento_source_tag": {
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "10px",
+        "letterSpacing": "1px",
+        "textTransform": "uppercase",
+        "color": "#927AAB",
+        "example": "SONDAGEM 2024 / DADOS INE 2026"
+      },
+      "bento_territory_label": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "10px",
+        "letterSpacing": "1px",
+        "textTransform": "uppercase",
+        "color": "#4A454D",
+        "example": "TERRITÓRIO: ARROIOS"
+      },
+      "bento_feature_heading": {
+        "font": "Epilogue",
+        "weight": 800,
+        "size": "28px",
+        "lineHeight": "34px",
+        "color": "#1C1B1B",
+        "example": "A freguesia com a maior concentração de pedidos de apoio."
+      },
+      "comparison_value": {
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "24px",
+        "color": "#1C1B1B",
+        "example": "45.000 / 62.000"
+      },
+      "thematic_card_title": {
+        "font": "Epilogue",
+        "weight": 700,
+        "size": "24px",
+        "lineHeight": "30px",
+        "color": "#FAF8F2",
+        "example": "Mulheres & Género / Migração & Visto / Saúde Mental"
+      },
+      "thematic_card_body": {
+        "font": "Manrope",
+        "weight": 400,
+        "size": "14px",
+        "lineHeight": "22px",
+        "color": "#FAF8F2",
+        "example": "Violência doméstica, monoparentalidade e a feminização da pobreza em ambiente urbano."
+      },
+      "thematic_card_cta": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "11px",
+        "letterSpacing": "1.1px",
+        "textTransform": "uppercase",
+        "textDecoration": "underline",
+        "color": "#FAF8F2",
+        "example": "32 INDICADORES / 18 INDICADORES / 24 INDICADORES"
+      },
+      "export_heading": {
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "48px",
+        "lineHeight": "52px",
+        "color": "#1C1B1B",
+        "example": "DESCARREGUE OS DADOS BRUTOS"
+      },
+      "export_body": {
+        "font": "Manrope",
+        "weight": 400,
+        "size": "16px",
+        "lineHeight": "26px",
+        "color": "#4A454D",
+        "example": "Para investigadores, jornalistas e decisores políticos. Promovemos a transparência total sobre a realidade social de Lisboa."
+      },
+      "nav_link": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "style": "Bold",
+        "size": "14px",
+        "lineHeight": "20px",
+        "letterSpacing": "0px",
+        "textTransform": "uppercase",
+        "color": "#FAF8F2",
+        "example": "SOBRE / DADOS / HISTÓRIAS"
+      }
+    }
+  },
+
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "2xl": "48px",
+    "3xl": "64px",
+    "4xl": "80px",
+    "5xl": "128px"
+  },
+
+  "layout": {
+    "pageMaxWidth": "1280px",
+    "mainContainer": {
+      "name": "Main",
+      "flow": "vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (2,577.5px)",
+      "padding": {
+        "top": "128px",
+        "bottom": "176px"
+      },
+      "gap": "64px",
+      "note": "Padding lateral aplicado individualmente por secção (32px cada). O Main não tem padding horizontal próprio."
+    }
+  },
+
+  "components": {
+    "topNavBar": {
+      "name": "Header / TopNavBar",
+      "flow": "horizontal",
+      "width": "Fixed (1,280px)",
+      "height": "Hug (84px)",
+      "justify": "space-between",
+      "padding": {
+        "top": "24px",
+        "right": "32px",
+        "bottom": "24px",
+        "left": "32px"
+      },
+      "background": "#24103A",
+      "activeLink": "DADOS (underline activo)",
+      "items": ["Sobre", "Dados", "Histórias", "Blog", "Participar"],
+      "ctaButton": {
+        "label": "Encontrar Serviços",
+        "href": "servicos.html",
+        "background": "#F4C542",
+        "color": "#24103A",
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "13px",
+        "letterSpacing": "1.3px",
+        "textTransform": "uppercase",
+        "padding": "9px 20px"
+      },
+      "menuIcon": {
+        "visibility": "mobile-only (≤860px)",
+        "border": "1px solid rgba(255,255,255,.3)",
+        "color": "#FAF8F2"
+      }
+    },
+
+    "heroSection": {
+      "name": "Section - Hero / Search & Filters",
+      "flow": "vertical",
+      "width": "Fixed (1,216px)",
+      "height": "Hug (364px)",
+      "maxWidth": "1280px",
+      "gap": "48px",
+
+      "headingContainer": {
+        "name": "Container (heading block)",
+        "flow": "vertical",
+        "width": "Fill (1,216px)",
+        "height": "Hug (232px)",
+        "gap": "16px",
+
+        "labelContainer": {
+          "name": "Container (label)",
+          "flow": "vertical",
+          "width": "Fill (1,216px)",
+          "height": "Hug (24px)",
+          "label": "OBSERVATÓRIO SOCIAL"
+        },
+        "h1Block": {
+          "name": "Heading 1",
+          "width": "1,216px",
+          "height": "192px",
+          "text": "DADOS QUE REVELAM O INVISÍVEL.",
+          "highlightWord": "REVELAM",
+          "highlightBackground": "#F4C542"
+        }
+      },
+
+      "searchFilterBar": {
+        "name": "Container (search + filters)",
+        "flow": "grid",
+        "width": "1,216px",
+        "height": "84px",
+        "grid": {
+          "rows": 1,
+          "columns": 12,
+          "rowGap": "24px",
+          "columnGap": "24px"
+        },
+        "searchInput": {
+          "placeholder": "Ex: Alojamento, Arroios, Saúde…",
+          "label": "PESQUISAR INDICADORES",
+          "icon": "🔍 (search icon, right-aligned)",
+          "gridColumnSpan": 5
+        },
+        "filterDropdowns": [
+          {
+            "label": "PERFIL",
+            "defaultValue": "TODOS",
+            "gridColumnSpan": 2
+          },
+          {
+            "label": "TEMA",
+            "defaultValue": "HABITAÇÃO",
+            "gridColumnSpan": 2
+          },
+          {
+            "label": "TERRITÓRIO",
+            "defaultValue": "LISBOA (TOTAL)",
+            "gridColumnSpan": 2
+          },
+          {
+            "label": "CAUSA",
+            "defaultValue": "DESEMPREGO",
+            "gridColumnSpan": 1
+          }
+        ]
+      }
+    },
+
+    "dataGridSection": {
+      "name": "Section - Data Grid / Bento Style",
+      "flow": "grid",
+      "width": "1,216px",
+      "height": "766px",
+      "maxWidth": "1280px",
+      "grid": {
+        "rows": 2,
+        "columns": 4,
+        "rowGap": "32px",
+        "columnGap": "32px"
+      },
+
+      "cards": {
+        "card1_largeHighlight": {
+          "name": "Card 1: Large Highlight",
+          "description": "Card escuro de destaque principal — Habitação Emergencial",
+          "flow": "vertical",
+          "width": "Fill (592px)",
+          "height": "Hug (401px)",
+          "justify": "space-between",
+          "padding": "40px",
+          "background": "#25113B",
+          "gridPlacement": {
+            "rowStart": 1,
+            "columnStart": 1,
+            "horizontalSpan": 2,
+            "verticalSpan": 1
+          },
+          "content": {
+            "categoryTag": "HABITAÇÃO EMERGENCIAL",
+            "visual": "Imagem fotográfica ou ilustrativa (ocupa área superior)",
+            "note": "Card de grande formato — 2 colunas, linha 1"
+          }
+        },
+
+        "card2_chartSmall": {
+          "name": "Card 2: Chart Small",
+          "description": "Card claro com gráfico de barras — Saúde Mental 68%",
+          "flow": "vertical",
+          "width": "Fill (280px)",
+          "height": "Hug (411px)",
+          "justify": "space-between",
+          "padding": "32px",
+          "background": "#E5E2E1",
+          "gridPlacement": {
+            "rowStart": 1,
+            "columnStart": 3,
+            "horizontalSpan": 1,
+            "verticalSpan": 1
+          },
+          "content": {
+            "categoryTag": "SAÚDE MENTAL",
+            "statValue": "68%",
+            "description": "Indivíduos que reportam sintomas severos de isolamento e depressão.",
+            "sourceTag": "SONDAGEM 2024",
+            "chartType": "bar chart (barras verticais, último bar em #F4C542)",
+            "externalLinkIcon": "↗ (link para relatório completo)"
+          }
+        },
+
+        "card3_comparison": {
+          "name": "Card 3: Comparison",
+          "description": "Card de comparação temporal — Refeições Servidas (Inverno 23 vs 24)",
+          "flow": "vertical",
+          "width": "Fill (280px)",
+          "height": "Hug (416px)",
+          "justify": "space-between",
+          "padding": {
+            "top": "32px",
+            "right": "32px",
+            "bottom": "156px",
+            "left": "32px"
+          },
+          "gap": "32px",
+          "background": "#FAF8F2",
+          "border": {
+            "left": "8px solid #25113B"
+          },
+          "gridPlacement": {
+            "rowStart": 1,
+            "columnStart": 4,
+            "horizontalSpan": 1,
+            "verticalSpan": 1
+          },
+          "content": {
+            "categoryTag": "REFEIÇÕES SERVIDAS",
+            "rows": [
+              { "label": "Inverno 23", "value": "45.000", "barColor": "#4A454D" },
+              { "label": "Inverno 24", "value": "62.000", "barColor": "#F4C542" }
+            ],
+            "description": "Aumento da pressão sobre as cantinas sociais e pontos de distribuição móvel."
+          }
+        },
+
+        "card4_migrationProfile": {
+          "name": "Card 4: Migration Profile",
+          "description": "Card claro de estatística simples — Migração 42%",
+          "flow": "vertical",
+          "width": "Fill (280px)",
+          "height": "Hug (318px)",
+          "padding": {
+            "top": "32px",
+            "right": "32px",
+            "bottom": "66px",
+            "left": "32px"
+          },
+          "gap": "16px",
+          "background": "#E5E2E1",
+          "gridPlacement": {
+            "rowStart": 2,
+            "columnStart": 1,
+            "horizontalSpan": 1,
+            "verticalSpan": 1
+          },
+          "content": {
+            "categoryTag": "MIGRAÇÃO",
+            "statValue": "42%",
+            "description": "Dos novos registos são de cidadãos em situação de migração irregular ou precária.",
+            "sourceTag": "DADOS INE 2026",
+            "backgroundIllustration": "Ícone/ilustração decorativa em marca d'água (globo/mapa)"
+          }
+        },
+
+        "card5_geographicFocus": {
+          "name": "Card 5: Geographic Focus",
+          "description": "Card horizontal com mapa — Território: Arroios",
+          "flow": "horizontal",
+          "width": "Fill (592px)",
+          "height": "Fixed (318px)",
+          "padding": "40px",
+          "gap": "40px",
+          "background": "#F6F3F2",
+          "gridPlacement": {
+            "rowStart": 2,
+            "columnStart": 2,
+            "horizontalSpan": 2,
+            "verticalSpan": 1
+          },
+          "content": {
+            "territoryLabel": "TERRITÓRIO: ARROIOS",
+            "heading": "A freguesia com a maior concentração de pedidos de apoio.",
+            "body": "O mapeamento geográfico revela que o centro histórico continua a ser o epicentro da invisibilidade social.",
+            "mapImage": {
+              "tag": "<img>",
+              "altRequired": true,
+              "altExample": "Mapa da freguesia de Arroios, Lisboa — concentração de pedidos de apoio",
+              "loading": "lazy",
+              "decoding": "async",
+              "objectFit": "cover",
+              "note": "Conteúdo informativo — exige <img alt>"
+            }
+          }
+        },
+
+        "card6_womenHighlight": {
+          "name": "Card 6: Women Highlight",
+          "description": "Card dourado de destaque temático — Foco: Mulheres 1/4",
+          "flow": "vertical",
+          "width": "Fill (280px)",
+          "height": "Hug (318px)",
+          "justify": "space-between",
+          "padding": "32px",
+          "background": "#765B00",
+          "gridPlacement": {
+            "rowStart": 2,
+            "columnStart": 4,
+            "horizontalSpan": 1,
+            "verticalSpan": 1
+          },
+          "content": {
+            "focusTag": "FOCO: MULHERES",
+            "statValue": "1/4",
+            "description": "Das pessoas em situação de rua são mulheres, muitas com filhos a cargo.",
+            "cta": {
+              "label": "VER RELATÓRIO COMPLETO",
+              "style": "link underline",
+              "color": "#FAF8F2"
+            }
+          }
+        }
+      }
+    },
+
+    "thematicGroupsSection": {
+      "name": "Section - Thematic Groups",
+      "flow": "vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (711.5px)",
+      "padding": {
+        "top": "128px",
+        "right": "32px",
+        "bottom": "128px",
+        "left": "32px"
+      },
+      "background": "#24103A",
+
+      "innerContainer": {
+        "flow": "vertical",
+        "width": "Fill (1,216px)",
+        "height": "Hug (455.5px)",
+        "maxWidth": "1280px",
+        "gap": "64px",
+
+        "headerContainer": {
+          "name": "Container (intro header)",
+          "flow": "horizontal",
+          "width": "Fill (1,216px)",
+          "justify": "space-between",
+          "content": {
+            "left": {
+              "label": "AGRUPAMENTOS TEMÁTICOS",
+              "heading": "EXPLORE POR INTERSECÇÃO"
+            },
+            "right": {
+              "description": "Navegue pelas dimensões da exclusão social através de filtros cruzados e análises de impacto."
+            }
+          }
+        },
+
+        "thematicCardsGrid": {
+          "name": "Overlay+Border",
+          "flow": "grid",
+          "width": "1,216px",
+          "height": "303.5px",
+          "border": "1px all-sides #927AAB 20%",
+          "grid": {
+            "rows": 1,
+            "columns": 3
+          },
+
+          "card": {
+            "name": "VerticalBorder",
+            "flow": "vertical",
+            "width": "Fill (404.67px)",
+            "height": "Hug (287.02px)",
+            "border": {
+              "right": "1px solid #927AAB 20%"
+            },
+            "padding": {
+              "top": "48px",
+              "right": "48px",
+              "bottom": "42px",
+              "left": "48px"
+            },
+            "gap": "14.9px",
+            "gridPlacement": {
+              "horizontalSpan": 1,
+              "verticalSpan": 1
+            },
+            "content": {
+              "icon": "SVG icon decorativo (aria-hidden='true') — cor #FAF8F2",
+              "title": "Mulheres & Género / Migração & Visto / Saúde Mental",
+              "body": "Descrição curta da dimensão temática",
+              "cta": {
+                "label": "N INDICADORES",
+                "format": "número + 'INDICADORES'",
+                "examples": ["32 INDICADORES", "18 INDICADORES", "24 INDICADORES"],
+                "style": "link uppercase underline"
+              }
+            },
+            "examples": [
+              {
+                "icon": "♀",
+                "title": "Mulheres & Género",
+                "body": "Violência doméstica, monoparentalidade e a feminização da pobreza em ambiente urbano.",
+                "cta": "32 INDICADORES"
+              },
+              {
+                "icon": "🔍",
+                "title": "Migração & Visto",
+                "body": "Barreiras burocráticas, acesso a contratos de trabalho e integração linguística.",
+                "cta": "18 INDICADORES"
+              },
+              {
+                "icon": "🧠",
+                "title": "Saúde Mental",
+                "body": "Trauma, isolamento social crónico e o acesso a cuidados continuados na rede pública.",
+                "cta": "24 INDICADORES"
+              }
+            ]
+          }
+        }
+      }
+    },
+
+    "exportCtaSection": {
+      "name": "Section - Export & CTA",
+      "flow": "horizontal",
+      "width": "Fixed (1,216px)",
+      "height": "Hug (240px)",
+      "maxWidth": "1280px",
+      "justify": "space-between",
+      "padding": {
+        "top": "64px"
+      },
+      "borderTop": {
+        "width": "8px",
+        "color": "#000000",
+        "note": "⚠️ Figma usa #000000 — verificar consistência com #25113B usado noutras páginas"
+      },
+      "background": "#FAF8F2",
+
+      "leftContent": {
+        "name": "Paragraph",
+        "heading": "DESCARREGUE OS DADOS BRUTOS",
+        "body": "Para investigadores, jornalistas e decisores políticos. Promovemos a transparência total sobre a realidade social de Lisboa."
+      },
+
+      "rightContent": {
+        "name": "Container (buttons)",
+        "flow": "horizontal",
+        "gap": "implied",
+        "buttons": [
+          {
+            "label": "RELATÓRIO ANUAL PDF",
+            "icon": "⬇ download",
+            "background": "#1C1B1B",
+            "color": "#FAF8F2",
+            "style": "button primary dark",
+            "action": "download PDF"
+          },
+          {
+            "label": "EXPORTAR CSV/JSON",
+            "icon": "🗄 database",
+            "background": "#E5E2E1",
+            "color": "#1C1B1B",
+            "style": "button secondary light",
+            "action": "export data"
+          }
+        ]
+      }
+    },
+
+    "footer": {
+      "name": "Footer",
+      "flow": "grid",
+      "width": "Fill (1,280px)",
+      "height": "Hug (404px)",
+      "grid": {
+        "rows": 1,
+        "columns": 4,
+        "rowGap": "48px",
+        "columnGap": "48px"
+      },
+      "borderTop": {
+        "width": "8px",
+        "color": "#F4C542",
+        "note": "border-top amarelo visível no canvas"
+      },
+      "background": "#24103A",
+      "columns": [
+        {
+          "col": 1,
+          "content": "Logo LISBOA INVISÍVEL (amarelo #F4C542) + tagline + copyright"
+        },
+        {
+          "col": 2,
+          "content": "Coluna vazia / espaçamento"
+        },
+        {
+          "col": 3,
+          "label": "NAVEGAÇÃO",
+          "links": ["INÍCIO", "DADOS (active)", "HISTÓRIAS", "SERVIÇOS"]
+        },
+        {
+          "col": 4,
+          "label": "LEGAL & CONTACTO",
+          "links": ["NEWSLETTER", "ACESSIBILIDADE", "LEGAL", "CONTACTO"],
+          "socialIcon": "envelope (newsletter)"
+        }
+      ]
+    }
+  },
+
+  "pageStructure": {
+    "order": [
+      "topNavBar",
+      "main → [heroSection, dataGridSection, thematicGroupsSection, exportCtaSection]",
+      "footer"
+    ],
+    "totalPageHeight": "2,577.5px (hug)",
+    "outerPadding": {
+      "top": "128px",
+      "bottom": "176px",
+      "note": "Padding do Main container; secções individuais gerem o seu padding lateral (32px)"
+    }
+  },
+
+  "notes": {
+    "differencesFromHistorias": [
+      "Não tem secção de filtros de tags horizontais (filter bar) — em substituição tem Search + 4 dropdowns de filtro em grid de 12 colunas",
+      "Não tem story cards — em substituição tem bento grid de 2×4 com 6 tipos diferentes de data cards",
+      "Tem secção 'Agrupamentos Temáticos' exclusiva com fundo escuro #24103A e cards com border transparente",
+      "Export CTA substitui o Newsletter CTA de Histórias",
+      "backgroundLight da página é #FAF8F2 (mesmo que Histórias)",
+      "Hero não tem parágrafo de body text — apenas label + H1 + search bar"
+    ],
+    "sharedWithHistorias": [
+      "TopNavBar: estrutura idêntica (mesmo componente)",
+      "Footer: estrutura idêntica (mesmo componente)",
+      "Tokens de cor e tipografia partilhados",
+      "H1 com yellow-highlight na palavra-chave (#F4C542)",
+      "Label uppercase Space Grotesk acima do H1",
+      "borderTop de 8px nas secções de separação"
+    ],
+    "openQuestions": [
+      "Border-top do Section-Export&CTA usa #000000 no Figma — deve ser #25113B para consistência com Histórias?",
+      "Os data cards têm conteúdo dinâmico ou são estáticos no MVP?",
+      "O search input tem autocomplete/suggestions ou é simples?",
+      "Os 4 dropdowns de filtro são independentes (AND) ou mutuamente exclusivos?"
+    ]
+  }
+}

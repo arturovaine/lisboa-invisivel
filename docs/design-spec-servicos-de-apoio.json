@@ -1,0 +1,788 @@
+{
+  "project": "Lisboa Invisível",
+  "page": "Serviços de Apoio",
+
+  "accessibility": {
+    "images": {
+      "rule": "Imagens de conteúdo (mapa de Lisboa) → <img> com alt descritivo. Ícones decorativos → aria-hidden='true'.",
+      "contentImages": "Mapa de Lisboa na sidebar → <img alt='Mapa de Lisboa com serviços de apoio ativos'>",
+      "decorativeImages": "Ícone * nos contactos de emergência, ícone ⊕ no mapa → aria-hidden='true'"
+    },
+    "search": "Input de pesquisa deve ter aria-label='Procurar serviços por nome ou localização'",
+    "filterButton": "Botão FILTRAR deve comunicar estado expandido/recolhido com aria-expanded",
+    "quickFilterTags": "Cada tag de filtro rápido (ALIMENTAÇÃO, HIGIENE, SAÚDE, ABRIGO) deve ter role='checkbox' ou role='button' com aria-pressed",
+    "resultsToggle": "Segmentado LISTA/MAPA deve usar role='tablist' + role='tab' com aria-selected",
+    "serviceCards": "Cada card de serviço deve ser um <article> com heading semântico",
+    "emergencyNumbers": "Números 112 e 144 devem ser <a href='tel:112'> e <a href='tel:144'>",
+    "contactNumbers": "Todos os contactos telefónicos devem ser links <a href='tel:'>",
+    "mapButton": "Botão 'EXPANDIR MAPA' deve ter aria-label descritivo",
+    "focusVisible": "Estados de foco em todos os controlos — pendente (ver docs/TODO.md)",
+    "skipLink": "Skip-link 'Saltar para conteúdo' — pendente (ver docs/TODO.md)"
+  },
+
+  "colors": {
+    "backgroundPage": "#FCF8F8",
+    "backgroundDark": "#24103A",
+    "backgroundCard": "#F6F3F2",
+    "highlightYellow": "#F4C542",
+    "bodyTextDark": "#1C1B1B",
+    "bodyTextMid": "#4A454D",
+    "navTextWhite": "#FAF8F2",
+    "searchFilterBarBg": "#EBE7E7",
+    "serviceCardBg": "#F6F3F2",
+    "serviceCardBorderHighlightYellow": "#F4C542",
+    "serviceCardBorderGold": "#765B00",
+    "emergencyCardBg": "#F4C542",
+    "mapPreviewBg": "#EBE7E7",
+    "verificationNoticeBg": "#E5E2E1",
+    "categoryBadgeBg": "#24103A",
+    "categoryBadgeText": "#FAF8F2",
+    "ctaButtonBg": "#24103A",
+    "ctaButtonText": "#FAF8F2",
+    "filterButtonBg": "#24103A",
+    "filterButtonText": "#FAF8F2",
+    "resultsHeaderBorder": "#24103A",
+    "footerBg": "#24103A",
+    "note_pageBackground": "Esta página usa #FCF8F8 (quase branco com tom rosado) em vez de #FAF8F2 — verificar consistência com restantes páginas"
+  },
+
+  "typography": {
+    "fonts": {
+      "heading": "Epilogue",
+      "ui": "Space Grotesk",
+      "body": "Manrope"
+    },
+    "scale": {
+      "h1_hero": {
+        "font": "Epilogue",
+        "weight": 900,
+        "style": "Black",
+        "size": "64px",
+        "lineHeight": "72px",
+        "color": "#1C1B1B",
+        "note": "Palavra 'APOIO' envolvida em highlight background #F4C542. Linha única. Frame Heading 1 tem altura fixed 72px.",
+        "example": "SERVIÇOS DE APOIO"
+      },
+      "subtitle_hero": {
+        "font": "Manrope",
+        "weight": 400,
+        "size": "16px",
+        "lineHeight": "26px",
+        "color": "#4A454D",
+        "maxWidth": "672px",
+        "example": "Recursos essenciais para cidadãos em situação de vulnerabilidade. Dados verificados pela comunidade em tempo real."
+      },
+      "search_placeholder": {
+        "font": "Manrope",
+        "weight": 400,
+        "size": "14px",
+        "color": "#4A454D",
+        "example": "PROCURAR POR NOME OU LOCALIZAÇÃO..."
+      },
+      "filter_button_label": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "12px",
+        "letterSpacing": "1.2px",
+        "textTransform": "uppercase",
+        "color": "#FAF8F2",
+        "example": "FILTRAR"
+      },
+      "quick_filter_tag": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "12px",
+        "letterSpacing": "1.2px",
+        "textTransform": "uppercase",
+        "color": "#1C1B1B",
+        "example": "ALIMENTAÇÃO / HIGIENE / SAÚDE / ABRIGO"
+      },
+      "results_label": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "11px",
+        "letterSpacing": "1.1px",
+        "textTransform": "uppercase",
+        "color": "#1C1B1B",
+        "example": "LISTAGEM DE RESULTADOS"
+      },
+      "results_toggle": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "11px",
+        "letterSpacing": "1.1px",
+        "textTransform": "uppercase",
+        "example": "LISTA / MAPA"
+      },
+      "service_card_name": {
+        "font": "Epilogue",
+        "weight": 800,
+        "size": "20px",
+        "lineHeight": "26px",
+        "letterSpacing": "0px",
+        "textTransform": "uppercase",
+        "color": "#1C1B1B",
+        "example": "BALNEÁRIO PÚBLICO DE ALCÂNTARA / COZINHA COMUNITÁRIA DE MARVILA"
+      },
+      "service_card_address": {
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "12px",
+        "lineHeight": "18px",
+        "color": "#4A454D",
+        "example": "Rua Cozinha Económica, 1300-149 Lisboa"
+      },
+      "service_card_description": {
+        "font": "Manrope",
+        "weight": 400,
+        "size": "14px",
+        "lineHeight": "22px",
+        "color": "#4A454D",
+        "example": "Serviços de duche quente, lavandaria e apoio social básico. Acesso gratuito para pessoas em situação de sem-abrigo."
+      },
+      "service_card_meta_label": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "10px",
+        "letterSpacing": "1px",
+        "textTransform": "uppercase",
+        "color": "#4A454D",
+        "example": "HORÁRIO / CONTACTO"
+      },
+      "service_card_meta_value": {
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "13px",
+        "lineHeight": "20px",
+        "color": "#1C1B1B",
+        "example": "08:00 — 19:00 (Seg a Sex) / +351 213 621 450"
+      },
+      "cta_route_button": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "11px",
+        "letterSpacing": "1.1px",
+        "textTransform": "uppercase",
+        "color": "#FAF8F2",
+        "example": "TRAÇAR ROTA"
+      },
+      "category_badge": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "10px",
+        "letterSpacing": "1px",
+        "textTransform": "uppercase",
+        "color": "#FAF8F2",
+        "background": "#24103A",
+        "example": "HIGIENE / ALIMENTAÇÃO"
+      },
+      "emergency_title": {
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "20px",
+        "lineHeight": "26px",
+        "textTransform": "uppercase",
+        "color": "#1C1B1B",
+        "example": "CONTACTOS DE EMERGÊNCIA"
+      },
+      "emergency_label": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "10px",
+        "letterSpacing": "1px",
+        "textTransform": "uppercase",
+        "color": "#1C1B1B",
+        "example": "EMERGÊNCIA NACIONAL / EMERGÊNCIA SOCIAL / APOIO MUNICIPAL (CML)"
+      },
+      "emergency_number_large": {
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "48px",
+        "lineHeight": "1",
+        "color": "#1C1B1B",
+        "example": "112 / 144"
+      },
+      "emergency_number_small": {
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "14px",
+        "lineHeight": "22px",
+        "color": "#1C1B1B",
+        "example": "800 910 110 / 218 171 100"
+      },
+      "emergency_service_name": {
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "14px",
+        "lineHeight": "22px",
+        "color": "#1C1B1B",
+        "example": "Unidade Sem-Abrigo / Proteção Civil"
+      },
+      "map_expand_button": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "12px",
+        "letterSpacing": "1.2px",
+        "textTransform": "uppercase",
+        "color": "#FAF8F2",
+        "background": "#24103A",
+        "example": "EXPANDIR MAPA"
+      },
+      "map_status_label": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "10px",
+        "letterSpacing": "1px",
+        "textTransform": "uppercase",
+        "color": "#4A454D",
+        "example": "VISTA DE MAPA ATIVA"
+      },
+      "map_status_value": {
+        "font": "Manrope",
+        "weight": 400,
+        "size": "13px",
+        "lineHeight": "20px",
+        "color": "#4A454D",
+        "example": "Existem 42 serviços ativos nas proximidades."
+      },
+      "verification_label": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "11px",
+        "letterSpacing": "1.1px",
+        "textTransform": "uppercase",
+        "color": "#4A454D",
+        "example": "VERIFICAÇÃO DE DADOS"
+      },
+      "verification_body": {
+        "font": "Manrope",
+        "weight": 400,
+        "size": "13px",
+        "lineHeight": "20px",
+        "color": "#4A454D",
+        "example": "Última atualização: 24 de Maio de 2024. Se encontrar informações incorretas, por favor utilize o botão de reportar em cada ficha de serviço."
+      },
+      "nav_link": {
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "14px",
+        "lineHeight": "20px",
+        "textTransform": "uppercase",
+        "color": "#FAF8F2"
+      }
+    }
+  },
+
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "2xl": "48px",
+    "3xl": "64px",
+    "4xl": "80px",
+    "5xl": "128px"
+  },
+
+  "layout": {
+    "pageMaxWidth": "1280px",
+    "mainContainer": {
+      "name": "Main",
+      "flow": "vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (1,418.34px)",
+      "maxWidth": "1280px",
+      "padding": {
+        "top": "128px",
+        "right": "48px",
+        "bottom": "80px",
+        "left": "48px"
+      },
+      "gap": "48px",
+      "background": "#FCF8F8",
+      "note": "Padding lateral 48px (maior que Histórias/Dados que usam 32px). Verificar se intencional."
+    }
+  },
+
+  "components": {
+    "topNavBar": {
+      "name": "TopNavBar",
+      "flow": "horizontal",
+      "width": "Fixed (1,280px)",
+      "height": "Hug (84px)",
+      "justify": "space-between",
+      "padding": {
+        "top": "24px",
+        "right": "32px",
+        "bottom": "24px",
+        "left": "32px"
+      },
+      "background": "#24103A",
+      "activeLink": "nenhum link activo explícito (Serviços não está no nav principal)",
+      "items": ["Sobre", "Dados", "Histórias", "Blog", "Participar"],
+      "ctaButton": {
+        "label": "Encontrar Serviços",
+        "href": "servicos.html",
+        "background": "#F4C542",
+        "color": "#24103A",
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "13px",
+        "letterSpacing": "1.3px",
+        "textTransform": "uppercase",
+        "padding": "9px 20px",
+        "note": "O CTA 'Encontrar Serviços' aponta para esta própria página — deve ser desabilitado ou ter estado activo quando nesta página."
+      },
+      "menuIcon": {
+        "visibility": "mobile-only (≤860px)"
+      }
+    },
+
+    "heroSection": {
+      "name": "Header Section",
+      "flow": "vertical",
+      "width": "Fill (1,184px)",
+      "height": "Hug (144px)",
+      "gap": "16px",
+
+      "headingRow": {
+        "name": "Heading 1",
+        "flow": "horizontal",
+        "width": "Fill (1,184px)",
+        "height": "Fixed (72px)",
+        "text": "SERVIÇOS DE APOIO",
+        "highlightWord": "APOIO",
+        "highlightBackground": "#F4C542",
+        "note": "Apenas a palavra 'APOIO' tem fundo amarelo. Sem label de secção acima (diferença vs. Dados/Histórias)."
+      },
+
+      "subtitleContainer": {
+        "name": "Container",
+        "flow": "vertical",
+        "width": "Fixed (672px)",
+        "height": "Hug (56px)",
+        "maxWidth": "672px",
+        "text": "Recursos essenciais para cidadãos em situação de vulnerabilidade. Dados verificados pela comunidade em tempo real."
+      }
+    },
+
+    "searchFilterBar": {
+      "name": "Section - Search & Filter Bar",
+      "flow": "horizontal",
+      "width": "Fill (1,184px)",
+      "height": "Hug (84px)",
+      "padding": "16px",
+      "gap": "16px",
+      "background": "#EBE7E7",
+
+      "searchInput": {
+        "placeholder": "PROCURAR POR NOME OU LOCALIZAÇÃO...",
+        "icon": "🔍 (search icon, left-aligned)",
+        "background": "#FAF8F2",
+        "border": "none"
+      },
+
+      "filterButton": {
+        "label": "FILTRAR",
+        "icon": "≡ (filtro icon, left-aligned)",
+        "background": "#24103A",
+        "color": "#FAF8F2",
+        "aria": "aria-expanded (toggle para painel de filtros avançados)"
+      },
+
+      "quickFilterTags": [
+        {
+          "label": "ALIMENTAÇÃO",
+          "background": "#FAF8F2",
+          "color": "#1C1B1B",
+          "border": "1px solid #D0CBCB"
+        },
+        {
+          "label": "HIGIENE",
+          "background": "#FAF8F2",
+          "color": "#1C1B1B",
+          "border": "1px solid #D0CBCB"
+        },
+        {
+          "label": "SAÚDE",
+          "background": "#FAF8F2",
+          "color": "#1C1B1B",
+          "border": "1px solid #D0CBCB"
+        },
+        {
+          "label": "ABRIGO",
+          "background": "#FAF8F2",
+          "color": "#1C1B1B",
+          "border": "1px solid #D0CBCB"
+        }
+      ],
+      "note": "Tags de filtro rápido são toggle buttons — estado activo inverte fundo (#24103A) e texto (#FAF8F2)"
+    },
+
+    "mainContentArea": {
+      "name": "Main Content Area",
+      "flow": "grid",
+      "width": "1,184px",
+      "height": "886.34px",
+      "grid": {
+        "rows": 1,
+        "columns": 12,
+        "rowGap": "32px",
+        "columnGap": "32px"
+      },
+
+      "serviceListColumn": {
+        "name": "Service List & Map Toggle",
+        "flow": "vertical",
+        "width": "Fill (778.67px)",
+        "height": "Hug (886.34px)",
+        "paddingBottom": "127.34px",
+        "gap": "32px",
+        "gridPlacement": {
+          "rowStart": 1,
+          "columnStart": 1,
+          "horizontalSpan": 8,
+          "verticalSpan": 1
+        },
+
+        "resultsHeader": {
+          "name": "HorizontalBorder",
+          "flow": "horizontal",
+          "width": "Fill (778.67px)",
+          "height": "Hug (32px)",
+          "justify": "space-between",
+          "padding": {
+            "right": "0.01px",
+            "bottom": "8px"
+          },
+          "borderBottom": {
+            "width": "4px",
+            "color": "#24103A"
+          },
+          "left": {
+            "text": "LISTAGEM DE RESULTADOS",
+            "font": "Space Grotesk",
+            "weight": 700,
+            "size": "11px",
+            "letterSpacing": "1.1px",
+            "textTransform": "uppercase"
+          },
+          "right": {
+            "toggle": ["LISTA", "MAPA"],
+            "activeState": "LISTA",
+            "note": "Segmentado — estado activo com underline ou cor diferente; role='tablist'"
+          }
+        },
+
+        "serviceCardsGrid": {
+          "name": "Service Cards Grid",
+          "flow": "grid",
+          "width": "778.67px",
+          "height": "563px",
+          "grid": {
+            "rows": 2,
+            "columns": 1,
+            "rowGap": "24px",
+            "columnGap": "24px"
+          },
+
+          "serviceCard": {
+            "name": "Article - Card",
+            "tag": "<article>",
+            "flow": "vertical",
+            "width": "Fill (778.67px)",
+            "height": "Hug (265.5px)",
+            "padding": "32px",
+            "background": "#F6F3F2",
+            "borderLeft": {
+              "width": "8px",
+              "colorVariants": {
+                "default": "#F4C542",
+                "alternate": "#765B00",
+                "note": "Cada card tem cor diferente no border esquerdo — parece alternado ou ligado à categoria"
+              }
+            },
+            "gridPlacement": {
+              "horizontalSpan": 1,
+              "verticalSpan": 1
+            },
+
+            "structure": {
+              "topRow": {
+                "flow": "horizontal",
+                "justify": "space-between",
+                "content": [
+                  "nome do serviço (heading)",
+                  "badge de categoria"
+                ]
+              },
+              "addressRow": {
+                "icon": "📍 (pin icon, aria-hidden='true')",
+                "text": "Endereço completo"
+              },
+              "descriptionText": "Descrição do serviço (2-3 linhas)",
+              "divider": "linha horizontal sutil",
+              "metaRow": {
+                "flow": "horizontal",
+                "justify": "space-between",
+                "left": {
+                  "columns": [
+                    {
+                      "label": "HORÁRIO",
+                      "value": "HH:MM — HH:MM (dias)"
+                    },
+                    {
+                      "label": "CONTACTO",
+                      "value": "+351 XXX XXX XXX (link tel:)"
+                    }
+                  ]
+                },
+                "right": {
+                  "ctaButton": {
+                    "label": "TRAÇAR ROTA",
+                    "icon": "↗ (arrow, right side)",
+                    "background": "#24103A",
+                    "color": "#FAF8F2",
+                    "font": "Space Grotesk",
+                    "weight": 700,
+                    "size": "11px",
+                    "letterSpacing": "1.1px",
+                    "textTransform": "uppercase"
+                  }
+                }
+              }
+            },
+
+            "examples": [
+              {
+                "id": "card-2",
+                "order": 1,
+                "name": "BALNEÁRIO PÚBLICO DE ALCÂNTARA",
+                "address": "Rua Cozinha Económica, 1300-149 Lisboa",
+                "description": "Serviços de duche quente, lavandaria e apoio social básico. Acesso gratuito para pessoas em situação de sem-abrigo.",
+                "schedule": "08:00 — 19:00 (Seg a Sex)",
+                "contact": "+351 213 621 450",
+                "category": "HIGIENE",
+                "borderColor": "#765B00",
+                "gridRow": 2
+              },
+              {
+                "id": "card-1",
+                "order": 2,
+                "name": "COZINHA COMUNITÁRIA DE MARVILA",
+                "address": "Estrada de Marvila, 1900-321 Lisboa",
+                "description": "Fornecimento diário de refeições quentes e cabazes de emergência. Requer triagem social prévia no local.",
+                "schedule": "12:00 — 14:30 / 19:00 — 21:00",
+                "contact": "+351 218 310 100",
+                "category": "ALIMENTAÇÃO",
+                "borderColor": "#F4C542",
+                "gridRow": 1
+              }
+            ]
+          }
+        },
+
+        "verificationNotice": {
+          "name": "Footer - Update Note",
+          "flow": "horizontal",
+          "width": "Fill (778.67px)",
+          "height": "Hug (100px)",
+          "padding": "24px",
+          "gap": "16px",
+          "background": "#E5E2E1",
+
+          "icon": {
+            "type": "circular check / shield",
+            "color": "#4A454D",
+            "ariaHidden": true
+          },
+          "content": {
+            "label": "VERIFICAÇÃO DE DADOS",
+            "body": "Última atualização: 24 de Maio de 2024. Se encontrar informações incorretas, por favor utilize o botão de reportar em cada ficha de serviço."
+          }
+        }
+      },
+
+      "emergencySidebar": {
+        "name": "Aside - Emergency Sidebar",
+        "flow": "vertical",
+        "width": "Fill (373.33px)",
+        "height": "Hug (870.34px)",
+        "left": "810.67px",
+        "gap": "32px",
+        "gridPlacement": {
+          "rowStart": 1,
+          "columnStart": 9,
+          "horizontalSpan": 4,
+          "verticalSpan": 1
+        },
+
+        "emergencyContactsCard": {
+          "name": "Background",
+          "flow": "vertical",
+          "width": "Fill (373.33px)",
+          "height": "Hug (465px)",
+          "padding": "32px",
+          "gap": "24px",
+          "background": "#F4C542",
+
+          "header": {
+            "flow": "horizontal",
+            "gap": "12px",
+            "icon": "* (asterisco estilizado, aria-hidden='true')",
+            "title": "CONTACTOS DE EMERGÊNCIA",
+            "borderBottom": "1px solid rgba(28,27,27,0.3)"
+          },
+
+          "emergencyNumbers": [
+            {
+              "label": "EMERGÊNCIA NACIONAL",
+              "number": "112",
+              "href": "tel:112",
+              "icon": "→ (arrow link)"
+            },
+            {
+              "label": "EMERGÊNCIA SOCIAL",
+              "number": "144",
+              "href": "tel:144",
+              "icon": "→ (arrow link)"
+            }
+          ],
+
+          "municipalContacts": {
+            "label": "APOIO MUNICIPAL (CML)",
+            "items": [
+              {
+                "service": "Unidade Sem-Abrigo",
+                "number": "800 910 110",
+                "href": "tel:800910110"
+              },
+              {
+                "service": "Proteção Civil",
+                "number": "218 171 100",
+                "href": "tel:218171100"
+              }
+            ]
+          }
+        },
+
+        "mapPreviewCard": {
+          "name": "Map Preview / Anchor",
+          "flow": "vertical",
+          "width": "Fill (373.33px)",
+          "height": "Hug (373.34px)",
+          "background": "#EBE7E7",
+
+          "mapImage": {
+            "tag": "<img>",
+            "alt": "Mapa de Lisboa com serviços de apoio ativos",
+            "loading": "lazy",
+            "decoding": "async",
+            "objectFit": "cover",
+            "note": "Mapa estático decorativo/interativo — se for imagem estática, usar alt descritivo; se for mapa interativo (Leaflet/Mapbox) usar role='application' e aria-label"
+          },
+
+          "expandButton": {
+            "label": "EXPANDIR MAPA",
+            "icon": "🗺 (map icon, left-aligned, aria-hidden='true')",
+            "background": "#24103A",
+            "color": "#FAF8F2",
+            "position": "overlay centrado sobre o mapa"
+          },
+
+          "mapStatusBadge": {
+            "background": "#FAF8F2",
+            "label": "VISTA DE MAPA ATIVA",
+            "body": "Existem 42 serviços ativos nas proximidades.",
+            "position": "abaixo do mapa"
+          }
+        }
+      }
+    },
+
+    "footer": {
+      "name": "Footer",
+      "flow": "grid",
+      "width": "1,280px",
+      "height": "388px",
+      "grid": {
+        "rows": 1,
+        "columns": 4,
+        "rowGap": "48px",
+        "columnGap": "48px"
+      },
+      "borderTop": {
+        "width": "8px",
+        "color": "#F4C542"
+      },
+      "background": "#24103A",
+      "columns": [
+        {
+          "col": 1,
+          "content": "Logo LISBOA INVISÍVEL (#F4C542) + tagline + copyright"
+        },
+        {
+          "col": 2,
+          "content": "Espaçamento / vazio"
+        },
+        {
+          "col": 3,
+          "label": "NAVEGAÇÃO",
+          "links": ["INÍCIO", "DADOS", "HISTÓRIAS", "SERVIÇOS (active)"]
+        },
+        {
+          "col": 4,
+          "label": "TRANSPARÊNCIA",
+          "links": ["NEWSLETTER", "ACESSIBILIDADE", "LEGAL", "CONTACTO"],
+          "socialIcon": "envelope"
+        }
+      ]
+    }
+  },
+
+  "pageStructure": {
+    "order": [
+      "topNavBar",
+      "main → [heroSection, searchFilterBar, mainContentArea → [serviceListColumn, emergencySidebar]]",
+      "footer"
+    ],
+    "totalPageHeight": "1,806.34px (frame Body) / Main content: 1,418.34px (hug)",
+    "outerPadding": {
+      "top": "128px",
+      "right": "48px",
+      "bottom": "80px",
+      "left": "48px"
+    }
+  },
+
+  "notes": {
+    "differencesFromHistoriasAndDados": [
+      "Não tem label de secção acima do H1 — só tem 'SERVIÇOS DE' + 'APOIO' com highlight",
+      "Hero é mais compacto (144px vs. 232-364px nas outras páginas)",
+      "Padding lateral do Main é 48px (vs. 32px nas outras páginas) — verificar se intencional",
+      "Background da página é #FCF8F8 (vs. #FAF8F2 nas outras) — tom ligeiramente rosado",
+      "Layout é em 2 colunas assimétricas (8/12 + 4/12) em vez de grelha de story cards",
+      "Sidebar de emergência é um componente de acesso imediato (safety-critical) — deve ter atenção especial em mobile (above the fold)",
+      "Footer tem border-top amarelo #F4C542 (diferente do #25113B de Histórias e do #000000 de Dados)"
+    ],
+    "sharedWithOtherPages": [
+      "TopNavBar: estrutura idêntica (mesmo componente)",
+      "H1 com yellow-highlight na palavra-chave (#F4C542)",
+      "Footer: estrutura de 4 colunas idêntica (mesma altura ligeiramente diferente: 388px vs 366-404px)"
+    ],
+    "safetyConsiderations": [
+      "Os números 112 e 144 são safety-critical — devem ser sempre visíveis e clicáveis (tel: links)",
+      "Em mobile a sidebar de emergência deve aparecer antes (acima) ou após (colapsada) a lista de serviços",
+      "A nota de verificação de dados é transparência editorial — importante para confiança do utilizador"
+    ],
+    "openQuestions": [
+      "O botão FILTRAR abre um painel de filtros avançados — estrutura e campos do painel não estão no Figma desta página",
+      "Os quick filters (ALIMENTAÇÃO, HIGIENE, SAÚDE, ABRIGO) são exclusivos ou múltiplos?",
+      "A toggle LISTA/MAPA — a vista de mapa expandida (full width) não está especificada no design",
+      "O padding lateral 48px (vs. 32px nas outras páginas) foi intencional para criar mais breathing room na página funcional?",
+      "Quantos cards aparecem na listagem por defeito? Existe paginação ou scroll infinito?",
+      "O card border esquerdo (#F4C542 vs. #765B00) segue alguma lógica? Parece ligado à categoria (alimentação vs. higiene?)"
+    ]
+  }
+}

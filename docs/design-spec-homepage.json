@@ -1,0 +1,899 @@
+{
+  "project": "Lisboa Invisível",
+  "page": "homepage",
+  "nodeId": "26-2",
+  "description": "Página principal (landing page) do Lisboa Invisível. Apresenta a proposta de valor da plataforma, números de impacto, pilares de acção, preview de histórias, desconstrução de mitos, categorias de dados, CTA de serviços de apoio, subscrição de newsletter e logos institucionais.",
+
+  "accessibility": {
+    "images": {
+      "heroBackground": "Foto de rua urbana de Lisboa com graffiti → <img alt='Rua de Lisboa com graffiti — contexto de exclusão social urbana' role='presentation'> ou background-image CSS (decorativa, conteúdo no texto sobreposto)",
+      "storyPhotos": "<img alt='Retrato de {Nome}, {Idade} anos — testemunho sobre {tema}'> para António 58, Elena 32, João 45",
+      "institutionalLogos": "<img alt='Logo {Instituição}'> para cada parceiro",
+      "dataIconos": "Ícones de categoria SVG → aria-hidden='true' (decorativos, label de texto presente)",
+      "lazyLoading": "loading='lazy' decoding='async' em fotos de histórias e logos abaixo do fold"
+    },
+    "altPattern": "Retrato de {Nome}, {Idade} anos — {bairro/contexto} — testemunho sobre {tema}",
+    "focusVisible": "pendente (ver docs/TODO.md)",
+    "skipLink": "pendente (ver docs/TODO.md)",
+    "semantics": {
+      "heroH1": "H1 — 'Tornar visível o que a cidade insiste em não ver.' — título principal da página",
+      "statsRegion": "Section Big Numbers → aria-label='Impacto do observatório em números'",
+      "mythBuster": "Section Mito vs Facto → <section aria-label='Desconstruir o preconceito'>; a citação falsa deve ter aria-label='Mito comum' ou prefixo visível 'FALSO'",
+      "newsletterForm": "<form aria-label='Subscrever boletim do observatório'> com <label> explícito para o campo de email"
+    }
+  },
+
+  "colors": {
+    "backgroundLight": "#FCF8F8",
+    "backgroundCream": "#FAF8F2",
+    "backgroundPillars": "#F6F3F2",
+    "backgroundDark": "#24103A",
+    "accentYellow": "#F4C542",
+    "accentGoldBrown": "#765B00",
+    "textWhite": "#FFFFFF",
+    "textDark": "#24103A",
+    "institutionalLogoBorder": "#CCC4CE",
+    "institutionalLogoBorderOpacity": "20%"
+  },
+
+  "typography": {
+    "fonts": {
+      "primary": "Epilogue",
+      "secondary": "Space Grotesk",
+      "tertiary": "Manrope"
+    },
+    "scale": {
+      "heroHeading": {
+        "example": "Tornar visível o que a cidade insiste em não ver.",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "72px",
+        "lineHeight": "1.0",
+        "letterSpacing": "-0.02em",
+        "color": "#FFFFFF",
+        "note": "'visível' em destaque com background #F4C542 (highlight inline)"
+      },
+      "heroSubtitle": {
+        "example": "Dados, histórias, serviços e mobilização sobre a situação de sem-abrigo em Lisboa.",
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "18px",
+        "lineHeight": "1.6",
+        "color": "#FFFFFF"
+      },
+      "impactLabel": {
+        "example": "IMPACTO REAL / RESPOSTA SOLIDÁRIA",
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "11px",
+        "letterSpacing": "0.14em",
+        "textTransform": "uppercase",
+        "color": "#FFFFFF"
+      },
+      "impactNumber": {
+        "example": "3.000+ / 15.000+",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "96px",
+        "lineHeight": "0.9",
+        "letterSpacing": "-0.03em",
+        "color": "#FFFFFF",
+        "note": "No card amarelo, cor é #24103A"
+      },
+      "impactDescription": {
+        "example": "Pessoas em situação de sem-abrigo registadas em Lisboa.",
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "16px",
+        "lineHeight": "1.6",
+        "color": "#FFFFFF"
+      },
+      "observatoryHeading": {
+        "example": "Um observatório social digital para consciencializar, desmistificar e mobilizar.",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "56px",
+        "lineHeight": "1.05",
+        "letterSpacing": "-0.01em",
+        "color": "#24103A"
+      },
+      "observatoryPillarNumber": {
+        "example": "01 / 02 / 03",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "20px",
+        "color": "#F4C542"
+      },
+      "observatoryPillarLabel": {
+        "example": "COMPREENDER / DESMISTIFICAR / MOBILIZAR",
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "14px",
+        "letterSpacing": "0.08em",
+        "textTransform": "uppercase",
+        "color": "#24103A"
+      },
+      "observatoryPillarBody": {
+        "example": "Análise de dados brutos transformados em informação visual clara e acessível.",
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "15px",
+        "lineHeight": "1.6",
+        "color": "#24103A"
+      },
+      "storiesHeading": {
+        "example": "Antes dos números, vieram as histórias.",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "48px",
+        "lineHeight": "1.05",
+        "color": "#24103A",
+        "note": "'histórias.' em cor #765B00 (gold-brown)"
+      },
+      "storyCardName": {
+        "example": "António, 58 anos",
+        "font": "Epilogue",
+        "weight": 700,
+        "size": "18px",
+        "color": "#24103A"
+      },
+      "storyCardExcerpt": {
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "15px",
+        "lineHeight": "1.6",
+        "color": "#24103A"
+      },
+      "mythBadge": {
+        "example": "FALSO",
+        "font": "Space Grotesk",
+        "weight": 900,
+        "size": "11px",
+        "letterSpacing": "0.12em",
+        "textTransform": "uppercase",
+        "background": "#F4C542",
+        "color": "#24103A"
+      },
+      "mythQuote": {
+        "example": "«Quem está na rua está lá porque quer ou porque não quer trabalhar.»",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "28px",
+        "lineHeight": "1.2",
+        "color": "#FFFFFF"
+      },
+      "mythStat": {
+        "example": "82%",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "64px",
+        "color": "#F4C542"
+      },
+      "mythStatLabel": {
+        "example": "Mais de 80% das situações decorrem de...",
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "14px",
+        "lineHeight": "1.6",
+        "color": "#FFFFFF"
+      },
+      "deconstructTitle": {
+        "example": "DESCONSTRUIR O PRECONCEITO.",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "36px",
+        "lineHeight": "1.1",
+        "textTransform": "uppercase",
+        "color": "#FFFFFF"
+      },
+      "deconstructLink": {
+        "example": "MITO DA AUTOSSUFICIÊNCIA",
+        "font": "Space Grotesk",
+        "weight": 600,
+        "size": "14px",
+        "letterSpacing": "0.06em",
+        "textTransform": "uppercase",
+        "color": "#FFFFFF"
+      },
+      "dataCategoryLabel": {
+        "example": "EXPLORAR CATEGORIAS DE DADOS",
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "13px",
+        "letterSpacing": "0.12em",
+        "textTransform": "uppercase",
+        "color": "#24103A"
+      },
+      "dataCategoryName": {
+        "example": "MULHERES / ALOJAMENTO / SAÚDE MENTAL",
+        "font": "Space Grotesk",
+        "weight": 600,
+        "size": "12px",
+        "letterSpacing": "0.08em",
+        "textTransform": "uppercase",
+        "color": "#24103A"
+      },
+      "serviceCtaHeading": {
+        "example": "PRECISA DE AJUDA OU QUER AJUDAR ALGUÉM?",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "48px",
+        "lineHeight": "1.0",
+        "textTransform": "uppercase",
+        "color": "#24103A"
+      },
+      "serviceCtaBody": {
+        "example": "Mapa em tempo real dos serviços de emergência, alimentação e apoio em Lisboa.",
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "16px",
+        "lineHeight": "1.6",
+        "color": "#24103A"
+      },
+      "newsletterHeading": {
+        "example": "RECEBA ATUALIZAÇÕES MENSAIS DO OBSERVATÓRIO.",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "48px",
+        "lineHeight": "1.0",
+        "textTransform": "uppercase",
+        "color": "#24103A"
+      }
+    }
+  },
+
+  "spacing": {
+    "xs": "8px",
+    "sm": "16px",
+    "md": "24px",
+    "lg": "32px",
+    "xl": "40px",
+    "2xl": "48px",
+    "3xl": "64px",
+    "4xl": "80px",
+    "5xl": "96px",
+    "6xl": "128px",
+    "7xl": "192px",
+    "note": "Esta página usa os tokens standard + 128px e 192px exclusivos desta página"
+  },
+
+  "layout": {
+    "pageMaxWidth": "1280px",
+    "bodyFrame": {
+      "node": "26-2",
+      "flow": "Vertical",
+      "width": "Fixed (1,280px)",
+      "height": "Hug (6,661.59px)",
+      "background": "#FCF8F8"
+    },
+    "paddingPattern": {
+      "standard": "Padding lateral 80px (Right 80px / Left 80px)",
+      "newsletter": "Padding lateral 192px (Right 192px / Left 192px) — layout centrado estreito",
+      "note": "A maioria das sections usa 80px lateral; newsletter usa 192px para focar no formulário"
+    }
+  },
+
+  "components": {
+    "topNavBar": {
+      "name": "TopNavBar",
+      "node": "26-navRef",
+      "flow": "Horizontal",
+      "width": "Fixed (1,280px)",
+      "height": "Hug (84px)",
+      "justify": "space-between",
+      "paddingTop": "24px",
+      "paddingRight": "32px",
+      "paddingBottom": "24px",
+      "paddingLeft": "32px",
+      "background": "#24103A",
+      "position": "sticky top-0 z-50",
+      "children": {
+        "logo": "LISBOA INVISÍVEL wordmark (white)",
+        "navLinks": ["SOBRE", "DADOS", "HISTÓRIAS", "BLOG", "PARTICIPAR"],
+        "ctaButton": {
+          "label": "ENCONTRAR SERVIÇOS",
+          "background": "#F4C542",
+          "color": "#000000",
+          "textTransform": "uppercase"
+        },
+        "hamburger": "Menu icon"
+      }
+    },
+
+    "heroSection": {
+      "name": "1. Hero Section",
+      "node": "26-3",
+      "flow": "Horizontal",
+      "width": "Fill (1,280px)",
+      "height": "Fixed (800px)",
+      "paddingTop": "0px",
+      "paddingRight": "80px",
+      "paddingBottom": "80px",
+      "paddingLeft": "80px",
+      "background": "#24103A",
+      "backgroundImage": "Foto de rua urbana de Lisboa com graffiti — overlay #24103A ~60%",
+      "backgroundSize": "cover",
+      "backgroundPosition": "center",
+      "layout": "content alinhado ao fundo-esquerdo (padding-bottom 80px, padding lateral 80px)",
+      "children": {
+        "heading": {
+          "text": "Tornar [visível] o que a cidade insiste em não ver.",
+          "inlineHighlight": {
+            "word": "visível",
+            "background": "#F4C542",
+            "color": "#24103A",
+            "padding": "0 4px"
+          },
+          "font": "Epilogue 900",
+          "fontSize": "72px",
+          "lineHeight": "1.0",
+          "color": "#FFFFFF"
+        },
+        "subtitle": {
+          "text": "Dados, histórias, serviços e mobilização sobre a situação de sem-abrigo em Lisboa.",
+          "font": "Space Grotesk 400",
+          "fontSize": "18px",
+          "lineHeight": "1.6",
+          "color": "#FFFFFF"
+        },
+        "ctaButtons": {
+          "flow": "Horizontal",
+          "gap": "16px",
+          "button1": {
+            "label": "EXPLORAR DADOS",
+            "variant": "outline",
+            "borderColor": "#FFFFFF",
+            "color": "#FFFFFF",
+            "background": "transparent"
+          },
+          "button2": {
+            "label": "ENCONTRAR SERVIÇOS",
+            "variant": "outline",
+            "borderColor": "#FFFFFF",
+            "color": "#FFFFFF",
+            "background": "transparent"
+          },
+          "button3": {
+            "label": "CONHECER O PROJETO",
+            "variant": "ghost/text",
+            "color": "#FFFFFF",
+            "background": "transparent",
+            "underline": true
+          }
+        }
+      }
+    },
+
+    "bigNumbersSection": {
+      "name": "Section - 2. Big Numbers (Bento Style)",
+      "node": "26-23",
+      "flow": "Vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (621px)",
+      "paddingTop": "96px",
+      "paddingRight": "80px",
+      "paddingBottom": "96px",
+      "paddingLeft": "80px",
+      "background": "#FCF8F8",
+      "children": {
+        "bentoGrid": {
+          "node": "26-24",
+          "flow": "Grid",
+          "width": "1,120px",
+          "height": "429px",
+          "rows": 1,
+          "columns": 12,
+          "rowGap": "32px",
+          "columnGap": "32px",
+          "children": {
+            "cardImpactoReal": {
+              "node": "26-35",
+              "name": "IMPACTO REAL — 3.000+",
+              "flow": "Vertical",
+              "width": "Fill (736px)",
+              "height": "Hug (425px)",
+              "padding": "48px",
+              "gap": "16px",
+              "background": "#24103A",
+              "grid": {
+                "rowStart": 1,
+                "columnStart": 1,
+                "horizontalSpan": 8,
+                "verticalSpan": 1
+              },
+              "children": {
+                "label": "IMPACTO REAL",
+                "number": "3.000+",
+                "description": "Pessoas em situação de sem-abrigo registadas em Lisboa.",
+                "source": "FONTE: NOS SA LISBOA | ACTUALIZADO EM JAN 2024",
+                "ctaLink": "PARTILHAR ESTE DADO →"
+              }
+            },
+            "cardRespostaSolidaria": {
+              "node": "26-25",
+              "name": "RESPOSTA SOLIDÁRIA — 15.000+",
+              "flow": "Vertical",
+              "width": "Fill (352px)",
+              "height": "Hug (429px)",
+              "paddingTop": "48px",
+              "paddingRight": "48px",
+              "paddingBottom": "132px",
+              "paddingLeft": "48px",
+              "gap": "16px",
+              "background": "#F4C542",
+              "grid": {
+                "rowStart": 1,
+                "columnStart": 9,
+                "horizontalSpan": 4,
+                "verticalSpan": 1
+              },
+              "children": {
+                "label": "RESPOSTA SOLIDÁRIA",
+                "number": "15.000+",
+                "description": "Refeições diárias servidas pela rede de apoio.",
+                "source": "FONTE: REDE SOCIAL LX | 2023",
+                "note": "padding-bottom de 132px cria espaço visual extra na base do card"
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "observatorySection": {
+      "name": "Section - 3. O que (Observatory Pillars)",
+      "node": "26-51",
+      "flow": "Vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (888px)",
+      "paddingTop": "128px",
+      "paddingRight": "80px",
+      "paddingBottom": "128px",
+      "paddingLeft": "80px",
+      "gap": "96px",
+      "background": "#F6F3F2",
+      "children": {
+        "heading": {
+          "text": "Um observatório social digital para consciencializar, desmistificar e mobilizar.",
+          "font": "Epilogue 900",
+          "fontSize": "56px",
+          "lineHeight": "1.05",
+          "color": "#24103A",
+          "maxWidth": "~800px"
+        },
+        "pillarsGrid": {
+          "flow": "Grid",
+          "columns": 3,
+          "gap": "32px",
+          "children": {
+            "pillar01": {
+              "number": "01",
+              "label": "COMPREENDER",
+              "body": "Análise de dados brutos transformados em informação visual clara e acessível.",
+              "numberColor": "#F4C542"
+            },
+            "pillar02": {
+              "number": "02",
+              "label": "DESMISTIFICAR",
+              "body": "Combate ao preconceito com factos verificados e narrativas humanizadas.",
+              "numberColor": "#F4C542"
+            },
+            "pillar03": {
+              "number": "03",
+              "label": "MOBILIZAR",
+              "body": "Encontro de forma concreta de ajudar ou receber ajuda através da nossa rede.",
+              "numberColor": "#F4C542"
+            }
+          }
+        }
+      }
+    },
+
+    "storiesSection": {
+      "name": "Section - 4. Histórias",
+      "node": "26-76",
+      "flow": "Vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (1,179.09px)",
+      "paddingTop": "128px",
+      "paddingRight": "80px",
+      "paddingBottom": "128px",
+      "paddingLeft": "80px",
+      "gap": "64px",
+      "background": "#FAF8F2",
+      "children": {
+        "sectionHeader": {
+          "flow": "Horizontal",
+          "justify": "space-between",
+          "children": {
+            "heading": {
+              "text": "Antes dos números, vieram as histórias.",
+              "font": "Epilogue 900",
+              "fontSize": "48px",
+              "note": "'histórias.' em cor #765B00"
+            },
+            "ctaLink": {
+              "text": "VER TODOS OS TESTEMUNHOS",
+              "font": "Space Grotesk 700",
+              "fontSize": "13px",
+              "letterSpacing": "0.08em",
+              "textTransform": "uppercase",
+              "color": "#24103A",
+              "underline": true
+            }
+          }
+        },
+        "storiesGrid": {
+          "flow": "Grid",
+          "columns": 3,
+          "gap": "32px",
+          "children": {
+            "storyCard1": {
+              "name": "António, 58 anos",
+              "categoryLabel": "TESTEMUNHO",
+              "photo": "<img alt='Retrato de António, 58 anos'>",
+              "photoAspectRatio": "16:9 ou 4:3",
+              "excerpt": "Testemunho sobre situação de sem-abrigo — excerto de ~2 linhas",
+              "ctaLink": "LER HISTÓRIA →"
+            },
+            "storyCard2": {
+              "name": "Elena, 32 anos",
+              "categoryLabel": "TESTEMUNHO",
+              "photo": "<img alt='Retrato de Elena, 32 anos'>",
+              "excerpt": "Testemunho sobre situação de sem-abrigo — excerto de ~2 linhas",
+              "ctaLink": "LER HISTÓRIA →"
+            },
+            "storyCard3": {
+              "name": "João, 45 anos",
+              "categoryLabel": "TESTEMUNHO",
+              "photo": "<img alt='Retrato de João, 45 anos'>",
+              "excerpt": "Testemunho sobre situação de sem-abrigo — excerto de ~2 linhas",
+              "ctaLink": "LER HISTÓRIA →"
+            }
+          }
+        }
+      }
+    },
+
+    "mythBusterSection": {
+      "name": "Section - 5. Mito vs Facto",
+      "node": "26-128",
+      "flow": "Vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (700.5px)",
+      "paddingTop": "96px",
+      "paddingRight": "80px",
+      "paddingBottom": "96px",
+      "paddingLeft": "80px",
+      "background": "#24103A",
+      "children": {
+        "innerGrid": {
+          "node": "26-129",
+          "flow": "Grid",
+          "width": "1,120px",
+          "height": "508.5px",
+          "rows": 1,
+          "columns": 2,
+          "rowGap": "64px",
+          "columnGap": "64px",
+          "children": {
+            "mythColumn": {
+              "grid": { "rowStart": 1, "columnStart": 1, "horizontalSpan": 1, "verticalSpan": 1 },
+              "children": {
+                "badge": {
+                  "text": "FALSO",
+                  "background": "#F4C542",
+                  "color": "#24103A",
+                  "role": "aria-label='Mito — afirmação incorrecta'"
+                },
+                "quoteText": "«Quem está na rua está lá porque quer ou porque não quer trabalhar.»",
+                "statSection": {
+                  "stat": "82%",
+                  "statColor": "#F4C542",
+                  "statFont": "Epilogue 900 64px",
+                  "description": "Mais de 80% das situações de sem-abrigo decorrem de desemprego imprevisto, traumas familiares ou problemas graves de saúde mental que não têm rede de apoio."
+                }
+              }
+            },
+            "factColumn": {
+              "grid": { "rowStart": 1, "columnStart": 2, "horizontalSpan": 1, "verticalSpan": 1 },
+              "children": {
+                "heading": "DESCONSTRUIR O PRECONCEITO.",
+                "description": "A desinformação é a barreira mais alta que uma pessoa em situação de sem-abrigo enfrenta todos os dias.",
+                "mythLinks": [
+                  { "label": "MITO DA AUTOSSUFICIÊNCIA", "href": "#" },
+                  { "label": "MITO DA NASCIMIENTO", "href": "#" }
+                ],
+                "linkStyle": {
+                  "font": "Space Grotesk 600",
+                  "fontSize": "14px",
+                  "letterSpacing": "0.06em",
+                  "textTransform": "uppercase",
+                  "color": "#FFFFFF",
+                  "border": "1px #FFFFFF 30% bottom"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "dataPreviewSection": {
+      "name": "Section - 6. Data Preview",
+      "node": "26-160",
+      "flow": "Vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (696px)",
+      "paddingTop": "128px",
+      "paddingRight": "80px",
+      "paddingBottom": "128px",
+      "paddingLeft": "80px",
+      "gap": "64px",
+      "background": "#FCF8F8",
+      "children": {
+        "sectionLabel": {
+          "text": "EXPLORAR CATEGORIAS DE DADOS",
+          "font": "Space Grotesk 700",
+          "fontSize": "13px",
+          "letterSpacing": "0.12em",
+          "textTransform": "uppercase",
+          "color": "#24103A"
+        },
+        "categoriesGrid": {
+          "flow": "Grid",
+          "rows": 2,
+          "columns": 4,
+          "gap": "16px",
+          "categories": [
+            { "icon": "SVG — figura feminina", "label": "MULHERES" },
+            { "icon": "SVG — habitação/tent", "label": "ALOJAMENTO", "highlighted": true, "background": "#F4C542" },
+            { "icon": "SVG — saúde mental", "label": "SAÚDE MENTAL" },
+            { "icon": "SVG — casa/habitação", "label": "HABITAÇÃO" },
+            { "icon": "SVG — família", "label": "FAMÍLIAS" },
+            { "icon": "SVG — apoio social", "label": "APOIO SOCIAL" },
+            { "icon": "SVG — formação", "label": "FORMAÇÃO" },
+            { "icon": "SVG — gráfico/dados", "label": "VEJA OS DADOS", "variant": "dark", "background": "#24103A", "color": "#FFFFFF" }
+          ],
+          "cardStyle": {
+            "padding": "24px",
+            "gap": "16px",
+            "background": "#F6F3F2",
+            "flow": "Vertical"
+          }
+        }
+      }
+    },
+
+    "helpServiceCTASection": {
+      "name": "Section - 7. Help/Service CTA",
+      "node": "26-212",
+      "flow": "Vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (536px)",
+      "padding": "80px",
+      "background": "#FAF8F2",
+      "children": {
+        "innerLayout": {
+          "flow": "Horizontal",
+          "justify": "space-between",
+          "align": "center",
+          "children": {
+            "textBlock": {
+              "heading": "PRECISA DE AJUDA OU QUER AJUDAR ALGUÉM?",
+              "body": "Mapa em tempo real dos serviços de emergência, alimentação e apoio em Lisboa.",
+              "font": {
+                "heading": "Epilogue 900 48px uppercase #24103A",
+                "body": "Space Grotesk 400 16px #24103A"
+              }
+            },
+            "ctaButtons": {
+              "flow": "Horizontal",
+              "gap": "16px",
+              "button1": {
+                "label": "IR VER AJUDA",
+                "variant": "solid",
+                "background": "#24103A",
+                "color": "#FFFFFF",
+                "font": "Space Grotesk 700 uppercase"
+              },
+              "button2": {
+                "label": "EMERGÊNCIA",
+                "variant": "outline",
+                "borderColor": "#24103A",
+                "color": "#24103A",
+                "background": "transparent",
+                "font": "Space Grotesk 700 uppercase"
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "newsletterSection": {
+      "name": "Section - 8. Newsletter",
+      "node": "26-228",
+      "flow": "Vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (640px)",
+      "paddingTop": "128px",
+      "paddingRight": "192px",
+      "paddingBottom": "128px",
+      "paddingLeft": "192px",
+      "background": "#FCF8F8",
+      "note": "Padding lateral de 192px (vs 80px standard) cria coluna centrada estreita para o formulário",
+      "children": {
+        "heading": {
+          "text": "RECEBA ATUALIZAÇÕES MENSAIS DO OBSERVATÓRIO.",
+          "font": "Epilogue 900",
+          "fontSize": "48px",
+          "lineHeight": "1.0",
+          "textTransform": "uppercase",
+          "color": "#24103A"
+        },
+        "form": {
+          "element": "<form aria-label='Subscrever boletim'>",
+          "flow": "Horizontal",
+          "gap": "0px",
+          "children": {
+            "emailInput": {
+              "element": "<input type='email'>",
+              "placeholder": "EMAIL",
+              "borderRight": "none",
+              "border": "1px solid #24103A",
+              "background": "#FFFFFF",
+              "flex": "1"
+            },
+            "submitButton": {
+              "label": "SUBSCREVER",
+              "element": "<button type='submit'>",
+              "background": "#24103A",
+              "color": "#FFFFFF",
+              "font": "Space Grotesk 700 uppercase",
+              "fontSize": "14px",
+              "letterSpacing": "0.08em",
+              "padding": "16px 32px"
+            }
+          }
+        },
+        "paginationDots": {
+          "type": "carousel indicator / progress dots",
+          "count": 5,
+          "activeColor": "#F4C542",
+          "inactiveColor": "#CCC4CE",
+          "note": "Pode indicar que o módulo newsletter é parte de um carousel de conteúdos ou steps de onboarding"
+        }
+      }
+    },
+
+    "institutionalLogosSection": {
+      "name": "Section - 9. Institutional Logos",
+      "node": "26-240",
+      "flow": "Vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (209px)",
+      "padding": "80px",
+      "borderTop": "1px solid #CCC4CE (20% opacity)",
+      "background": "#FCF8F8",
+      "children": {
+        "logosRow": {
+          "flow": "Horizontal",
+          "justify": "space-around",
+          "align": "center",
+          "logos": [
+            "CRIA",
+            "FCT",
+            "ISCTE-IUL",
+            "CML",
+            "outros parceiros"
+          ],
+          "logoStyle": {
+            "filter": "grayscale(100%)",
+            "opacity": "60-70%",
+            "maxHeight": "48px"
+          }
+        }
+      }
+    },
+
+    "footer": {
+      "name": "Footer",
+      "node": "26-247",
+      "flow": "Grid",
+      "width": "1,280px",
+      "height": "392px",
+      "borderTop": "8px solid #F4C542",
+      "rows": 1,
+      "columns": 4,
+      "rowGap": "48px",
+      "columnGap": "48px",
+      "background": "#24103A",
+      "children": {
+        "column1": {
+          "content": "Logo LISBOA INVISÍVEL + tagline curta + copyright",
+          "columnSpan": 1
+        },
+        "column2": {
+          "label": "NAVEGAÇÃO",
+          "links": ["Sobre", "Dados", "Histórias", "Blog"],
+          "columnSpan": 1
+        },
+        "column3": {
+          "label": "PARTICIPE",
+          "links": ["Torne-se Parceiro", "Voluntariado", "Doação"],
+          "columnSpan": 1
+        },
+        "column4": {
+          "label": "LEGAL & PRIVACIDADE",
+          "links": ["Política de Privacidade", "Termos de Uso", "Contacto"],
+          "columnSpan": 1
+        }
+      }
+    }
+  },
+
+  "pageStructure": {
+    "order": [
+      "topNavBar",
+      "heroSection",
+      "bigNumbersSection",
+      "observatorySection",
+      "storiesSection",
+      "mythBusterSection",
+      "dataPreviewSection",
+      "helpServiceCTASection",
+      "newsletterSection",
+      "institutionalLogosSection",
+      "footer"
+    ],
+    "totalPageHeight": "6,661.59px (Body)",
+    "bodyBackground": "#FCF8F8",
+    "sectionCount": 9,
+    "colorRhythm": [
+      "#24103A (hero)",
+      "#FCF8F8 (big numbers)",
+      "#F6F3F2 (observatory)",
+      "#FAF8F2 (stories)",
+      "#24103A (myth buster)",
+      "#FCF8F8 (data preview)",
+      "#FAF8F2 (help CTA)",
+      "#FCF8F8 (newsletter)",
+      "#FCF8F8 (logos)",
+      "#24103A (footer)"
+    ],
+    "note": "Ritmo de cor deliberado: alternância entre tons claros (#FCF8F8, #F6F3F2, #FAF8F2) e secções escuras (#24103A) para criar contraste e separação visual sem separadores explícitos"
+  },
+
+  "notes": {
+    "differencesFromHistorias": [
+      "Esta é a página mais longa do projecto (6661px vs ~3200-3600px nas outras páginas)",
+      "Estrutura editorial com 9 secções distintas vs outras páginas com 4-6 secções",
+      "Hero tem altura FIXED de 800px (vs Hug noutras páginas) — impõe proporção visual exacta independente do conteúdo",
+      "Heading H1 tem highlight inline em 'visível' (#F4C542) — único uso de highlight inline em heading em todo o projecto",
+      "Big Numbers usa grelha 12 colunas com split 8+4 (diferente do split 8+4 da Missão mas com padding diferente nos cards)",
+      "Section Newsletter usa padding lateral de 192px — o maior de todas as páginas (vs 80px standard)",
+      "Section 9. Institutional Logos tem border-top de 1px #CCC4CE 20% (muito subtil, diferente do border-top 8px #F4C542 do Footer)",
+      "Myth Buster section usa grid de 2 colunas com gap de 64px — não usa 12 colunas"
+    ],
+    "sharedWithHistorias": [
+      "TopNavBar: mesma estrutura, padding (24/32), background (#24103A)",
+      "Footer: mesma estrutura Grid 1×4, 48px gap, background #24103A, border-top 8px #F4C542",
+      "Paleta de cores base: #24103A, #F4C542, #FCF8F8, #F6F3F2, #FAF8F2, #765B00",
+      "Tipografia: Epilogue (900 headings), Space Grotesk (body/labels)",
+      "Cards de histórias com mesmo formato da página Histórias (foto + nome/idade + excerto + CTA link)",
+      "Padding lateral padrão de 80px (partilhado com Missão e Dados)"
+    ],
+    "uniqueDesignDecisions": [
+      "Highlight inline em H1 ('visível' com background #F4C542) — usar <mark> com override de estilo ou <span class='highlight'>; semanticamente <mark> é preferível",
+      "Hero tem altura FIXED de 800px (não Hug) — impõe proporção visual exacta independente do conteúdo; usar min-height: 800px em CSS para responsividade",
+      "Alternância deliberada de 5 backgrounds diferentes (#24103A → #FCF8F8 → #F6F3F2 → #FAF8F2 → #24103A → #FCF8F8 → #FAF8F2 → #FCF8F8 → #FCF8F8 → #24103A) como separação visual sem bordas explícitas",
+      "Section Mito vs Facto usa grid 2 colunas simétricas (50/50 com gap 64px) — não usa grelha de 12 colunas como as outras secções",
+      "Newsletter com padding lateral de 192px — único na plataforma; cria efeito de 'janela estreita' concentrada no formulário",
+      "Dots de paginação na Newsletter — indicam carousel ou steps de onboarding; confirmar se são indicadores de estado ou navegação funcional",
+      "Card 'RESPOSTA SOLIDÁRIA' tem padding-bottom de 132px (vs 48px dos outros lados) — cria assimetria vertical intencional",
+      "Section 9. Institutional Logos tem border-top de 1px #CCC4CE 20% (muito subtil) vs border-top 8px #F4C542 do Footer — duas convenções de separação diferentes na mesma página",
+      "Categoria 'ALOJAMENTO' destacada com background #F4C542 na grelha de dados — único item activo/selected state visível no design"
+    ]
+  }
+}

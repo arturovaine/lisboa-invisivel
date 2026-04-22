@@ -1,0 +1,720 @@
+{
+  "project": "Lisboa Invisível",
+  "page": "missão",
+  "nodeId": "146-2",
+  "description": "Página institucional/manifesto do Lisboa Invisível. Apresenta identidade, missão, pilares de acção, compromisso ético, parceiros e call-to-action de envolvimento.",
+
+  "accessibility": {
+    "images": {
+      "rule": "hero background photo (edifício com sobreposição) → <img alt='Fachada de edifício em Lisboa — contexto visual do manifesto' role='presentation'> ou background-image CSS; é decorativo pois o conteúdo está no texto sobreposto",
+      "origensCard": "Card ORIGENS não contém imagem — apenas texto; sem alt necessário",
+      "partnerLogos": "<img alt='[Nome do parceiro]'> para CRIA, FCT, ISCTE-IUL, CML",
+      "pillarIcons": "Ícones SVG dos pilares → aria-hidden='true' (decorativos; título e descrição fornecem o contexto)",
+      "lazyLoading": "loading='lazy' decoding='async' em imagens abaixo do fold (parceiros)"
+    },
+    "altPattern": "Ícones de pilares → aria-hidden; logos de parceiros → alt='Logo [Instituição]'",
+    "focusVisible": "pendente (ver docs/TODO.md)",
+    "skipLink": "pendente (ver docs/TODO.md)",
+    "semantics": {
+      "manifiestoLabel": "MANIFESTO INSTITUCIONAL → aria-label ou <span class='visually-hidden'> como prefixo semântico do H1",
+      "ethicalQuote": "Citação → <blockquote> com <cite> para 'CONSELHO DE ÉTICA L.I.'",
+      "pillarsSection": "Section O QUE FAZEMOS → <section aria-labelledby='pillars-heading'>"
+    }
+  },
+
+  "colors": {
+    "backgroundDark": "#24103A",
+    "backgroundBlack": "#000000",
+    "backgroundLight": "#FCF8F8",
+    "backgroundPillars": "#F6F3F2",
+    "backgroundPartners": "#E5E2E1",
+    "accentYellow": "#F4C542",
+    "accentGoldBrown": "#765B00",
+    "textWhite": "#FFFFFF",
+    "textDark": "#24103A",
+    "origensCardBg": "#000000",
+    "ethicalBorderAccent": "#765B00"
+  },
+
+  "typography": {
+    "fonts": {
+      "primary": "Epilogue",
+      "secondary": "Space Grotesk",
+      "tertiary": "Manrope"
+    },
+    "scale": {
+      "pageLabel": {
+        "example": "MANIFESTO INSTITUCIONAL",
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "12px",
+        "lineHeight": "1.2",
+        "letterSpacing": "0.12em",
+        "textTransform": "uppercase",
+        "color": "#24103A",
+        "background": "#F4C542",
+        "padding": "4px 10px"
+      },
+      "heroHeadingLine1": {
+        "example": "O LISBOA INVISÍVEL:",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "80px",
+        "lineHeight": "1.0",
+        "letterSpacing": "-0.02em",
+        "textTransform": "uppercase",
+        "color": "#FFFFFF"
+      },
+      "heroHeadingLine2": {
+        "example": "VER, COMPREENDER E AGIR.",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "80px",
+        "lineHeight": "1.0",
+        "letterSpacing": "-0.02em",
+        "textTransform": "uppercase",
+        "color": "#F4C542"
+      },
+      "heroSubtitle": {
+        "example": "Transformamos dados brutos em dignidade humana...",
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "18px",
+        "lineHeight": "1.6",
+        "letterSpacing": "0",
+        "color": "#FFFFFF"
+      },
+      "sectionHeading": {
+        "example": "A NOSSA MISSÃO É DESOCULTAR O QUE A CIDADE IGNORA.",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "48px",
+        "lineHeight": "1.05",
+        "letterSpacing": "-0.01em",
+        "textTransform": "uppercase",
+        "color": "#24103A"
+      },
+      "bodyText": {
+        "example": "Nascido da urgência de dados rigorosos sobre a exclusão social urbana...",
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "16px",
+        "lineHeight": "1.7",
+        "letterSpacing": "0",
+        "color": "#24103A"
+      },
+      "origensLabel": {
+        "example": "ORIGENS",
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "14px",
+        "lineHeight": "1.2",
+        "letterSpacing": "0.1em",
+        "textTransform": "uppercase",
+        "color": "#FFFFFF"
+      },
+      "origensMetadata": {
+        "example": "FUNDADO EM 2021 / LISBOA, PORTUGAL / REDE DE APOIO / MULTIDISCIPLINAR",
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "13px",
+        "lineHeight": "1.8",
+        "letterSpacing": "0.08em",
+        "textTransform": "uppercase",
+        "color": "#FFFFFF"
+      },
+      "pillarsOverlineLabel": {
+        "example": "PILLARS OF ACTION",
+        "font": "Space Grotesk",
+        "weight": 500,
+        "size": "11px",
+        "lineHeight": "1.2",
+        "letterSpacing": "0.14em",
+        "textTransform": "uppercase",
+        "color": "#765B00"
+      },
+      "pillarsHeading": {
+        "example": "O QUE FAZEMOS",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "36px",
+        "lineHeight": "1.1",
+        "textTransform": "uppercase",
+        "color": "#24103A"
+      },
+      "pillarCardTitle": {
+        "example": "Observatório / Mobilização / Apoio",
+        "font": "Epilogue",
+        "weight": 700,
+        "size": "20px",
+        "lineHeight": "1.2",
+        "color": "#24103A"
+      },
+      "pillarCardBody": {
+        "example": "Mapeamento em tempo real de pontos críticos...",
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "15px",
+        "lineHeight": "1.6",
+        "color": "#24103A"
+      },
+      "ethicalCommitmentLabel": {
+        "example": "COMPROMISSO ÉTICO",
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "13px",
+        "lineHeight": "1.2",
+        "letterSpacing": "0.12em",
+        "textTransform": "uppercase",
+        "color": "#765B00"
+      },
+      "ethicalQuote": {
+        "example": "«Tratamos cada dado como uma vida e cada história como um testemunho sagrado...»",
+        "font": "Space Grotesk",
+        "weight": 400,
+        "size": "18px",
+        "lineHeight": "1.7",
+        "color": "#24103A",
+        "note": "blockquote element"
+      },
+      "ethicalAttribution": {
+        "example": "CONSELHO DE ÉTICA L.I.",
+        "font": "Space Grotesk",
+        "weight": 600,
+        "size": "12px",
+        "letterSpacing": "0.1em",
+        "textTransform": "uppercase",
+        "color": "#765B00"
+      },
+      "partnersLabel": {
+        "example": "APOIO INSTITUCIONAL E CIENTÍFICO",
+        "font": "Space Grotesk",
+        "weight": 500,
+        "size": "12px",
+        "letterSpacing": "0.12em",
+        "textTransform": "uppercase",
+        "color": "#24103A"
+      },
+      "ctaHeading": {
+        "example": "FAÇA PARTE DA REDE. AJUDE A MAPEAR A MUDANÇA.",
+        "font": "Epilogue",
+        "weight": 900,
+        "size": "56px",
+        "lineHeight": "1.0",
+        "textTransform": "uppercase",
+        "color": "#FFFFFF"
+      },
+      "ctaButton": {
+        "example": "TORNE-SE PARCEIRO / CONTACTAR EQUIPA",
+        "font": "Space Grotesk",
+        "weight": 700,
+        "size": "14px",
+        "letterSpacing": "0.08em",
+        "textTransform": "uppercase"
+      }
+    }
+  },
+
+  "spacing": {
+    "xs": "8px",
+    "sm": "16px",
+    "md": "24px",
+    "lg": "32px",
+    "xl": "40px",
+    "2xl": "48px",
+    "3xl": "64px",
+    "4xl": "80px",
+    "5xl": "96px"
+  },
+
+  "layout": {
+    "pageMaxWidth": "1280px",
+    "mainContainer": {
+      "node": "146-3",
+      "flow": "Vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (3,278.8px)",
+      "paddingTop": "96px",
+      "paddingRight": "0px",
+      "paddingBottom": "0px",
+      "paddingLeft": "0px",
+      "gap": "0px",
+      "background": "none (inherits body #FCF8F8)",
+      "note": "O padding lateral é gerido individualmente por cada Section; o Main não tem padding horizontal próprio. O padding top de 96px corresponde à altura do TopNavBar fixo."
+    },
+    "bodyFrame": {
+      "node": "146-2",
+      "flow": "Vertical",
+      "width": "Fixed (1,280px)",
+      "height": "Hug (3,621.05px)",
+      "background": "#FCF8F8"
+    }
+  },
+
+  "components": {
+    "topNavBar": {
+      "name": "TopNavBar Execution",
+      "node": "146-137",
+      "flow": "Horizontal",
+      "width": "Fixed (1,280px)",
+      "height": "Hug (84px)",
+      "justify": "space-between",
+      "paddingTop": "24px",
+      "paddingRight": "32px",
+      "paddingBottom": "24px",
+      "paddingLeft": "32px",
+      "background": "#24103A",
+      "position": "sticky top-0 z-50",
+      "children": {
+        "logo": "LISBOA INVISÍVEL wordmark (white)",
+        "navLinks": ["SOBRE", "DADOS", "HISTÓRIAS", "BLOG", "PARTICIPAR"],
+        "ctaButton": {
+          "label": "ENCONTRAR SERVIÇOS",
+          "background": "#F4C542",
+          "color": "#000000",
+          "textTransform": "uppercase"
+        },
+        "hamburger": "Menu icon (visible on mobile)"
+      }
+    },
+
+    "heroSection": {
+      "name": "Hero Section",
+      "node": "146-4",
+      "flow": "Horizontal",
+      "width": "Fill (1,280px)",
+      "height": "Hug (716px)",
+      "minHeight": "716px",
+      "paddingTop": "124px",
+      "paddingBottom": "124px",
+      "paddingLeft": "0px",
+      "paddingRight": "0px",
+      "background": "#24103A",
+      "backgroundImage": "Foto de fachada de edifício de Lisboa com sobreposição de cor #24103A (60-70% opacity)",
+      "backgroundSize": "cover",
+      "backgroundPosition": "center",
+      "children": {
+        "contentContainer": {
+          "node": "146-6",
+          "flow": "Vertical",
+          "width": "Fill (1,280px)",
+          "height": "Hug (465px)",
+          "paddingLeft": "80px",
+          "paddingRight": "80px",
+          "gap": "24px",
+          "children": {
+            "pageLabel": {
+              "type": "badge",
+              "text": "MANIFESTO INSTITUCIONAL",
+              "background": "#F4C542",
+              "color": "#24103A",
+              "font": "Space Grotesk 700",
+              "fontSize": "12px",
+              "letterSpacing": "0.12em",
+              "textTransform": "uppercase",
+              "padding": "4px 10px"
+            },
+            "heading": {
+              "line1": {
+                "text": "O LISBOA INVISÍVEL:",
+                "color": "#FFFFFF"
+              },
+              "line2": {
+                "text": "VER, COMPREENDER E AGIR.",
+                "color": "#F4C542"
+              },
+              "font": "Epilogue 900",
+              "fontSize": "80px",
+              "lineHeight": "1.0",
+              "textTransform": "uppercase"
+            },
+            "subtitle": {
+              "text": "Transformamos dados brutos em dignidade humana. Somos um observatório ativo dedicado a mapear a realidade das pessoas em situação de sem-abrigo em Lisboa.",
+              "font": "Space Grotesk 400",
+              "fontSize": "18px",
+              "lineHeight": "1.6",
+              "color": "#FFFFFF"
+            }
+          }
+        }
+      }
+    },
+
+    "missionVisionSection": {
+      "name": "Mission/Vision Section",
+      "node": "146-11",
+      "flow": "Vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (620.75px)",
+      "paddingTop": "96px",
+      "paddingRight": "80px",
+      "paddingBottom": "96px",
+      "paddingLeft": "80px",
+      "background": "#FCF8F8",
+      "children": {
+        "innerGrid": {
+          "node": "146-12",
+          "flow": "Grid",
+          "width": "1,120px",
+          "height": "428.75px",
+          "rows": 1,
+          "columns": 12,
+          "rowGap": "48px",
+          "columnGap": "48px",
+          "children": {
+            "textColumn": {
+              "node": "146-13",
+              "flow": "Vertical",
+              "width": "Fill (730.67px)",
+              "height": "Hug (428.75px)",
+              "gap": "47.25px",
+              "grid": {
+                "rowStart": 1,
+                "columnStart": 1,
+                "horizontalSpan": 8,
+                "verticalSpan": 1
+              },
+              "children": {
+                "heading": "A NOSSA MISSÃO É DESOCULTAR O QUE A CIDADE IGNORA.",
+                "body1": "Nascido da urgência de dados rigorosos sobre a exclusão social urbana, o Lisboa Invisível não é apenas uma plataforma de arquivo. É um instrumento de cidadania que utiliza a investigação académica para informar a intervenção social e a política pública.",
+                "body2": "Acreditamos que o primeiro passo para a mudança é a visibilidade. Ao documentar histórias de vida e métricas de infraestrutura, construímos um mapa humano da capital que serve tanto para o apoio imediato como para a transformação estrutural a longo prazo."
+              }
+            },
+            "origensCard": {
+              "node": "146-24",
+              "flow": "Horizontal",
+              "width": "Fill (341.33px)",
+              "height": "Fixed (428.75px)",
+              "grid": {
+                "rowStart": 1,
+                "columnStart": 9,
+                "horizontalSpan": 4,
+                "verticalSpan": 1
+              },
+              "children": {
+                "background": {
+                  "node": "146-25",
+                  "flow": "Vertical",
+                  "width": "Fill (341.33px)",
+                  "height": "Hug (236px)",
+                  "padding": "40px",
+                  "gap": "16px",
+                  "background": "#000000",
+                  "content": {
+                    "label": "ORIGENS",
+                    "items": [
+                      "FUNDADO EM 2021",
+                      "LISBOA, PORTUGAL",
+                      "REDE DE APOIO",
+                      "MULTIDISCIPLINAR"
+                    ],
+                    "eyeIcon": {
+                      "position": "top-right corner absolute",
+                      "background": "#F4C542",
+                      "size": "~48px × 48px",
+                      "note": "Ícone de visibilidade/destaque — aria-hidden='true'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "pillarsSection": {
+      "name": "Section - What We Do (Pillars)",
+      "node": "146-32",
+      "flow": "Vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (628px)",
+      "paddingTop": "96px",
+      "paddingRight": "80px",
+      "paddingBottom": "96px",
+      "paddingLeft": "80px",
+      "gap": "64px",
+      "background": "#F6F3F2",
+      "children": {
+        "sectionHeader": {
+          "node": "146-33",
+          "flow": "Vertical",
+          "width": "Fill (1,120px)",
+          "height": "Hug (68px)",
+          "gap": "8px",
+          "children": {
+            "overline": {
+              "text": "PILLARS OF ACTION",
+              "font": "Space Grotesk 500",
+              "fontSize": "11px",
+              "letterSpacing": "0.14em",
+              "textTransform": "uppercase",
+              "color": "#765B00"
+            },
+            "heading": {
+              "text": "O QUE FAZEMOS",
+              "font": "Epilogue 900",
+              "fontSize": "36px",
+              "textTransform": "uppercase",
+              "color": "#24103A"
+            }
+          }
+        },
+        "pillarsGrid": {
+          "node": "146-38",
+          "flow": "Grid",
+          "width": "1,120px",
+          "height": "304px",
+          "rows": 1,
+          "columns": 3,
+          "rowGap": "32px",
+          "columnGap": "32px",
+          "children": {
+            "pillar1_Observatorio": {
+              "node": "146-39",
+              "flow": "Vertical",
+              "width": "Fill (352px)",
+              "height": "Hug (292px)",
+              "padding": "40px",
+              "gap": "16px",
+              "background": "#FCF8F8",
+              "grid": { "rowStart": 1, "columnStart": 1, "horizontalSpan": 1, "verticalSpan": 1 },
+              "decorative": "SVG corner bracket marks (4 cantos) — aria-hidden='true'",
+              "children": {
+                "icon": "Ícone de dados/gráfico (SVG line, ~32px)",
+                "title": "Observatório",
+                "description": "Mapeamento em tempo real de pontos críticos e recolha de dados estatísticos rigorosos sobre a população flutuante da cidade."
+              }
+            },
+            "pillar2_Mobilizacao": {
+              "node": "146-?",
+              "note": "Pillar 2 — mesmas dimensões e estrutura que Pillar 1",
+              "flow": "Vertical",
+              "width": "Fill (352px)",
+              "height": "Hug (292px)",
+              "padding": "40px",
+              "gap": "16px",
+              "background": "#FCF8F8",
+              "grid": { "rowStart": 1, "columnStart": 2, "horizontalSpan": 1, "verticalSpan": 1 },
+              "children": {
+                "icon": "Ícone de megafone/activismo (SVG line, ~32px)",
+                "title": "Mobilização",
+                "description": "Campanhas de sensibilização pública e pressão política baseada em factos para garantir o direito à habitação e dignidade."
+              }
+            },
+            "pillar3_Apoio": {
+              "node": "146-?",
+              "note": "Pillar 3 — mesmas dimensões e estrutura que Pillar 1",
+              "flow": "Vertical",
+              "width": "Fill (352px)",
+              "height": "Hug (292px)",
+              "padding": "40px",
+              "gap": "16px",
+              "background": "#FCF8F8",
+              "grid": { "rowStart": 1, "columnStart": 3, "horizontalSpan": 1, "verticalSpan": 1 },
+              "children": {
+                "icon": "Ícone de cuidado/coração (SVG line, ~32px)",
+                "title": "Apoio",
+                "description": "Ligação directa entre quem precisa e as redes de apoio formal e informal existentes na Área Metropolitana de Lisboa."
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "ethicalCommitmentSection": {
+      "name": "Section - Ethical Commitment",
+      "node": "146-66",
+      "flow": "Vertical",
+      "width": "Fixed (1,200px)",
+      "height": "Hug (442.05px)",
+      "paddingTop": "96px",
+      "paddingRight": "80px",
+      "paddingBottom": "96px",
+      "paddingLeft": "80px",
+      "borderLeft": "12px solid #765B00",
+      "background": "none (herda #FCF8F8 do parent, sem fill próprio)",
+      "note": "Width fixed em 1200px (vs 1280px dos outros sections) — possivelmente para acomodar a borda esquerda espessa de 12px e manter alinhamento visual",
+      "children": {
+        "label": {
+          "text": "COMPROMISSO ÉTICO",
+          "font": "Space Grotesk 700",
+          "fontSize": "13px",
+          "letterSpacing": "0.12em",
+          "textTransform": "uppercase",
+          "color": "#765B00"
+        },
+        "quote": {
+          "element": "blockquote",
+          "text": "«Tratamos cada dado como uma vida e cada história como um testemunho sagrado. A nossa metodologia garante o anonimato e a segurança total de todos os intervenientes, priorizando sempre o respeito pela autodeterminação e pela privacidade individual acima de qualquer métrica estatística.»",
+          "font": "Space Grotesk 400",
+          "fontSize": "18px",
+          "lineHeight": "1.7",
+          "color": "#24103A"
+        },
+        "attribution": {
+          "element": "cite",
+          "text": "CONSELHO DE ÉTICA L.I.",
+          "prefixDecoration": "—— (linha horizontal curta, #765B00)",
+          "font": "Space Grotesk 600",
+          "fontSize": "12px",
+          "letterSpacing": "0.1em",
+          "textTransform": "uppercase",
+          "color": "#765B00"
+        }
+      }
+    },
+
+    "partnersSection": {
+      "name": "Section - Partners",
+      "node": "146-76",
+      "flow": "Vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (340px)",
+      "paddingTop": "96px",
+      "paddingRight": "80px",
+      "paddingBottom": "96px",
+      "paddingLeft": "80px",
+      "gap": "64px",
+      "background": "#E5E2E1",
+      "children": {
+        "sectionLabel": {
+          "node": "146-77",
+          "text": "APOIO INSTITUCIONAL E CIENTÍFICO",
+          "font": "Space Grotesk 500",
+          "fontSize": "12px",
+          "letterSpacing": "0.12em",
+          "textTransform": "uppercase",
+          "color": "#24103A"
+        },
+        "logosRow": {
+          "node": "146-79",
+          "flow": "Grid",
+          "width": "1,120px",
+          "height": "64px",
+          "rows": 1,
+          "columns": 4,
+          "rowGap": "48px",
+          "columnGap": "48px",
+          "opacity": "70%",
+          "background": "#FFFFFF",
+          "logos": ["CRIA", "FCT", "ISCTE-IUL", "CML"],
+          "note": "Logos a 70% de opacidade sobre fundo branco — efeito de marca d'água discreta"
+        }
+      }
+    },
+
+    "getInvolvedCTASection": {
+      "name": "Section - Get Involved CTA",
+      "node": "146-92",
+      "flow": "Vertical",
+      "width": "Fill (1,280px)",
+      "height": "Hug (436px)",
+      "paddingTop": "96px",
+      "paddingRight": "80px",
+      "paddingBottom": "96px",
+      "paddingLeft": "80px",
+      "background": "#000000",
+      "children": {
+        "heading": {
+          "text": "FAÇA PARTE DA REDE. AJUDE A MAPEAR A MUDANÇA.",
+          "font": "Epilogue 900",
+          "fontSize": "56px",
+          "lineHeight": "1.0",
+          "textTransform": "uppercase",
+          "color": "#FFFFFF"
+        },
+        "buttons": {
+          "flow": "Horizontal",
+          "gap": "16px",
+          "button1": {
+            "label": "TORNE-SE PARCEIRO",
+            "variant": "outline",
+            "borderColor": "#F4C542",
+            "color": "#F4C542",
+            "background": "transparent",
+            "font": "Space Grotesk 700",
+            "fontSize": "14px",
+            "letterSpacing": "0.08em",
+            "textTransform": "uppercase",
+            "padding": "14px 32px"
+          },
+          "button2": {
+            "label": "CONTACTAR EQUIPA",
+            "variant": "outline",
+            "borderColor": "#FFFFFF",
+            "color": "#FFFFFF",
+            "background": "transparent",
+            "font": "Space Grotesk 700",
+            "fontSize": "14px",
+            "letterSpacing": "0.08em",
+            "textTransform": "uppercase",
+            "padding": "14px 32px"
+          }
+        }
+      }
+    },
+
+    "footer": {
+      "name": "Footer Execution",
+      "node": "146-108",
+      "flow": "Grid",
+      "width": "1,280px",
+      "height": "336px",
+      "borderTop": "8px solid #F4C542",
+      "rows": 1,
+      "columns": 4,
+      "rowGap": "48px",
+      "columnGap": "48px",
+      "background": "#24103A",
+      "note": "Footer idêntico ao das restantes páginas. Border-top #F4C542 (amarelo) — consistente com Serviços de Apoio e diferente do possível #000000 registado noutras specs."
+    }
+  },
+
+  "pageStructure": {
+    "order": [
+      "topNavBar",
+      "heroSection",
+      "missionVisionSection",
+      "pillarsSection",
+      "ethicalCommitmentSection",
+      "partnersSection",
+      "getInvolvedCTASection",
+      "footer"
+    ],
+    "totalPageHeight": "3,621.05px (Body) / 3,278.8px (Main)",
+    "bodyBackground": "#FCF8F8"
+  },
+
+  "notes": {
+    "differencesFromHistorias": [
+      "Não há grelha de cards com filtros — é uma página editorial linear sem componentes de listagem",
+      "Hero tem padding lateral de 0px na Section e 80px no Container interno (vs 32px de padding directo noutras pages)",
+      "Hero tem altura mínima de 716px (minHeight constraint) vs altura calculada noutras páginas",
+      "paddingLateral dominante é 80px (vs 32px na maioria das outras páginas) — decisão editorial para criar margem mais 'premium'",
+      "Section - Ethical Commitment tem width Fixed 1200px (não Fill) — única section com largura fixa, possivelmente por causa do border-left de 12px",
+      "CTA final usa fundo #000000 puro (preto) em vez de #24103A (dark purple) usado no NavBar e Footer",
+      "Footer border-top usa #F4C542 (amarelo) — consistente com Serviços de Apoio",
+      "Pillar cards usam cantos decorativos SVG (corner brackets) sem cor de fundo diferenciada — apenas background #FCF8F8"
+    ],
+    "sharedWithHistorias": [
+      "TopNavBar: mesma estrutura, dimensões (1280×84px), padding (24/32) e background (#24103A)",
+      "Footer: mesma estrutura Grid 1×4, 48px gap, background #24103A",
+      "Mesma paleta base: #24103A, #F4C542, #FCF8F8, #F6F3F2, #765B00",
+      "Mesmas famílias tipográficas: Epilogue (headings), Space Grotesk (body/labels)",
+      "Mesmo sistema de spacing (xs a 5xl)",
+      "Badge 'MANIFESTO INSTITUCIONAL' segue o mesmo padrão de label das outras páginas (uppercase, Space Grotesk 700, background #F4C542)"
+    ],
+    "openQuestions": [
+      "Q1: O padding lateral de 80px (vs 32px das outras páginas) é intencional para esta página institucional ou deve ser harmonizado?",
+      "Q2: Section - Ethical Commitment tem width: Fixed 1200px — deve ser Fill 1280px como as outras sections, ou este fixed é deliberado para criar um recuo visual adicional?",
+      "Q3: O border-left do Ethical Commitment é 12px em #765B00. Confirmar se deve ser um elemento <aside> ou <blockquote> com border-left CSS, ou um componente com div separada para o traço.",
+      "Q4: Os ícones SVG dos pilares (Observatório, Mobilização, Apoio) necessitam de assets exportados — confirmar se vêm de biblioteca de ícones (ex. Phosphor, Feather) ou são desenhados.",
+      "Q5: O card ORIGENS tem um ícone de olho (#F4C542 sobre preto) posicionado no canto superior direito. Confirmar se é um botão de 'preview/destaque' interactivo ou puramente decorativo.",
+      "Q6: CTA section usa #000000 (preto puro) — confirmar se é intencional ou se devia ser #24103A para consistência com o esquema de cor dark da marca.",
+      "Q7: Logos de parceiros (CRIA, FCT, ISCTE-IUL, CML) a 70% de opacidade sobre branco — confirmar se devem ter links para as respectivas instituições (<a href> com aria-label).",
+      "Q8: Confirmar se a página deve ter um <main> com id='conteudo-principal' para o skip-link."
+    ]
+  }
+}
