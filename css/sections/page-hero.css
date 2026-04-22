@@ -20,6 +20,25 @@
     text-transform: none;
   }
 
+  .hero.tall .sub {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0px;
+  }
+
+  .hero.tall .btn-primary,
+  .hero.tall .btn-outline,
+  .hero.tall .btn-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+  }
+
   .bg {
     position: absolute;
     inset: 0;
