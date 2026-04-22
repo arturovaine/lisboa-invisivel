@@ -1,8 +1,5 @@
   section {
     background: var(--cream);
-    height: 442px;
-    display: flex;
-    align-items: center;
   }
 
   .inner {
