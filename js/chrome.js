@@ -33,7 +33,13 @@ class LiNavbar extends HTMLElement {
         </ul>
         <div class="nav-actions">
           <a href="servicos.html"><button class="btn-cta">Encontrar Serviços</button></a>
-          <span class="menu-icon">☰</span>
+          <span class="menu-icon">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="18" height="2" fill="white"/>
+              <rect y="5" width="18" height="2" fill="white"/>
+              <rect y="10" width="18" height="2" fill="white"/>
+            </svg>
+          </span>
         </div>
       </nav>
     `;
