@@ -257,7 +257,7 @@
     color: #1C1B1B;
     opacity: .55;
   }
-  .card-migration .stat  { color: #1C1B1B; font-size: 56px; }
+  .card-migration .stat  { color: #1C1B1B; font-weight: 700; font-size: 48px; line-height: 48px; letter-spacing: 0px; }
   .card-migration .desc  { color: rgba(28,27,27,.7); }
   .card-migration .source { color: #927AAB; }
 
