@@ -67,11 +67,11 @@
   @media (max-width: 760px) {
     .pillars {
       grid-template-columns: 1fr;
+      height: auto;
     }
 
     .pillar {
-      border-right: none;
+      padding: 2rem 1.5rem;
       border-bottom: 1px solid rgba(28, 27, 27, .1);
-      padding: 1.5rem 0 !important;
     }
   }
