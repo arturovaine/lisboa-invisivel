@@ -165,4 +165,12 @@
     .grid {
       grid-template-columns: 1fr;
     }
+
+    .num {
+      font-size: clamp(3rem, 18vw, 128px);
+    }
+
+    .card {
+      padding: 2rem 1.5rem;
+    }
   }
