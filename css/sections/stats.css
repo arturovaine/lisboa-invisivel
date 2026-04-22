@@ -125,14 +125,16 @@
   }
 
   .share {
-    font-family: var(--font-display);
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
-    font-size: .7rem;
-    letter-spacing: .12em;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
     text-transform: uppercase;
+    text-align: center;
     background: none;
     border: none;
-    color: var(--yellow);
+    color: #F4C542;
     display: flex;
     align-items: center;
     gap: .4rem;
