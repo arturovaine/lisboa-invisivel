@@ -1,8 +1,9 @@
   section {
     background: #E5E2E1;
-    height: 340px;
+    min-height: 340px;
     display: flex;
     align-items: center;
+    padding: 3rem 2rem;
   }
 
   .inner {
