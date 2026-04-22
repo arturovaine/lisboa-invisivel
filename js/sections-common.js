@@ -61,8 +61,7 @@ class LiPageHero extends LiSection {
     return `
       <section class="hero ${tall}">
         <div class="bg" style="background-image:url('${bg}')"></div>
-        <div class="overlay"></div>
-        ${tall ? '<div class="blur-lens"></div>' : ''}
+        ${tall ? '<div class="blur-lens"></div>' : '<div class="overlay"></div>'}
         <div class="content">
           ${kicker ? `<span class="kicker">${kicker}</span>` : ''}
           <h1>${title}</h1>
