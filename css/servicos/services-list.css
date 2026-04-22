@@ -7,8 +7,8 @@
     max-width: 1184px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 778.67px 373.33px;
+    gap: 32px;
     align-items: start;
     overflow: hidden;
   }
@@ -413,7 +413,8 @@
 
   .map {
     background: #fff;
-    padding: 1.5rem;
+    width: 100%;
+    padding-top: 24px;
   }
 
   .map-box {
