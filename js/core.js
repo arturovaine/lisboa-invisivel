@@ -26,7 +26,7 @@ export const IMG = {
   pets:             './img/pets-street.jpg',
 };
 
-export const LOGO_SVG = `<img src="./assets/logo.svg" alt="Lisboa Invisível" width="89" height="32" style="display:block;filter:brightness(0) invert(1)" />`;
+export const LOGO_SVG = `<img src="./assets/logo.svg" alt="Lisboa Invisível" width="120" height="42" style="display:block;filter:brightness(0) invert(1)" />`;
 
 export const baseStyles = `
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
