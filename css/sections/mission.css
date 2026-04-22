@@ -24,7 +24,7 @@
     grid-template-columns: repeat(3, 1fr);
     max-width: 1120px;
     height: 296px;
-    gap: 24px;
+    gap: 1px;
   }
 
   .pillar {
