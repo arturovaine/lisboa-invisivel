@@ -57,6 +57,7 @@ export const baseStyles = `
     --font-ui:          'Space Grotesk', sans-serif;
     --font-body:        'Manrope', sans-serif;
     display: block;
+    overflow: clip;
   }
   .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
   a { text-decoration: none; color: inherit; cursor: pointer; }
