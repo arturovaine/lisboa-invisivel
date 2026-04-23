@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/arturovaine/lisboa-invisivel#readme",
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.2",
     "@playwright/test": "^1.59.1",
     "vite": "^6.4.2"
   }
