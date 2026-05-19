@@ -1,0 +1,125 @@
+[
+  {
+    "name": "Balneário Público de Alcântara",
+    "tag": "Higiene",
+    "address": "Rua Padre Adriano Botelho 5, 1300-257 Lisboa",
+    "description": "Serviços de duche quente, lavandaria e apoio social básico. Acesso gratuito para pessoas em situação de sem-abrigo.",
+    "hours": "08:00 — 19:00 (Seg a Sex)",
+    "phone": "911 761 897",
+    "lat": 38.7061,
+    "lng": -9.1761,
+    "mapSource": "mapServices",
+    "cardCoordinates": {
+      "lat": 38.7068,
+      "lng": -9.1784
+    },
+    "notes": "Coordenadas do mapa e do card não coincidem exatamente; lat/lng principais seguem mapServices."
+  },
+  {
+    "name": "Cozinha Comunitária de Marvila",
+    "tag": "Alimentação",
+    "address": "Estrada de Marvila, 1900-321 Lisboa",
+    "description": "Fornecimento diário de refeições quentes e cabazes de emergência. Requer triagem prévia no local.",
+    "hours": "12:00 — 14:30 / 19:00 — 21:00",
+    "phone": "+351 218 310 100",
+    "lat": 38.7332,
+    "lng": -9.1098,
+    "mapSource": "mapServices",
+    "cardCoordinates": {
+      "lat": 38.7464,
+      "lng": -9.1014
+    },
+    "notes": "Coordenadas do mapa e do card não coincidem exatamente; lat/lng principais seguem mapServices."
+  },
+  {
+    "name": "João 13 – NAL+ de São Vicente",
+    "tag": "Higiene",
+    "address": "Calçada do Cascão 39, 1100-122 Lisboa",
+    "description": "",
+    "hours": "",
+    "phone": "",
+    "lat": 38.7144,
+    "lng": -9.1253,
+    "mapSource": "mapServices",
+    "cardCoordinates": null,
+    "notes": "Disponível apenas em mapServices."
+  },
+  {
+    "name": "UAPSA / NPISA – SCML",
+    "tag": "Apoio Social",
+    "address": "Cais do Gás, Rua da Cintura do Porto de Lisboa",
+    "description": "",
+    "hours": "",
+    "phone": "",
+    "lat": 38.703,
+    "lng": -9.1689,
+    "mapSource": "mapServices",
+    "cardCoordinates": null,
+    "notes": "Disponível apenas em mapServices."
+  },
+  {
+    "name": "CASA – Centro de Apoio ao Sem Abrigo",
+    "tag": "Apoio Social",
+    "address": "Rua Dr. João de Barros 17G, 1500-230 Lisboa",
+    "description": "",
+    "hours": "",
+    "phone": "",
+    "lat": 38.7536,
+    "lng": -9.1993,
+    "mapSource": "mapServices",
+    "cardCoordinates": null,
+    "notes": "Disponível apenas em mapServices."
+  },
+  {
+    "name": "Exército de Salvação",
+    "tag": "Abrigo",
+    "address": "Rua da Manutenção 7, 1900-318 Lisboa",
+    "description": "",
+    "hours": "",
+    "phone": "",
+    "lat": 38.7273,
+    "lng": -9.1099,
+    "mapSource": "mapServices",
+    "cardCoordinates": null,
+    "notes": "Disponível apenas em mapServices."
+  },
+  {
+    "name": "Vitae – Associação para o Desenvolvimento",
+    "tag": "Abrigo",
+    "address": "Rua de Cascais 1, 1300-145 Lisboa",
+    "description": "",
+    "hours": "",
+    "phone": "",
+    "lat": 38.7033,
+    "lng": -9.175,
+    "mapSource": "mapServices",
+    "cardCoordinates": null,
+    "notes": "Disponível apenas em mapServices."
+  },
+  {
+    "name": "Centro de Dia Santa Isabel (Cruz Vermelha)",
+    "tag": "Apoio Social",
+    "address": "Rua Saraiva de Carvalho 8, 1250-243 Lisboa",
+    "description": "",
+    "hours": "",
+    "phone": "",
+    "lat": 38.7154,
+    "lng": -9.1645,
+    "mapSource": "mapServices",
+    "cardCoordinates": null,
+    "notes": "Disponível apenas em mapServices."
+  },
+  {
+    "name": "CASL – IASFA",
+    "tag": "Abrigo",
+    "address": "Rua de São José 24, 1150-323 Lisboa",
+    "description": "",
+    "hours": "",
+    "phone": "",
+    "lat": 38.7186,
+    "lng": -9.1424,
+    "mapSource": "mapServices",
+    "cardCoordinates": null,
+    "notes": "Disponível apenas em mapServices."
+  }
+]
