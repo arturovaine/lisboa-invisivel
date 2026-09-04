@@ -65,4 +65,4 @@ npm run build   # gera dist/
 npm run preview # pré-visualiza o build localmente
 ```
 
-O deploy para GitHub Pages é automático via GitHub Actions em cada push para `main`.
+> O deploy para GitHub Pages é automático via GitHub Actions em cada push para `main`.
